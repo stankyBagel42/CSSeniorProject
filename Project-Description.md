@@ -12,4 +12,4 @@
 - wolffec@mail.uc.edu
 
 # Project Topic Area
-- Something cool
+- A game where enemies learn to beat you based off of your playstyle
