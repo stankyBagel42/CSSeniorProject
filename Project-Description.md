@@ -1,4 +1,4 @@
-# Team Name: ENED Bad
+# Team Name: Algorithmic Adversaries
 
 # Team Members
 ## Nick Sucietto
