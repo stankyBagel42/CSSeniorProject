@@ -12,4 +12,4 @@
 - wolffec@mail.uc.edu
 
 # Project Topic Area
-- A game where enemies learn to beat you based off of your playstyle
+- An AI Pokemon trainer that can be used to test teams and to have fun.
