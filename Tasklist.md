@@ -1,16 +1,13 @@
 # Tasklist
-1. Nick: Design and determine different enemy types
-2. Alex: Design various room types
-3. Eric: Investigate different roguelike formats (top-down, first person, third person)
+1. Nick: Setup the local showdown server.
+2. Alex: Design various pokemon teams.
+3. Eric: Investigate different machine learning models
 4. Eric: Determine the function that will be used to improve enemies over time
-5. Eric: Test that the algorithm improves the enemies over time at a reasonable pace
-6. Nick: Design different equipment/items/consumables
-7. Eric: Determine how each "dungeon" will be generated
-8. Nick: Investigate implementing various game mechanics
-9. Nick: Refine item/enemy balancing to ensure engaging gameplay
-10. Nick: Implement save/load features
-11. Alex: Develop essential sound systems such as footsteps and combat noises
-12. Alex: Design art assets for all of the different entities in the game
-13. Alex: Design boss enemies with unique identities
-14. Alex: Specify a setting/theme for the game (fantasy, sci-fi, etc.)
-15. Eric: Test out different movement options for the player to get one that feels good for the game.
+5. Eric: Test that the algorithm improves the trainer over time at a reasonable pace
+6. Alex: Research existing battle stats to feed the AI.
+7. Nick: Write scripts to query servers.
+8. Nick: Test battle mechanics on the servers.
+9. Alex: Create UI outline.
+10. Alex: Test battling in UI.
+11. Alex: Develop essential sound systems.
+12. Alex: Design/import art assets for the game.
