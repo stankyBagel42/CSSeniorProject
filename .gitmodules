@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
 [submodule "pokemon-showdown"]
 	path = pokemon-showdown
 	url = https://github.com/nsuce/pokemon-showdown
->>>>>>> 84502ff3f2826b1ad6251a4bc786e14f8c9b972b
