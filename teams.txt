@@ -1,0 +1,130 @@
+========================================================================================================
+TEAM 1: THE OG
+========================================================================================================
+Roserade @ Focus Sash  
+Ability: Natural Cure  
+Level: 80  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 2 Atk / 30 SpA / 30 Spe  
+- Grass Knot  
+- Hidden Power [Fire]  
+- Sleep Powder  
+- Toxic Spikes  
+
+Swampert @ Leftovers  
+Ability: Torrent  
+Level: 80  
+EVs: 240 HP / 216 Def / 52 SpD  
+Relaxed Nature  
+- Ice Beam  
+- Stealth Rock  
+- Earthquake  
+- Hydro Pump  
+
+Gengar @ Choice Scarf  
+Ability: Levitate  
+Level: 77  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 2 Atk / 30 Def  
+- Shadow Ball  
+- Focus Blast  
+- Thunderbolt  
+- Hidden Power [Ice]  
+
+Lucario @ Life Orb  
+Ability: Inner Focus  
+Level: 80  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Swords Dance  
+- Close Combat  
+- Bullet Punch  
+- Extreme Speed  
+
+Infernape @ Choice Scarf  
+Ability: Blaze  
+Level: 79  
+EVs: 156 Atk / 120 SpA / 232 Spe  
+Naive Nature  
+- Close Combat  
+- Fire Blast  
+- Thunder Punch  
+- Hidden Power [Ice]  
+
+Salamence @ Life Orb  
+Ability: Intimidate  
+Level: 75  
+EVs: 76 Atk / 252 SpA / 180 Spe  
+Rash Nature  
+- Draco Meteor  
+- Fire Blast  
+- Brick Break  
+- Roost  
+
+========================================================================================================
+TEAM 2: STALL TEAM
+========================================================================================================
+Daedalus (Hippowdon) @ Leftovers  
+Ability: Sand Stream  
+Level: 80  
+EVs: 252 HP / 24 Atk / 192 Def / 40 SpD  
+Impish Nature  
+- Stealth Rock  
+- Slack Off  
+- Earthquake  
+- Ice Fang  
+
+Icarus (Skarmory) @ Shed Shell  
+Ability: Keen Eye  
+Level: 78  
+EVs: 252 HP / 200 Def / 40 SpD / 16 Spe  
+- Whirlwind  
+- Spikes  
+- Roost  
+- Brave Bird  
+
+Morpheus (Tentacruel) @ Leftovers  
+Ability: Liquid Ooze  
+Level: 82  
+EVs: 252 HP / 120 Def / 136 SpD  
+Calm Nature  
+IVs: 3 Atk / 30 SpA  
+- Toxic Spikes  
+- Rapid Spin  
+- Surf  
+- Hidden Power [Electric]  
+
+Helios (Blissey) @ Leftovers  
+Ability: Natural Cure  
+Level: 80  
+EVs: 252 Def / 40 SpA / 216 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Wish  
+- Protect  
+- Flamethrower  
+- Toxic  
+
+Celobi (Celebi) @ Leftovers  
+Ability: Natural Cure  
+Level: 80  
+EVs: 252 HP / 216 Def / 8 SpD / 32 Spe  
+Bold Nature  
+- Recover  
+- Perish Song  
+- Grass Knot  
+- U-turn  
+
+The Man Who Was Thursday (Spiritomb) @ Leftovers  
+Ability: Pressure  
+Level: 86  
+EVs: 252 HP / 100 Def / 156 SpD  
+Calm Nature  
+IVs: 3 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe  
+- Shadow Ball  
+- Rest  
+- Sleep Talk  
+- Hidden Power [Fighting]  
+
