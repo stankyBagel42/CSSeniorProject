@@ -649,3 +649,68 @@ IVs: 2 Atk / 30 Def
 - Roost  
 - Agility  
 
+========================================================================================================
+TEAM 11: A GREEK RMT
+========================================================================================================
+Zorbas (Azelf) @ Focus Sash  
+Ability: Levitate  
+Level: 78  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Naive Nature  
+- Stealth Rock  
+- Explosion  
+- Fire Blast  
+- Psychic  
+
+Dimitris (Gengar) @ Life Orb  
+Ability: Levitate  
+Level: 77  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
+- Shadow Ball  
+- Focus Blast  
+- Explosion  
+- Hypnosis  
+
+Yiannis (Infernape) @ Life Orb  
+Ability: Blaze  
+Level: 79  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Fire Blast  
+- Focus Blast  
+- Vacuum Wave  
+
+Maria (Manaphy) @ Life Orb  
+Ability: Hydration  
+Level: 76  
+EVs: 4 HP / 252 SpA / 252 Spe  
+IVs: 0 Atk  
+- Tail Glow  
+- Surf  
+- Energy Ball  
+- Ice Beam  
+
+Yiorgos (Empoleon) @ Petaya Berry  
+Ability: Torrent  
+Level: 80  
+EVs: 12 HP / 12 Def / 252 SpA / 232 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Agility  
+- Substitute  
+- Hydro Pump  
+- Ice Beam  
+
+Eleni (Jolteon) @ Choice Specs  
+Ability: Volt Absorb  
+Level: 81  
+EVs: 4 HP / 252 SpA / 252 Spe  
+IVs: 0 Atk  
+- Thunderbolt  
+- Shadow Ball  
+- Baton Pass  
+- Rain Dance  
+
