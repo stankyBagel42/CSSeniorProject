@@ -386,3 +386,69 @@ Adamant Nature
 - Waterfall  
 - Outrage  
 
+========================================================================================================
+TEAM 7: TEAM RAIKOULOVER 
+========================================================================================================
+Iggybot (Yanmega) @ Focus Sash  
+Ability: Speed Boost  
+Level: 82  
+EVs: 104 Def / 252 SpA / 152 Spe  
+Modest Nature  
+IVs: 3 Atk / 30 SpA / 30 SpD  
+- Bug Buzz  
+- Hidden Power [Ground]  
+- Hypnosis  
+- Protect  
+
+Blue Kirby (Heatran) @ Life Orb  
+Ability: Flash Fire  
+Level: 77  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
+- Flamethrower  
+- Earth Power  
+- Stealth Rock  
+- Explosion  
+
+Matty (Bronzong) @ Light Clay  
+Ability: Levitate  
+Level: 80  
+EVs: 216 HP / 252 Def / 40 SpD  
+Relaxed Nature  
+IVs: 0 Spe  
+- Gyro Ball  
+- Reflect  
+- Light Screen  
+- Explosion  
+
+Seven Deadly Sins (Gyarados) @ Leftovers  
+Ability: Intimidate  
+Level: 79  
+EVs: 216 HP / 252 Def / 40 SpD  
+Impish Nature  
+- Waterfall  
+- Stone Edge  
+- Rest  
+- Sleep Talk  
+
+Justinawe (Garchomp) @ Choice Scarf  
+Ability: Sand Veil  
+Level: 74  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Outrage  
+- Dragon Claw  
+- Earthquake  
+- Fire Blast  
+
+Wdro (Jirachi) @ Leftovers  
+Ability: Serene Grace  
+Level: 75  
+EVs: 252 HP / 80 SpA / 176 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Thunderbolt  
+- Substitute  
+- Calm Mind  
+
