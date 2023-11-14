@@ -452,3 +452,68 @@ IVs: 0 Atk
 - Substitute  
 - Calm Mind  
 
+========================================================================================================
+TEAM 8: THE DARK PASSENGER
+========================================================================================================
+The Bastard (Salamence) @ Life Orb  
+Ability: Intimidate  
+Level: 75  
+EVs: 6 HP / 252 Atk / 250 Spe  
+Jolly Nature  
+- Outrage  
+- Earthquake  
+- Dragon Dance  
+- Roost  
+
+Dark Passenger (Gengar) @ Life Orb  
+Ability: Levitate  
+Level: 77  
+EVs: 6 HP / 252 SpA / 250 Spe  
+Timid Nature  
+IVs: 2 Atk / 30 SpA / 30 Spe  
+- Shadow Ball  
+- Focus Blast  
+- Hidden Power [Fire]  
+- Protect  
+
+Balls of Steel (Magnezone) @ Leftovers  
+Ability: Magnet Pull  
+Level: 81  
+EVs: 42 HP / 252 SpA / 214 Spe  
+Naive Nature  
+- Thunderbolt  
+- Hidden Power [Grass]  
+- Substitute  
+- Explosion  
+
+Boy Blue (Vaporeon) (M) @ Leftovers  
+Ability: Water Absorb  
+Level: 83  
+EVs: 188 HP / 252 Def / 68 Spe  
+Bold Nature  
+IVs: 3 Atk / 30 SpA  
+- Wish  
+- Protect  
+- Surf  
+- Hidden Power [Electric]  
+
+Iron Man VI (Scizor) @ Choice Band  
+Ability: Technician  
+Level: 79  
+EVs: 198 HP / 252 Atk / 58 Spe  
+Adamant Nature  
+- Bullet Punch  
+- U-turn  
+- Superpower  
+- Pursuit  
+
+BBQ Time (Heatran) @ Choice Scarf  
+Ability: Flash Fire  
+Level: 77  
+EVs: 6 Atk / 252 SpA / 250 Spe  
+Naive Nature  
+- Explosion  
+- Earth Power  
+- Fire Blast  
+- Stealth Rock  
+
