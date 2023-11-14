@@ -517,3 +517,69 @@ Naive Nature
 - Fire Blast  
 - Stealth Rock  
 
+========================================================================================================
+TEAM 9: TEAM ROSE TYLER 
+========================================================================================================
+Fallen Leaves (Roserade) @ Focus Sash  
+Ability: Natural Cure  
+Level: 80  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 3 Atk / 30 SpA / 30 SpD  
+- Leaf Storm  
+- Sleep Powder  
+- Toxic Spikes  
+- Hidden Power [Ground]  
+
+Burn the Evidence (Heatran) @ Choice Scarf  
+Ability: Flash Fire  
+Level: 77  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Naive Nature  
+- Fire Blast  
+- Earth Power  
+- Explosion  
+- Stealth Rock  
+
+Turn Your Back (Metagross) @ Shuca Berry  
+Ability: Clear Body  
+Level: 78  
+EVs: 240 HP / 80 Atk / 188 SpD  
+Adamant Nature  
+- Meteor Mash  
+- Bullet Punch  
+- Earthquake  
+- Thunder Punch  
+
+Standing in the Rain (Rotom-Wash) @ Leftovers  
+Ability: Levitate  
+Level: 80  
+EVs: 108 HP / 192 SpA / 210 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Substitute  
+- Will-O-Wisp  
+- Shadow Ball  
+- Charge Beam  
+
+River Below (Swampert) @ Leftovers  
+Ability: Torrent  
+Level: 80  
+EVs: 252 HP / 40 Def / 216 SpD  
+Careful Nature  
+- Waterfall  
+- Curse  
+- Rest  
+- Sleep Talk  
+
+Midnight Mass (Jirachi) @ Leftovers  
+Ability: Serene Grace  
+Level: 75  
+EVs: 252 HP / 76 SpA / 180 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Calm Mind  
+- Thunderbolt  
+- Substitute  
+
