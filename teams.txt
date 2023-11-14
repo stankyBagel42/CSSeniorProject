@@ -258,3 +258,66 @@ Adamant Nature
 - Waterfall  
 - Dragon Dance  
 
+========================================================================================================
+TEAM 5: TEAM ASTRAL PROJECTION
+========================================================================================================
+Aerodactyl @ Focus Sash  
+Ability: Pressure  
+Level: 79  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Stealth Rock  
+- Taunt  
+- Rock Slide  
+- Earthquake  
+
+Gyarados @ Life Orb  
+Ability: Intimidate  
+Level: 79  
+EVs: 80 HP / 252 Atk / 176 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Earthquake  
+- Ice Fang  
+- Waterfall  
+
+Gengar @ Life Orb  
+Ability: Levitate  
+Level: 77  
+EVs: 40 Atk / 216 SpA / 252 Spe  
+Timid Nature  
+- Shadow Ball  
+- Explosion  
+- Focus Blast  
+- Hypnosis  
+
+Garchomp @ Choice Band  
+Ability: Sand Veil  
+Level: 74  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Dragon Claw  
+- Fire Fang  
+- Outrage  
+
+Lucario @ Life Orb  
+Ability: Inner Focus  
+Level: 80  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Close Combat  
+- Swords Dance  
+- Bullet Punch  
+- Extreme Speed  
+
+Deoxys-Speed @ Life Orb  
+Ability: Pressure  
+Level: 79  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Naive Nature  
+- Ice Beam  
+- Thunderbolt  
+- Superpower  
+- Shadow Ball  
+
