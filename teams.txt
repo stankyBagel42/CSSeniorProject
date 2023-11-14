@@ -583,3 +583,69 @@ IVs: 0 Atk
 - Thunderbolt  
 - Substitute  
 
+========================================================================================================
+TEAM 10: SIX PATHS OF PAIN
+========================================================================================================
+Starmie @ Choice Specs  
+Ability: Natural Cure  
+Level: 80  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hydro Pump  
+- Psychic  
+- Trick  
+- Rapid Spin  
+
+Heatran @ Shuca Berry  
+Ability: Flash Fire  
+Level: 77  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
+- Stealth Rock  
+- Fire Blast  
+- Earth Power  
+- Explosion  
+
+Celebi @ Leftovers  
+Ability: Natural Cure  
+Level: 80  
+EVs: 236 HP / 228 SpA / 44 Spe  
+Modest Nature  
+- Leaf Storm  
+- Hidden Power [Fire]  
+- Recover  
+- U-turn  
+
+Dugtrio @ Choice Band  
+Ability: Arena Trap  
+Level: 85  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Stone Edge  
+- Pursuit  
+- Aerial Ace  
+
+Raikou @ Choice Scarf  
+Ability: Pressure  
+Level: 77  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Rash Nature  
+IVs: 2 Atk / 30 Def  
+- Thunderbolt  
+- Hidden Power [Ice]  
+- Aura Sphere  
+- Shadow Ball  
+
+Zapdos @ Life Orb  
+Ability: Pressure  
+Level: 77  
+EVs: 240 HP / 226 SpA / 42 Spe  
+Modest Nature  
+IVs: 2 Atk / 30 Def  
+- Thunderbolt  
+- Hidden Power [Ice]  
+- Roost  
+- Agility  
+
