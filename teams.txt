@@ -128,3 +128,68 @@ IVs: 3 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Sleep Talk  
 - Hidden Power [Fighting]  
 
+========================================================================================================
+TEAM 3: TEACHER'S OUT
+========================================================================================================
+Garchomp @ Salac Berry  
+Ability: Sand Veil  
+Level: 74  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Substitute  
+- Swords Dance  
+- Dragon Claw  
+- Earthquake  
+
+Gengar @ Black Sludge  
+Ability: Levitate  
+Level: 77  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Substitute  
+- Pain Split  
+- Shadow Ball  
+- Focus Blast  
+
+Togekiss @ Leftovers  
+Ability: Serene Grace  
+Level: 79  
+EVs: 252 HP / 188 Def / 68 SpD  
+Bold Nature  
+- Substitute  
+- Nasty Plot  
+- Body Slam  
+- Air Slash  
+
+Breloom @ Toxic Orb  
+Ability: Poison Heal  
+Level: 81  
+EVs: 252 HP / 48 Atk / 208 Def  
+Adamant Nature  
+- Substitute  
+- Spore  
+- Leech Seed  
+- Focus Punch  
+
+Machamp @ Leftovers  
+Ability: No Guard  
+Level: 80  
+EVs: 128 HP / 252 Atk / 128 Spe  
+Adamant Nature  
+- Substitute  
+- Dynamic Punch  
+- Payback  
+- Stone Edge  
+
+Jirachi @ Leftovers  
+Ability: Serene Grace  
+Level: 75  
+EVs: 252 HP / 80 SpA / 176 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Substitute  
+- Calm Mind  
+- Thunderbolt  
+- Psychic  
+
