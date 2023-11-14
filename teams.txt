@@ -193,3 +193,68 @@ IVs: 0 Atk
 - Thunderbolt  
 - Psychic  
 
+========================================================================================================
+TEAM 4: WE ARE THE MACHAMPIONS! 
+========================================================================================================
+Homeland Security (Jirachi) @ Leftovers  
+Ability: Serene Grace  
+Level: 75  
+EVs: 252 HP / 8 Atk / 216 Def / 32 Spe  
+Impish Nature  
+- Stealth Rock  
+- Wish  
+- Zen Headbutt  
+- Body Slam  
+
+Big Brother (Machamp) @ Leftovers  
+Ability: No Guard  
+Level: 80  
+EVs: 252 HP / 220 Atk / 36 Def  
+Adamant Nature  
+- Dynamic Punch  
+- Rest  
+- Sleep Talk  
+- Ice Punch  
+
+FBI (Tyranitar) @ Choice Band  
+Ability: Sand Stream  
+Level: 79  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Pursuit  
+- Earthquake  
+- Stone Edge  
+- Crunch  
+
+NSA (Blissey) @ Leftovers  
+Ability: Natural Cure  
+Level: 80  
+EVs: 252 Def / 80 SpA / 176 SpD  
+Calm Nature  
+IVs: 3 Atk / 30 SpA / 30 SpD  
+- Thunder Wave  
+- Soft-Boiled  
+- Flamethrower  
+- Hidden Power [Ground]  
+
+Secret Service (Celebi) @ Leftovers  
+Ability: Natural Cure  
+Level: 80  
+EVs: 252 HP / 220 Def / 4 SpD / 32 Spe  
+Bold Nature  
+IVs: 2 Atk / 30 Def  
+- Grass Knot  
+- Hidden Power [Ice]  
+- Recover  
+- Thunder Wave  
+
+CIA (Gyarados) @ Leftovers  
+Ability: Intimidate  
+Level: 79  
+EVs: 252 HP / 176 Atk / 60 Def / 20 Spe  
+Adamant Nature  
+- Rest  
+- Sleep Talk  
+- Waterfall  
+- Dragon Dance  
+
