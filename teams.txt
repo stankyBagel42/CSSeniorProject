@@ -714,3 +714,67 @@ IVs: 0 Atk
 - Baton Pass  
 - Rain Dance  
 
+========================================================================================================
+TEAM 12: PRIDE & PREJUDICE
+========================================================================================================
+Heatran @ Shuca Berry  
+Ability: Flash Fire  
+Level: 77  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Naive Nature  
+- Fire Blast  
+- Stealth Rock  
+- Earth Power  
+- Explosion  
+
+Kingdra @ Lum Berry  
+Ability: Swift Swim  
+Level: 80  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Substitute  
+- Waterfall  
+- Outrage  
+
+Salamence @ Choice Band  
+Ability: Intimidate  
+Level: 75  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Outrage  
+- Dragon Claw  
+- Earthquake  
+- Stone Edge  
+
+Latias @ Leftovers  
+Ability: Levitate  
+Level: 70  
+EVs: 128 HP / 128 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Recover  
+- Refresh  
+- Dragon Pulse  
+
+Scizor @ Leftovers  
+Ability: Technician  
+Level: 79  
+EVs: 24 HP / 252 Atk / 232 Spe  
+Adamant Nature  
+- Bullet Punch  
+- Superpower  
+- Swords Dance  
+- U-turn  
+
+Magnezone @ Choice Scarf  
+Ability: Magnet Pull  
+Level: 81  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Naive Nature  
+- Thunderbolt  
+- Hidden Power [Fire]  
+- Flash Cannon  
+- Explosion  
+
