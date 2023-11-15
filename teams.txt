@@ -973,3 +973,393 @@ IVs: 0 Atk
 - Roost  
 - Roar  
 
+========================================================================================================
+TEAM 16 
+========================================================================================================
+Rubber Ball Sound Effect (RBSF) (Wobbuffet) @ Leftovers  
+Ability: Shadow Tag  
+Level: 81  
+EVs: 28 HP / 228 Def / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Counter  
+- Mirror Coat  
+- Safeguard  
+- Encore  
+
+Oink Oink (Mamoswine) @ Choice Band  
+Ability: Oblivious  
+Level: 80  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Ice Shard  
+- Stone Edge  
+- Superpower  
+
+Cash Money (Metagross) @ Shell Bell  
+Ability: Clear Body  
+Level: 78  
+Shiny: Yes  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Earthquake  
+- Meteor Mash  
+- Zen Headbutt  
+- Hammer Arm  
+
+W33DGOD!!!!!!!!! (Vileplume) @ Focus Sash  
+Ability: Chlorophyll  
+Level: 88  
+EVs: 252 HP / 252 SpA / 4 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sleep Powder  
+- Leech Seed  
+- Sludge Bomb  
+- Substitute  
+
+Reese's (Suicune) @ Leftovers  
+Ability: Pressure  
+Level: 80  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 2 Atk / 30 SpA  
+- Calm Mind  
+- Surf  
+- Ice Beam  
+- Hidden Power [Grass]  
+
+Dionysus (Breloom) @ Toxic Orb  
+Ability: Poison Heal  
+Level: 81  
+EVs: 72 HP / 252 Atk / 184 Spe  
+Adamant Nature  
+- Mach Punch  
+- Spore  
+- Seed Bomb  
+- Focus Punch  
+
+========================================================================================================
+TEAM 17 
+========================================================================================================
+Scootch (Sceptile) @ Leftovers  
+Ability: Overgrow  
+Level: 84  
+EVs: 252 HP / 4 Def / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Substitute  
+- Leech Seed  
+- Energy Ball  
+- Dragon Pulse  
+
+Sour Milk (Aerodactyl) @ Choice Band  
+Ability: Rock Head  
+Level: 79  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Rock Slide  
+- Earthquake  
+- Aerial Ace  
+- Double-Edge  
+
+Roswell Mk3 (Starmie) @ Mystic Water  
+Ability: Natural Cure  
+Level: 80  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Surf  
+- Psychic  
+- Thunderbolt  
+- Ice Beam  
+
+Junior (Salamence) @ Lum Berry  
+Ability: Intimidate  
+Level: 75  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Adamant Nature  
+- Fire Fang  
+- Dragon Claw  
+- Aerial Ace  
+- Earthquake  
+
+Los Orca (Skarmory) @ Leftovers  
+Ability: Keen Eye  
+Level: 78  
+EVs: 252 HP / 252 Def / 4 SpD  
+Impish Nature  
+- Toxic  
+- Whirlwind  
+- Spikes  
+- Aerial Ace  
+
+Chiquitita (Slaking) @ Choice Band  
+Ability: Truant  
+Level: 84  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Adamant Nature  
+- Return  
+- Earthquake  
+- Brick Break  
+- Shadow Claw  
+
+========================================================================================================
+TEAM 18 
+========================================================================================================
+Beetleborg (Heracross) @ Flame Orb  
+Ability: Guts  
+Level: 81  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Jolly Nature  
+- Megahorn  
+- Protect  
+- Rock Slide  
+- Close Combat  
+
+Icarus (Dragonite) @ Life Orb  
+Ability: Inner Focus  
+Level: 78  
+EVs: 252 Atk / 252 Spe  
+Lonely Nature  
+- Draco Meteor  
+- Earthquake  
+- Extreme Speed  
+- Aerial Ace  
+
+Alphonse (Scizor) @ Leftovers  
+Ability: Technician  
+Level: 79  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Bullet Punch  
+- Bug Bite  
+- Swords Dance  
+- Aerial Ace  
+
+Meta Naito (Gliscor) @ Power Herb  
+Ability: Hyper Cutter  
+Level: 80  
+EVs: 220 HP / 252 Atk / 36 Def  
+Impish Nature  
+- Sky Attack  
+- Earthquake  
+- Tailwind  
+- U-turn  
+
+Marauder (Porygon-Z) @ Choice Specs  
+Ability: Adaptability  
+Level: 81  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Tri Attack  
+- Dark Pulse  
+- Ice Beam  
+- Thunderbolt  
+
+Liebe (Gengar) @ Focus Sash  
+Ability: Levitate  
+Level: 77  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Taunt  
+- Energy Ball  
+- Thunderbolt  
+
+========================================================================================================
+TEAM 19: DOGGIES!!
+========================================================================================================
+Air Bud (Arcanine) @ Lum Berry  
+Ability: Intimidate  
+Level: 82  
+EVs: 192 HP / 252 Atk / 64 Spe  
+Adamant Nature  
+- Flare Blitz  
+- Extreme Speed  
+- Roar  
+- Iron Head  
+
+Bolt (Manectric) @ Choice Scarf  
+Ability: Static  
+Level: 87  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Discharge  
+- Switcheroo  
+- Flamethrower  
+- Roar  
+
+Hades (Houndoom) @ Life Orb  
+Ability: Flash Fire  
+Level: 84  
+EVs: 252 Atk / 32 SpA / 224 Spe  
+Hasty Nature  
+- Pursuit  
+- Roar  
+- Fire Blast  
+- Sucker Punch  
+
+IV (Mightyena) @ Sitrus Berry  
+Ability: Intimidate  
+Level: 92  
+EVs: 248 HP / 116 Atk / 144 Spe  
+Adamant Nature  
+- Taunt  
+- Super Fang  
+- Sucker Punch  
+- Roar  
+
+Anubis (Lucario) @ Life Orb  
+Ability: Inner Focus  
+Level: 80  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Roar  
+- Close Combat  
+- Extreme Speed  
+- Ice Punch  
+
+Gollum (Granbull) @ Sitrus Berry  
+Ability: Intimidate  
+Level: 88  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Impish Nature  
+- Roar  
+- Thunder Wave  
+- Return  
+- Earthquake  
+
+========================================================================================================
+TEAM 20: GYM-TIMIDATION 
+========================================================================================================
+Pitbull (Arcanine) @ Choice Band  
+Ability: Intimidate  
+Level: 82  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Flare Blitz  
+- Extreme Speed  
+- Iron Head  
+- Thunder Fang  
+
+Panther (Luxray) @ Life Orb  
+Ability: Intimidate  
+Level: 88  
+EVs: 204 Atk / 156 SpA / 148 Spe  
+Naughty Nature  
+- Superpower  
+- Thunderbolt  
+- Ice Fang  
+- Crunch  
+
+Baby Arm (Hitmontop) @ Chesto Berry  
+Ability: Intimidate  
+Level: 86  
+EVs: 252 HP / 252 Def / 4 SpD  
+Impish Nature  
+- Close Combat  
+- Stone Edge  
+- Rapid Spin  
+- Sucker Punch  
+
+Venus (Mawile) @ Leftovers  
+Ability: Intimidate  
+Level: 96  
+EVs: 252 HP / 28 Def / 228 Spe  
+Jolly Nature  
+IVs: 0 Atk  
+- Substitute  
+- Swords Dance  
+- Baton Pass  
+- Taunt  
+
+Bull (Tauros) @ Choice Band  
+Ability: Intimidate  
+Level: 79  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Jolly Nature  
+- Return  
+- Iron Head  
+- Earthquake  
+- Pursuit  
+
+Chad (Salamence) @ Yache Berry  
+Ability: Intimidate  
+Level: 75  
+EVs: 244 HP / 12 Atk / 252 SpD  
+Careful Nature  
+- Earthquake  
+- Aerial Ace  
+- Dragon Claw  
+- Crunch  
+
+========================================================================================================
+TEAM 21: RAIN TEAM 
+========================================================================================================
+Crobat @ Damp Rock  
+Ability: Inner Focus  
+Level: 82  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Rain Dance  
+- U-turn  
+- Taunt  
+- Hypnosis  
+
+Scizor @ Sitrus Berry  
+Ability: Technician  
+Level: 79  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Pursuit  
+- Brick Break  
+- U-turn  
+- Bullet Punch  
+
+Rotom-Wash @ Damp Rock  
+Ability: Levitate  
+Level: 80  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunder  
+- Hydro Pump  
+- Shadow Ball  
+- Rain Dance  
+
+Ludicolo @ Life Orb  
+Ability: Swift Swim  
+Level: 85  
+EVs: 60 HP / 252 SpA / 196 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Surf  
+- Energy Ball  
+- Ice Beam  
+- Rain Dance  
+
+Kabutops @ Focus Sash  
+Ability: Swift Swim  
+Level: 84  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Swords Dance  
+- Waterfall  
+- Stone Edge  
+- Aqua Jet  
+
+Dugtrio @ Expert Belt  
+Ability: Arena Trap  
+Level: 85  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Stone Edge  
+- Sucker Punch  
+- Toxic  
+
