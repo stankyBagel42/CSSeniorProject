@@ -908,3 +908,68 @@ IVs: 0 Atk
 - Seismic Toss  
 - Thunder Wave  
 
+========================================================================================================
+TEAM 15: I HATE SAND 
+========================================================================================================
+Garchomp @ Choice Scarf  
+Ability: Sand Veil  
+Level: 74  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Outrage  
+- Stone Edge  
+- Dragon Claw  
+
+Swampert @ Leftovers  
+Ability: Torrent  
+Level: 80  
+EVs: 252 HP / 152 Def / 100 SpD / 4 Spe  
+Relaxed Nature  
+- Earthquake  
+- Ice Beam  
+- Stealth Rock  
+- Roar  
+
+Scizor @ Choice Band  
+Ability: Technician  
+Level: 79  
+EVs: 248 HP / 252 Atk / 8 Spe  
+Adamant Nature  
+- Bullet Punch  
+- Pursuit  
+- U-turn  
+- Superpower  
+
+Tyranitar @ Lum Berry  
+Ability: Sand Stream  
+Level: 79  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Dragon Dance  
+- Stone Edge  
+- Crunch  
+- Earthquake  
+
+Heatran @ Shuca Berry  
+Ability: Flash Fire  
+Level: 77  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Lava Plume  
+- Earth Power  
+- Protect  
+- Roar  
+
+Zapdos @ Leftovers  
+Ability: Pressure  
+Level: 77  
+EVs: 248 HP / 228 Def / 32 Spe  
+Bold Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Thunderbolt  
+- Roost  
+- Roar  
+
