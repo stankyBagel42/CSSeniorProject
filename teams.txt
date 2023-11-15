@@ -844,3 +844,67 @@ Adamant Nature
 - Bullet Punch  
 - Close Combat  
 
+========================================================================================================
+TEAM 14: THE GANG
+========================================================================================================
+Quagmire (Luxray) @ Life Orb  
+Ability: Intimidate  
+Level: 88  
+EVs: 204 Atk / 156 SpA / 148 Spe  
+Naughty Nature  
+- Thunderbolt  
+- Superpower  
+- Crunch  
+- Hidden Power [Grass]  
+
+Jimmy Jams (Staraptor) @ Choice Band  
+Ability: Intimidate  
+Level: 82  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Adamant Nature  
+- Brave Bird  
+- Return  
+- Close Combat  
+- U-turn  
+
+Gyaradosiclitis (Gyarados) @ Wacan Berry  
+Ability: Intimidate  
+Level: 79  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Waterfall  
+- Ice Fang  
+- Earthquake  
+
+Harambe (Infernape) @ Expert Belt  
+Ability: Blaze  
+Level: 79  
+EVs: 64 Atk / 252 SpA / 192 Spe  
+Naive Nature  
+- Fire Blast  
+- Close Combat  
+- U-turn  
+- Grass Knot  
+
+Buddy Rho (Alakazam) @ Choice Specs  
+Ability: Synchronize  
+Level: 83  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Signal Beam  
+- Focus Blast  
+- Trick  
+
+Peppa Thepig (Clefable) @ Leftovers  
+Ability: Magic Guard  
+Level: 83  
+EVs: 252 HP / 4 Def / 252 SpD  
+IVs: 0 Atk  
+- Ice Beam  
+- Soft-Boiled  
+- Seismic Toss  
+- Thunder Wave  
+
