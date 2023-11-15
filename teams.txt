@@ -778,3 +778,69 @@ Naive Nature
 - Flash Cannon  
 - Explosion  
 
+========================================================================================================
+TEAM 13: CHAMPION CYNTHIA!
+========================================================================================================
+Garchomp @ Focus Sash  
+Ability: Rough Skin  
+Level: 74  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Naive Nature  
+- Stealth Rock  
+- Outrage  
+- Earthquake  
+- Fire Blast  
+
+Spiritomb @ Black Glasses  
+Ability: Infiltrator  
+Level: 86  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Pursuit  
+- Shadow Sneak  
+- Sucker Punch  
+- Will-O-Wisp  
+
+Togekiss @ Leftovers  
+Ability: Serene Grace  
+Level: 79  
+EVs: 252 HP / 120 Def / 132 SpD / 4 Spe  
+Calm Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Air Slash  
+- Thunder Wave  
+- Roost  
+
+Milotic @ Life Orb  
+Ability: Marvel Scale  
+Level: 82  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 30 HP / 2 Atk / 30 Def / 30 SpA / 30 SpD  
+- Hydro Pump  
+- Ice Beam  
+- Hidden Power [Flying]  
+- Recover  
+
+Roserade @ Choice Scarf  
+Ability: Natural Cure  
+Level: 80  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 2 Atk / 30 SpA / 30 Spe  
+- Leaf Storm  
+- Sludge Bomb  
+- Hidden Power [Fire]  
+- Sleep Powder  
+
+Lucario @ Air Balloon  
+Ability: Justified  
+Level: 80  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Adamant Nature  
+- Swords Dance  
+- Extreme Speed  
+- Bullet Punch  
+- Close Combat  
+
