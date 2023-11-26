@@ -23,3 +23,4 @@
 - Advisor Meetings: 10 Hours (everyone)
 - Team Research and Design: 10 Hours (Alex)
 - Game Testing: 5 Hours (Alex)
+- Server Setup and Interface Testing: 15 Hours (Nick)
