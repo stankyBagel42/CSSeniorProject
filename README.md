@@ -1,17 +1,16 @@
 # Team Names
 # [Project Description](Project-Description.md)
 # User Stories and Design Diagrams
-## User Stories
-## Design Diagrams: Level 0, Level 1, and Level 2
-## Description of the Diagrams
+## [User Stories](User_Stories.md)
+## [Design Diagrams: Level 0, Level 1, and Level 2 (descriptions included)](Design_Diagrams/Design%20Diagram.pdf)
 # Project Tasks and Timeline
-## Task List
+## [Task List](Tasklist.md)
 ## Timeline
 ## Effort Matrix
 # ABET Concerns Essay
 # PPT Slideshow
-# Self-Assessment Essays
-# Professional Biographies
+# [Self-Assessment Essays](Homework%20Essays)
+# [Professional Biographies](Professional%20Biographies)
 # Budget
 ## Expenses to Date
 ## Monetary Value of Donated Items
