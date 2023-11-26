@@ -6,7 +6,7 @@
 # Project Tasks and Timeline
 ## [Task List](Tasklist.md)
 ## [Timeline](Timeline.md)
-## [Effort Matrix](Effot Matrix.jpeg)
+## [Effort Matrix](Effot%20Matrix.jpeg)
 # ABET Concerns Essay
 # [PPT Slideshow](Slide%20Show%20Design%20Presentation.pptx)
 # [Self-Assessment Essays](Homework%20Essays)
