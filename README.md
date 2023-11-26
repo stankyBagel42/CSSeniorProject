@@ -19,3 +19,7 @@
 - https://www.smogon.com/rmt/archive/dpp
 - https://bulbapedia.bulbagarden.net/wiki/Main_Page
 ## Hours
+- Assignments and Team Meetings: 20 Hours (everyone)
+- Advisor Meetings: 10 Hours (everyone)
+- Team Research and Design: 10 Hours (Alex)
+- Game Testing: 5 Hours (Alex)
