@@ -12,8 +12,8 @@
 # [Self-Assessment Essays](Homework%20Essays)
 # [Professional Biographies](Professional%20Biographies)
 # Budget
-## Expenses to Date
-## Monetary Value of Donated Items
+## Expenses to Date: $0
+## Monetary Value of Donated Items: $0
 # Appendix
 ## References
 ## Hours
