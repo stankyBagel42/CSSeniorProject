@@ -16,4 +16,6 @@
 ## Monetary Value of Donated Items: $0
 # Appendix
 ## References
+- https://www.smogon.com/rmt/archive/dpp
+- https://bulbapedia.bulbagarden.net/wiki/Main_Page
 ## Hours
