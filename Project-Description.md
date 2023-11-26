@@ -17,6 +17,11 @@ AI struggles to match human skill in diverse Pokémon battles, limiting challeng
 # Inadequacy of current solutions
 Existing AI systems for Pokémon battles lack adaptability and struggle to emulate human-level strategies, resulting in predictable and less engaging gameplay experiences.
 
+# Problem Abstract
+Our senior design project aims to develop an AI agent capable of playing as a Pokémon trainer using the popular online battle simulator, Pokémon Showdown’s public API. This project leverages the power of reinforcement learning techniques to create a proficient virtual trainer capable of making strategic decisions in a dynamic and competitive environment.
+
+Pokémon Showdown is an online platform that provides a battle simulator for Pokémon games, enabling players to assemble and battle teams of Pokémon in real-time. Our project focuses on enhancing the game-playing experience by implementing a reinforcement learning algorithm to train the AI agent to make strategic decisions, such as selecting moves, switching Pokémon, and predicting the opponent's actions.
+
 # Technical background applicable to the problem
 ???
 
