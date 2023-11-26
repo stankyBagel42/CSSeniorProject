@@ -11,16 +11,14 @@
 - Computer Science
 - wolffec@mail.uc.edu
 
-# Project Abstract
-Our senior design project aims to develop an AI agent capable of playing as a Pokémon trainer using the popular online battle simulator, Pokémon Showdown’s public API. This project leverages the power of reinforcement learning techniques to create a proficient virtual trainer capable of making strategic decisions in a dynamic and competitive environment.
-
-Pokémon Showdown is an online platform that provides a battle simulator for Pokémon games, enabling players to assemble and battle teams of Pokémon in real-time. Our project focuses on enhancing the game-playing experience by implementing a reinforcement learning algorithm to train the AI agent to make strategic decisions, such as selecting moves, switching Pokémon, and predicting the opponent's actions.
+# Problem Statement
+AI struggles to match human skill in diverse Pokémon battles, limiting challenging gaming experiences.
 
 # Inadequacy of current solutions
-Current AI approaches for turn-based strategy games lack the necessary depth and adaptability required for dynamic gameplay. Many rely on simplistic heuristics or struggle with limited datasets, hindering their ability to learn complex strategies and adapt in real-time. These models often lack scalability, fail to generalize across diverse scenarios, and may raise ethical concerns regarding fairness. Their incapability to handle the intricate decision-making demands of competitive battles highlights the need for more sophisticated, adaptable AI approaches to effectively navigate the complexities of turn-based strategy games.
+Existing AI systems for Pokémon battles lack adaptability and struggle to emulate human-level strategies, resulting in predictable and less engaging gameplay experiences.
 
 # Technical background applicable to the problem
 ???
 
 # Approach to Problem
-???
+To improve AI performance in Pokémon battles, our team will implement Double Deep Q-Network (DDQN) training using Pokémon Showdown battle data. We'll supplement this with self-play and engagements with other players. Testing involves scenarios with clear optimal choices and historical battle data simulations. Our approach will expose the AI to diverse team compositions and battle scenarios to enhance its adaptability across different strategies.
