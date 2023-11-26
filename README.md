@@ -24,3 +24,4 @@
 - Team Research and Design: 10 Hours (Alex)
 - Game Testing: 5 Hours (Alex)
 - Server Setup and Interface Testing: 15 Hours (Nick)
+- PyTorch RL and Tutorials: 15 Hours (Eric)
