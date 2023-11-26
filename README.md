@@ -5,7 +5,7 @@
 ## [Design Diagrams: Level 0, Level 1, and Level 2 (descriptions included)](Design_Diagrams/Design%20Diagram.pdf)
 # Project Tasks and Timeline
 ## [Task List](Tasklist.md)
-## Timeline
+## [Timeline](Timeline.md)
 ## Effort Matrix
 # ABET Concerns Essay
 # [PPT Slideshow](Slide%20Show%20Design%20Presentation.pptx)
