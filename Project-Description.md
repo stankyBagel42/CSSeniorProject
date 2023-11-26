@@ -11,8 +11,6 @@
 - Computer Science
 - wolffec@mail.uc.edu
 
-# Problem Statement
-
 # Project Abstract
 Our senior design project aims to develop an AI agent capable of playing as a Pokémon trainer using the popular online battle simulator, Pokémon Showdown’s public API. This project leverages the power of reinforcement learning techniques to create a proficient virtual trainer capable of making strategic decisions in a dynamic and competitive environment.
 
