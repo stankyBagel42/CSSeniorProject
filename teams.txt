@@ -117,7 +117,7 @@ Bold Nature
 - Grass Knot  
 - U-turn  
 
-The Man Who Was Thursday (Spiritomb) @ Leftovers  
+Spiritomb @ Leftovers  
 Ability: Pressure  
 Level: 86  
 EVs: 252 HP / 100 Def / 156 SpD  
@@ -158,7 +158,7 @@ Level: 79
 EVs: 252 HP / 188 Def / 68 SpD  
 Bold Nature  
 - Substitute  
-- Nasty Plot  
+- Defog  
 - Body Slam  
 - Air Slash  
 
@@ -551,7 +551,7 @@ Adamant Nature
 - Earthquake  
 - Thunder Punch  
 
-Standing in the Rain (Rotom-Wash) @ Leftovers  
+Rotom-Wash @ Leftovers  
 Ability: Levitate  
 Level: 80  
 EVs: 108 HP / 192 SpA / 210 Spe  
@@ -629,7 +629,8 @@ Jolly Nature
 
 Raikou @ Choice Scarf  
 Ability: Pressure  
-Level: 77  
+Level: 77
+Shiny: Yes
 EVs: 4 Def / 252 SpA / 252 Spe  
 Rash Nature  
 IVs: 2 Atk / 30 Def  
@@ -782,7 +783,7 @@ Naive Nature
 TEAM 13: CHAMPION CYNTHIA!
 ========================================================================================================
 Garchomp @ Focus Sash  
-Ability: Rough Skin  
+Ability: Sand Veil  
 Level: 74  
 EVs: 252 Atk / 4 SpA / 252 Spe  
 Naive Nature  
@@ -792,7 +793,7 @@ Naive Nature
 - Fire Blast  
 
 Spiritomb @ Black Glasses  
-Ability: Infiltrator  
+Ability: Pressure  
 Level: 86  
 EVs: 252 HP / 252 Atk / 4 SpD  
 Adamant Nature  
@@ -834,8 +835,8 @@ IVs: 2 Atk / 30 SpA / 30 Spe
 - Hidden Power [Fire]  
 - Sleep Powder  
 
-Lucario @ Air Balloon  
-Ability: Justified  
+Lucario @ Expert Belt 
+Ability: Inner Focus  
 Level: 80  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Adamant Nature  
