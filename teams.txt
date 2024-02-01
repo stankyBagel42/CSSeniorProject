@@ -977,7 +977,7 @@ IVs: 0 Atk
 ========================================================================================================
 TEAM 16 
 ========================================================================================================
-RBSF (Wobbuffet) @ Leftovers  
+Wobbuffet @ Leftovers
 Ability: Shadow Tag  
 Level: 81  
 EVs: 28 HP / 228 Def / 252 SpD  
@@ -1363,4 +1363,3 @@ Adamant Nature
 - Stone Edge  
 - Sucker Punch  
 - Toxic  
-

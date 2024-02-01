@@ -1,2 +1,11 @@
 # PyCharm project settings
 .idea/
+
+__pycache__/
+
+# scratch files
+scratch/
+
+# model training checkpoints and replays
+checkpoints/
+replays/
