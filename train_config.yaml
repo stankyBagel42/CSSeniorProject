@@ -1,0 +1,23 @@
+# File paths
+checkpoint_dir: C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints
+# final save path will be checkpoint_dir\run_name\
+run_name: 240131_TestRun
+
+
+# Training/Model Parameters
+batch_size: 128
+num_steps: 200000 # TURNS for each bot to play (not battles)
+
+# model updating
+warmup_steps: 5000 # Steps without training in the beginning
+learn_freq: 10 # steps between updating network
+lr: 0.00025 # learning rate (Adam optimizer)
+
+# exploration rate
+exploration_rate: 1
+exploration_rate_decay: 0.9999975 # every step exploration rate is multiplied by this
+exploration_rate_min: 0.1
+
+# other settings
+gamma: 0.9 # % of influence for target (offline) network when making predictions
+save_freq: 5000 # Steps between saving the networks to the checkpoint directory
