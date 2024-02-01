@@ -1,11 +1,22 @@
 import os
+from enum import Enum
 from pathlib import Path
 import random
 
 import yaml
 
 repo_root = Path(__file__).absolute().parents[1]
+POKEMON_IDX_MAP = {}
 
+class STAT_IDX(Enum):
+    """Stat index mapping for game state vector"""
+    ATK = 0
+    DEF = 1
+    SPA = 2
+    SPD = 3
+    SPE = 4
+    EVASION = 5
+    ACCURACY = 6
 
 def run_showdown_cmd(cmd:str, args:str) -> str:
     """Run a command using pokemon showdown CLI and node.JS. THIS PREPENDS 'node pokemon-showdown' TO YOUR COMMAND"""
@@ -39,3 +50,23 @@ def read_yaml(yaml_filepath:str | Path) -> dict:
     return data
 
 
+def pokemon_to_index(pokemon) -> int:
+    global POKEMON_IDX_MAP
+    if len(POKEMON_IDX_MAP.keys()) == 0:
+        with open(repo_root / 'all_pokemon.csv', 'r') as inp:
+            for row in inp.readlines()[1:]:
+                pokemon, idx = row.split(',')
+                idx = int(idx)
+                POKEMON_IDX_MAP[pokemon.lower()] = idx
+
+
+
+
+def get_packed_teams(packed_teams_dir:Path) -> list[str]:
+    """Get a list of all packed team strings from the given directory"""
+    packed_teams = []
+    for txt in packed_teams_dir.iterdir():
+        with open(txt, 'r') as team_inp:
+            team = team_inp.read()
+            packed_teams.append(team)
+    return packed_teams

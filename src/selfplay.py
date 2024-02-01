@@ -12,7 +12,7 @@ from tqdm import tqdm
 from poke_env import AccountConfiguration
 
 from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder
-from src.utils import repo_root, read_yaml
+from src.utils import repo_root, read_yaml, get_packed_teams
 
 
 async def battle_handler(player1:SimpleRLPlayer, player2:SimpleRLPlayer, num_challenges, teams:list[str]=None):
@@ -33,7 +33,6 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
     while len(player.battles) == 0:
         time.sleep(0.001)
 
-    player.agent.next_team
     current_battle = player.battles[list(player.battles.keys())[0]]
     state = player.embed_battle(current_battle)
     logs = []
@@ -70,13 +69,13 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         q, loss = player.model.learn()
         prev_q = q if q else prev_q
         prev_loss = loss if loss else prev_loss
-
+        win_rate = player.win_rate if len(player.battles) > 1 else -1
         # log dictionary
         log = {
             'q': f"{prev_q:+.2f}",
             'loss': f"{prev_loss:+.2f}",
             'reward': f"{reward:+06.2f}",
-            'win_rate': f"{player.win_rate:0.2f}",
+            'win_rate': f"{win_rate:0.2f}",
             'exploration_rate': player.model.exploration_rate
         }
         pbar.set_postfix(log)
@@ -106,14 +105,6 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
     while player.current_battle and not player.current_battle.finished:
         _ = player.step(-1)
 
-def get_packed_teams(packed_teams_dir:Path) -> list[str]:
-    """Get a list of all packed team strings from the given directory"""
-    packed_teams = []
-    for txt in packed_teams_dir.iterdir():
-        with open(txt, 'r') as team_inp:
-            team = team_inp.read()
-            packed_teams.append(team)
-    return packed_teams
 
 
 
@@ -127,6 +118,21 @@ if __name__ == "__main__":
     p2 = AccountConfiguration('RL Bot 2', None)
 
     BATTLE_FORMAT = "gen4anythinggoes"
+
+    # STATE:
+    # Move power for active moves (4)
+    # Move multiplier for active moves (4)
+    # # Pokemon fainted allies (1)
+    # # Pokemon fainted opponent (1)
+    # # Status on allies (6)
+    # # Status on enemies (6)
+    # Allies HP Fraction (6)
+    # Opponent HP Fraction (6)
+    # Ally Active Stat Changes (7)
+    # Opponent Active Stat Changes (7)
+    # One hot encode ally pokemon, active first (66 * 6, 396)
+    # One hot encode opponent pokemon active pokemon (66)
+    STATE_DIM = 510
 
 
     checkpoint_dir = Path(cfg['checkpoint_dir']) / cfg['run_name']
@@ -142,14 +148,15 @@ if __name__ == "__main__":
         teambuilder = None
 
     AGENT_KWARGS = {
-        'state_dim': 34,
+        'state_dim': STATE_DIM,
         'save_dir': checkpoint_dir / 'player_1',
         'action_dim': 9,
     }
+    num_steps = cfg.pop('num_steps')
 
     # non-training parameter config values
     cfg.pop('checkpoint_dir')
-    cfg.pop('num_steps')
+
     cfg.pop('run_name')
     AGENT_KWARGS.update(cfg)
 
@@ -173,7 +180,6 @@ if __name__ == "__main__":
     )
 
     # Setup arguments to pass to the training function
-    num_steps = 200_000
     p1_env_kwargs = {"num_steps": num_steps}
     p2_env_kwargs = {"num_steps": num_steps}
 
