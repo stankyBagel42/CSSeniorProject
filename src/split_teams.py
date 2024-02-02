@@ -4,7 +4,7 @@ import re
 import tempfile
 from pathlib import Path
 
-from src.utils import repo_root
+from src.utils.general import repo_root
 
 if __name__ == '__main__':
     teams_txt = repo_root / "teams.txt"

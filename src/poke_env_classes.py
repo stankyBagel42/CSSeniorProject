@@ -9,9 +9,7 @@ from poke_env.teambuilder import Teambuilder
 
 from src.rl.agent import PokemonAgent
 from src.rl.network import PokeNet
-from src.utils import pokemon_to_index, POKEMON_IDX_MAP, STAT_IDX
-
-GEN_DATA = GenData(4)
+from src.utils.pokemon import pokemon_to_index, POKEMON_IDX_MAP, STAT_IDX, SideCondition, Field, Weather, GEN_DATA
 
 
 class MultiTeambuilder(Teambuilder):

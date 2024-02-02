@@ -1,5 +1,3 @@
-import copy
-
 from torch import nn
 
 class PokeNet(nn.Module):

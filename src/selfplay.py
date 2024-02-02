@@ -2,7 +2,6 @@ import asyncio
 import copy
 import random
 import time
-from collections import defaultdict
 from pathlib import Path
 from threading import Thread
 
@@ -12,8 +11,10 @@ from tqdm import tqdm
 from poke_env import AccountConfiguration
 
 from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder
-from src.utils import repo_root, read_yaml, get_packed_teams
+from src.rl.agent import PokemonAgent
 
+from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all
+from src.utils.pokemon import test_vs_random
 
 async def battle_handler(player1:SimpleRLPlayer, player2:SimpleRLPlayer, num_challenges, teams:list[str]=None):
     player2_team = None
