@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 from threading import Thread
 
-import numpy as np
+import wandb
 from matplotlib import pyplot as plt
 from poke_env.player import RandomPlayer
 from tqdm import tqdm
@@ -79,9 +79,15 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
             'reward': f"{reward:+06.2f}",
             'exploration_rate': player.model.exploration_rate
         }
+        if loss == -1:
+            log.pop('loss')
+        if q == -1:
+            log.pop('q')
         pbar.set_postfix(log)
         pbar.update()
 
+        # log player values under separate folders
+        wandb.log({f"{player.username}/{k}":float(v) for k,v in log.items()})
 
         state = next_state
         if done or current_battle.finished:
@@ -123,6 +129,7 @@ def validate_player(player:SimpleRLPlayer, baseline_bot, trained_bot:TrainedRLPl
     target_wr = test_vs_random(target_bot, num_validate_battles, random_player=baseline_bot)
 
     val_end = time.time()
+    wandb.log({f"{player.username}/val/wr": wr, f"{player.username}/val/target_wr": target_wr, f"{player.username}/val/step":player.model.curr_step})
     print("\n\n" + "-" * 30)
     print(f"RL Bot at {player.model.curr_step} Steps")
     print(f"Online net vs Random WR: {wr:0.2%}")
@@ -135,6 +142,10 @@ if __name__ == "__main__":
     seed_all(42)
 
     cfg = read_yaml(repo_root / 'train_config.yaml')
+
+    # initialize weights and biases to track training
+    wandb.init(project='pokemon_reinforcement_learning',
+               config=cfg)
     p1 = AccountConfiguration('RL Bot 1', None)
     p2 = AccountConfiguration('RL Bot 2', None)
 
@@ -261,6 +272,7 @@ if __name__ == "__main__":
 
     player1.close(purge=False)
     player2.close(purge=False)
+    wandb.finish()
     end = time.time()
     print(f"Finished with {num_steps} steps ({player1.n_finished_battles} battles) in {end - start:0.2f}s "
           f"({player1.n_finished_battles / (end - start) :0.2f} battles/s)")
