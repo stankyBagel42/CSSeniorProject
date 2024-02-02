@@ -36,13 +36,13 @@ class PokemonAgent:
         #  The Agent's DNN to predict the most optimal action
         self.online_net = PokeNet(self.state_dim, self.action_dim).float()
         self.target_net = copy.deepcopy(self.online_net)
+        self.optimizer = torch.optim.Adam(self.online_net.parameters(), lr=lr)
         if self.use_cuda:
             self.online_net = self.online_net.to('cuda')
             self.target_net = self.target_net.to('cuda')
         if checkpoint:
             self.load(checkpoint)
 
-        self.optimizer = torch.optim.Adam(self.online_net.parameters(), lr=lr)
         self.loss_fn = torch.nn.SmoothL1Loss()
 
     def net(self, x, model):
@@ -160,10 +160,11 @@ class PokemonAgent:
 
     def save(self):
         self.save_dir.mkdir(parents=True,exist_ok=True)
-        save_path = self.save_dir / f"PokeNet_{int(self.curr_step // self.save_every)}.chkpt"
+        save_path = self.save_dir / f"PokeNet_{int(self.curr_step // self.save_every)}.pt"
         torch.save(
             dict(
                 online_model=self.online_net.state_dict(),
+                optimizer_state=self.optimizer.state_dict(),
                 target_model=self.target_net.state_dict(),
                 exploration_rate=self.exploration_rate
             ),
@@ -177,12 +178,15 @@ class PokemonAgent:
         if not load_path.exists():
             raise ValueError(f"{load_path} does not exist")
 
-        ckp = torch.load(load_path, map_location=('cuda' if self.use_cuda else 'cpu'))
-        exploration_rate = ckp.get('exploration_rate')
-        online_state_dict = ckp.get('online_model')
-        target_state_dict = ckp.get('target_model')
+        model_data = torch.load(load_path, map_location=('cuda' if self.use_cuda else 'cpu'))
+        exploration_rate = model_data['exploration_rate']
+        online_state_dict = model_data['online_model']
+        target_state_dict = model_data['target_model']
+        optimizer_state_dict = model_data['optimizer_state']
 
         print(f"Loading model at {load_path} with exploration rate {exploration_rate}")
         self.online_net.load_state_dict(online_state_dict)
         self.target_net.load_state_dict(target_state_dict)
+        self.optimizer.load_state_dict(optimizer_state_dict)
         self.exploration_rate = exploration_rate
+
