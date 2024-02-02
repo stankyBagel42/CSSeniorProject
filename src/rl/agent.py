@@ -12,10 +12,11 @@ from src.rl.network import PokeNet
 class PokemonAgent:
     def __init__(self, state_dim, action_dim, save_dir:Path, checkpoint=None, batch_size:int = 32, exploration_rate:int=1,
                  exploration_rate_decay:float = 0.99999975, exploration_rate_min: float = 0.1, gamma:float = 0.9,
-                 warmup_steps:int =1e3, learn_freq:int = 3, sync_freq: int = 1e4, save_freq:int = 1e4, lr:float = 0.00025):
+                 warmup_steps:int =1e3, learn_freq:int = 3, sync_freq: int = 1e4, save_freq:int = 1e4, lr:float = 0.00025,
+                 memory_size:int = 100000):
         self.state_dim = state_dim
         self.action_dim = action_dim
-        self.memory = deque(maxlen=100000)
+        self.memory = deque(maxlen=memory_size)
         self.batch_size = batch_size
 
         self.exploration_rate = exploration_rate
