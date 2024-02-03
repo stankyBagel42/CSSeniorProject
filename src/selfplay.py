@@ -11,6 +11,7 @@ from poke_env.player import RandomPlayer
 from tqdm import tqdm
 from poke_env import AccountConfiguration
 
+from benchmark import benchmark_player
 from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer
 from src.rl.agent import PokemonAgent
 from src.rl.game_state import GameState
@@ -85,9 +86,13 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
             log.pop('q')
         pbar.set_postfix(log)
         pbar.update()
-
+        step = log.pop('step')
+        wandb_log = {
+            f"{player.username}/{k}": float(v) for k, v in log.items()
+        }
+        wandb_log['step'] = step
         # log player values under separate folders
-        wandb.log({f"{player.username}/{k}":float(v) for k,v in log.items()})
+        wandb.log(wandb_log)
 
         state = next_state
         if done or current_battle.finished:
@@ -119,7 +124,7 @@ def load_latest(checkpoint_directory: str | Path, **kwargs) -> PokemonAgent:
     return agent
 
 
-def validate_player(player:SimpleRLPlayer, baseline_bot, trained_bot:TrainedRLPlayer, target_bot:TrainedRLPlayer):
+def validate_player(player: SimpleRLPlayer, baseline_bot, trained_bot: TrainedRLPlayer, target_bot: TrainedRLPlayer):
     """Validate the given player's current model against the given baseline"""
     val_start = time.time()
     trained_bot.model = copy.deepcopy(player.model.online_net).cpu()
@@ -129,13 +134,14 @@ def validate_player(player:SimpleRLPlayer, baseline_bot, trained_bot:TrainedRLPl
     target_wr = test_vs_random(target_bot, num_validate_battles, random_player=baseline_bot)
 
     val_end = time.time()
-    wandb.log({f"{player.username}/val/wr": wr, f"{player.username}/val/target_wr": target_wr, f"{player.username}/val/step":player.model.curr_step})
+    wandb.log({f"{player.username}/val/wr": wr, f"{player.username}/val/target_wr": target_wr, "step": player.model.curr_step})
     print("\n\n" + "-" * 30)
     print(f"RL Bot at {player.model.curr_step} Steps")
     print(f"Online net vs Random WR: {wr:0.2%}")
     print(f"Target net vs Random WR: {target_wr:0.2%}")
     print(f"Validation took {val_end - val_start:0.2f}s")
     print("-" * 30 + "\n\n")
+
 
 if __name__ == "__main__":
     # Set random seed
@@ -184,7 +190,6 @@ if __name__ == "__main__":
     resume_from = cfg.pop('resume_from')
     AGENT_KWARGS.update(cfg)
 
-
     if resume:
         save_dir = resume_from / 'player_1'
         player1 = SimpleRLPlayer(
@@ -228,8 +233,8 @@ if __name__ == "__main__":
         )
 
     # create validation players once
-    trained_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT,team=MultiTeambuilder(teams))
-    target_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT,team=MultiTeambuilder(teams))
+    trained_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
+    target_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
 
     validation_baseline = RandomPlayer(battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
 
@@ -263,16 +268,12 @@ if __name__ == "__main__":
             for p in [player1, player2]:
                 validate_player(p, validation_baseline, trained_player, target_player)
 
-
-
-
     # Wait for thread completion
     t1.join()
     t2.join()
 
     player1.close(purge=False)
     player2.close(purge=False)
-    wandb.finish()
     end = time.time()
     print(f"Finished with {num_steps} steps ({player1.n_finished_battles} battles) in {end - start:0.2f}s "
           f"({player1.n_finished_battles / (end - start) :0.2f} battles/s)")
@@ -283,4 +284,25 @@ if __name__ == "__main__":
     plt.plot(val_steps, val_target_wrs, label="Target Network WR")
     plt.title("Validation Winrate vs Random")
     plt.savefig(checkpoint_dir / 'validate_winrate_plot.png')
-    plt.show()
+
+    # copy player 1's model to benchmark (player 2 should have similar performance)
+    trained_player.model = copy.deepcopy(player1.model.online_net).cpu()
+
+    print(f"Benchmarking...")
+    # run the player benchmark vs the standard deterministic players
+    benchmark_results = benchmark_player(trained_player, n_challenges=500, teambuilder=teambuilder)
+
+    # get the average win rate in the benchmark, and log results
+    total_wr = 0
+    count = 0
+    print(benchmark_results.keys())
+    for opponent, win_rate in benchmark_results[trained_player.username].items():
+        if win_rate is not None:
+            total_wr += 1
+            count += 1
+            print(f"Bot WR vs {opponent.lower()}: {win_rate}")
+            wandb.log({f'benchmark/{opponent.lower()}': win_rate})
+
+    wandb.log({"benchmark/average_winrate": total_wr / count})
+
+    wandb.finish()

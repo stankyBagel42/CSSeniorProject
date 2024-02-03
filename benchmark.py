@@ -6,7 +6,7 @@ from poke_env.player import Player, RandomPlayer, MaxBasePowerPlayer, SimpleHeur
 from tabulate import tabulate
 
 from src.poke_env_classes import MultiTeambuilder, TrainedRLPlayer
-from src.utils import repo_root, get_packed_teams
+from src.utils.general import repo_root, get_packed_teams
 
 GEN_DATA = GenData(4)
 
@@ -31,33 +31,43 @@ class MaxDamagePlayer(Player):
         else:
             return self.choose_random_move(battle)
 
-async def main():
+
+def benchmark_player(player:TrainedRLPlayer, n_challenges:int=100, teambuilder=None) -> dict[str,dict[str,float]]:
+    """Each player in players plays against the others n_challenges times, the resulting win rates are stored in a
+    dictionary of dictionaries."""
+    if teambuilder is None:
+        teambuilder = MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))
+    battle_format = player.format
+    players = [
+        player,
+        MaxDamagePlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))),
+        RandomPlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams")),
+                     account_configuration=AccountConfiguration("Random Benchmark", None)),
+        MaxBasePowerPlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))),
+        SimpleHeuristicsPlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))),
+    ]
+
+    cross_eval_results = asyncio.get_event_loop().run_until_complete(cross_evaluate(players, n_challenges=n_challenges))
+
+    return cross_eval_results
+
+
+if __name__ == '__main__':
+    MODEL_PATH = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402002_BigState_1mil\player_1\PokeNet_26.pt"
+    NUM_CHALLENGES = 100
+
     packed_teams = get_packed_teams(repo_root / 'packed_teams')
     teambuilder = MultiTeambuilder(packed_teams)
     p1 = AccountConfiguration("RL 1",None)
-    p2 = AccountConfiguration("RL 2",None)
 
     format = 'gen4anythinggoes'
     rl_player = TrainedRLPlayer(model=MODEL_PATH,battle_format=format, team=teambuilder, account_configuration=p1)
-    rl_player2 = TrainedRLPlayer(model=MODEL2_PATH,battle_format=format, team=teambuilder, account_configuration=p2)
 
-    players = [
-        rl_player,
-        MaxDamagePlayer(battle_format=format, team=teambuilder),
-        RandomPlayer(battle_format=format, team=teambuilder, account_configuration=AccountConfiguration("Random Benchmark",None)),
-        MaxBasePowerPlayer(battle_format=format, team=teambuilder),
-        SimpleHeuristicsPlayer(battle_format=format, team=teambuilder),
-        rl_player2,
-    ]
-    cross_eval_results = await cross_evaluate(players, n_challenges=NUM_CHALLENGES)
-    table = [["-"] + [p.username for p in players]]
+    cross_eval_results = benchmark_player(rl_player, NUM_CHALLENGES, teambuilder)
+
+
+    table = [["-"] + [p.username for p in cross_eval_results.keys()]]
     for p_1, results in cross_eval_results.items():
         table.append([p_1] + [cross_eval_results[p_1][p_2] for p_2 in results])
     print("Cross evaluation of 2 DDQNs with baselines:")
     print(tabulate(table))
-
-if __name__ == '__main__':
-    MODEL_PATH = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402001_1mil_Resumed\player_1\PokeNet_149.pt"
-    MODEL2_PATH = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402001_1mil_Resumed\player_2\PokeNet_149.pt"
-    NUM_CHALLENGES = 100
-    asyncio.get_event_loop().run_until_complete(main())
