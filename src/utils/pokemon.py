@@ -36,6 +36,12 @@ class SideCondition(Enum):
     TAILWIND = 5
     TOXIC_SPIKES = 6
 
+    def is_stackable(self) -> bool:
+        """Poke-env has a weird thing where the value of the side condition dictionary is the turn a condition was
+        played if it isn't stackable. I just need if it is present, and the stacks otherwise."""
+        return self in [SideCondition.SPIKES, SideCondition.TOXIC_SPIKES]
+
+
 class Field(Enum):
     """Pared down version of poke-env side fields since we don't need every possible value."""
     GRAVITY = 0

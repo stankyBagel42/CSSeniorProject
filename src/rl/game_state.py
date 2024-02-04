@@ -1,6 +1,6 @@
 import numpy as np
 from gym.spaces import Box
-from poke_env.environment import AbstractBattle, Pokemon
+from poke_env.environment import AbstractBattle
 
 from src.utils.pokemon import pokemon_to_index, GEN_DATA, STAT_IDX, SideCondition, Field, Weather
 
@@ -10,7 +10,6 @@ class Component:
     length: int
     low: np.ndarray
     high: np.ndarray
-
 
 
 class MovePower(Component):
@@ -70,6 +69,7 @@ class FullFieldEffects(Component):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
+
 class PokemonIDX(Component):
     """Pokemon OHE vector"""
     length = 67
@@ -117,7 +117,7 @@ class GameState:
         self.description = Box(self.low, self.high, dtype=np.float32)
 
     @staticmethod
-    def embed_state(battle:AbstractBattle) -> np.ndarray:
+    def embed_state(battle: AbstractBattle) -> np.ndarray:
         """Converts battle object to a numpy array representing the battle state"""
         # we could have just made "encode()" methods on each component to make it fully modular, but that results in a
         # LOT of repeated calculations (like iterating over the team for the statuses, hp values, and fainted values
@@ -145,7 +145,6 @@ class GameState:
         side_conditions = np.zeros(14)
         field_conditions = np.zeros(4)
         weather_effects = np.zeros(4)
-
 
         # get move information
         for i, move in enumerate(battle.available_moves):
@@ -191,12 +190,18 @@ class GameState:
         fainted_mon_opponent /= 6
 
         # encode single-sided conditions for both teams
-        for condition in battle.side_conditions.keys():
-            idx = SideCondition.__getitem__(condition.name.upper()).value
-            side_conditions[idx] = 1
-        for condition in battle.opponent_side_conditions.keys():
-            idx = SideCondition.__getitem__(condition.name.upper()).value
-            side_conditions[idx + 7] = 1
+        # poke-env marks non-stackable conditions with the turn they were played, so we have to check if it is
+        # stackable or not to return the correct state
+        for env_condition, val in battle.side_conditions.items():
+            condition = SideCondition.__getitem__(env_condition.name.upper())
+            idx = condition.value
+            real_val = val if condition.is_stackable() else 1
+            side_conditions[idx] = real_val
+        for env_condition, val in battle.opponent_side_conditions.items():
+            condition = SideCondition.__getitem__(env_condition.name.upper())
+            idx = condition.value
+            real_val = val if condition.is_stackable() else 1
+            side_conditions[idx + 7] = real_val
 
         # different field conditions
         for field in battle.fields.keys():
