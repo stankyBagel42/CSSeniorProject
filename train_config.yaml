@@ -28,3 +28,14 @@ exploration_rate_min: 0.1
 gamma: 0.9 # % of influence for target (offline) network when making predictions
 save_freq: 5000 # Steps between saving the networks to the checkpoint directory
 memory_size: 200000 # Maximum steps to hold in memory
+
+# model architecture
+# Model is created in a simple way (BASE is base_nodes layer, N is the number of layers per side -1), all layers are
+# just linear/dense with ReLU between, and a softmax at the end.
+# INPUT_DIM -> BASE -> 2*BASE -> ... -> 2^N * BASE -> 2^(N-1) * BASE -> ... -> 2*BASE -> BASE -> OUTPUT_DIM
+base_nodes_layer: 64
+num_layers_per_side: 3
+
+# EXPERIMENTAL: If false, then the agent will treat model output as a probability distribution and sample actions from
+#   it, true will simply use argmax
+use_argmax: false

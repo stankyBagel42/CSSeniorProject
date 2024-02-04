@@ -8,7 +8,7 @@ from poke_env.environment import AbstractBattle
 from poke_env.player import Gen4EnvSinglePlayer, Player, ForfeitBattleOrder
 from poke_env.teambuilder import Teambuilder
 
-from src.rl.agent import PokemonAgent
+from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
 from src.rl.network import PokeNet
 from src.utils.pokemon import pokemon_to_index, POKEMON_IDX_MAP, STAT_IDX, SideCondition, Field, Weather, GEN_DATA
@@ -26,7 +26,8 @@ class MultiTeambuilder(Teambuilder):
 
 
 class SimpleRLPlayer(Gen4EnvSinglePlayer):
-    def __init__(self, model=None, agent_kwargs: dict = None, game_state: GameState = None, *args, **kwargs):
+    def __init__(self, model=None, agent_config: AgentConfig = None, game_state: GameState = None, *args, **kwargs):
+        assert (model is not None) or (agent_config is not None), "Either a model or an agent config must be provided."
         self.done_training = False
         self.num_battles = 0
 
@@ -36,9 +37,7 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
         self.game_state = game_state
 
         if model is None:
-            if agent_kwargs is not None and 'action_dim' not in agent_kwargs.keys():
-                agent_kwargs['action_dim'] = self.action_space_size()
-            model = PokemonAgent(**agent_kwargs)
+            model = PokemonAgent(agent_config)
         self.model = model
 
         # initialize base object
@@ -58,7 +57,7 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
 
 
 class TrainedRLPlayer(Player):
-    def __init__(self, model: PokeNet | str | Path, game_state:GameState = None, *args, **kwargs):
+    def __init__(self, model: PokeNet | str | Path, game_state:GameState = None, use_argmax:bool=True, *args, **kwargs):
         """model is the pytorch model used to make actions given a battle state (can be a model or a PathLike object
         pointing to the saved weights. Args and Kwargs are sent to Player init"""
         super().__init__(*args, **kwargs)
@@ -67,12 +66,15 @@ class TrainedRLPlayer(Player):
         if game_state is None:
             game_state = GameState()
         self.game_state = game_state
-
+        self.use_argmax = use_argmax
         # load the model
         if isinstance(model,str | Path):
-            model_weights = torch.load(model)['online_model']
-            model = PokeNet(num_inputs=self.game_state.length, num_outputs=9, layers_per_side=3)
-            model.load_state_dict(model_weights)
+            model_info = torch.load(model)
+            model = PokeNet(num_inputs=self.game_state.length, num_outputs=9,
+                            layers_per_side=model_info['cfg']['num_layers_per_side'],
+                            base_nodes=model_info['cfg']['base_nodes_layer'])
+            model.load_state_dict(model_info['online_model'])
+
         self.model = model
 
     def choose_move(self, battle):
@@ -82,12 +84,27 @@ class TrainedRLPlayer(Player):
         with torch.no_grad():
             predictions = self.model(state)
 
-        # choose moves from highest likelihood to lowest, only doing random if nothing else works
-        cur_action = len(predictions) - 1
-        actions = np.argsort(predictions)
-        while cur_action > 0:
-            action = actions[cur_action]
-            # from action_to_move
+        if self.use_argmax:
+            # choose moves from highest likelihood to lowest, only doing random if nothing else works
+            cur_action = len(predictions) - 1
+            actions = np.argsort(predictions)
+            while cur_action > 0:
+                action = actions[cur_action]
+                # from action_to_move
+                if action == -1:
+                    return ForfeitBattleOrder()
+                elif (
+                        action < 4
+                        and action < len(battle.available_moves)
+                        and not battle.force_switch
+                ):
+                    return Player.create_order(battle.available_moves[action])
+                elif 0 <= action - 4 < len(battle.available_switches):
+                    return Player.create_order(battle.available_switches[action - 4])
+                cur_action -= 1
+            return self.choose_random_move(battle)
+        else:
+            action = torch.distributions.Categorical(predictions).sample().item()
             if action == -1:
                 return ForfeitBattleOrder()
             elif (
@@ -95,12 +112,11 @@ class TrainedRLPlayer(Player):
                     and action < len(battle.available_moves)
                     and not battle.force_switch
             ):
-                return Player.create_order(battle.available_moves[action])
+                return self.create_order(battle.available_moves[action])
             elif 0 <= action - 4 < len(battle.available_switches):
-                return Player.create_order(battle.available_switches[action - 4])
-            cur_action -= 1
-        return self.choose_random_move(battle)
-
+                return self.create_order(battle.available_switches[action - 4])
+            else:
+                return self.choose_random_move(battle)
 
 class MaxDamagePlayer(Player):
 
