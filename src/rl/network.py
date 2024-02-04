@@ -1,10 +1,10 @@
 from torch import nn
 
 class PokeNet(nn.Module):
-    def __init__(self, num_inputs:int, num_outputs:int, layers_per_side:int=3):
+    def __init__(self, num_inputs:int, num_outputs:int, layers_per_side:int=3, base_nodes:int=64):
         super().__init__()
 
-        cur_count = 64
+        cur_count = base_nodes
         layers = []
 
         for i in range(layers_per_side):
@@ -21,7 +21,7 @@ class PokeNet(nn.Module):
             cur_count = cur_count // 2
 
         layers = layers[:-1]
-        layers.append(nn.Softmax(dim=0))
+        layers.append(nn.Softmax())
 
         self.network = nn.Sequential(*layers)
 

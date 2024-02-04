@@ -2,6 +2,7 @@ import asyncio
 import copy
 import random
 import time
+from dataclasses import asdict
 from pathlib import Path
 from threading import Thread
 
@@ -13,7 +14,7 @@ from poke_env import AccountConfiguration
 
 from benchmark import benchmark_player
 from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer
-from src.rl.agent import PokemonAgent
+from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
 from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all
 from src.utils.pokemon import test_vs_random
@@ -174,11 +175,6 @@ if __name__ == "__main__":
         teams = None
         teambuilder = None
 
-    AGENT_KWARGS = {
-        'state_dim': STATE_DIM,
-        'save_dir': checkpoint_dir / 'player_1',
-        'action_dim': 9,
-    }
     num_steps = cfg.pop('num_steps')
     validate_freq = cfg.pop('validate_freq')
     num_validate_battles = cfg.pop('num_validate_battles')
@@ -188,28 +184,27 @@ if __name__ == "__main__":
     cfg.pop('run_name')
     resume = cfg.pop('resume')
     resume_from = cfg.pop('resume_from')
-    AGENT_KWARGS.update(cfg)
 
+    agent_config = AgentConfig(state_dim=STATE_DIM, action_dim=9, save_dir=checkpoint_dir / 'player_1', **cfg)
+
+    # save agent config, has some repeated keys, but it also has some extra info like the state dim
+    write_yaml(asdict(agent_config),checkpoint_dir / 'agent_config.yaml')
     if resume:
-        save_dir = resume_from / 'player_1'
         player1 = SimpleRLPlayer(
             battle_format=BATTLE_FORMAT,
             opponent="placeholder",
             start_challenging=False,
             account_configuration=p1,
-            model=load_latest(save_dir, **AGENT_KWARGS),
+            model=load_latest(resume_from / 'player_1', agent_config),
             team=teambuilder
         )
-
-        save_dir = resume_from / 'player_2'
-
-        AGENT_KWARGS['save_dir'] = checkpoint_dir / 'player_2'
+        agent_config.save_dir = checkpoint_dir / 'player_2'
         player2 = SimpleRLPlayer(
             battle_format=BATTLE_FORMAT,
             opponent="placeholder",
             start_challenging=False,
             account_configuration=p2,
-            model=load_latest(save_dir, **AGENT_KWARGS),
+            model=load_latest(resume_from / 'player_2', agent_config),
             team=teambuilder
         )
     else:
@@ -218,17 +213,17 @@ if __name__ == "__main__":
             opponent="placeholder",
             start_challenging=False,
             account_configuration=p2,
-            agent_kwargs=AGENT_KWARGS,
+            agent_config=agent_config,
             team=teambuilder
         )
-        AGENT_KWARGS['save_dir'] = checkpoint_dir / 'player_2'
+        agent_config.save_dir = checkpoint_dir / 'player_2'
 
         player1 = SimpleRLPlayer(
             battle_format=BATTLE_FORMAT,
             opponent=player2,
             start_challenging=False,
             account_configuration=p1,
-            agent_kwargs=AGENT_KWARGS,
+            agent_config=agent_config,
             team=teambuilder
         )
 
