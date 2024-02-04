@@ -9,3 +9,4 @@ scratch/
 # model training checkpoints and replays
 checkpoints/
 replays/
+wandb/

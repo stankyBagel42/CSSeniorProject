@@ -1,3 +1,6 @@
+# if true, wandb won't log anything (helps avoid spamming wandb with updates)
+debug: false
+
 # File paths
 checkpoint_dir: C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints
 # final save path will be checkpoint_dir\run_name\
