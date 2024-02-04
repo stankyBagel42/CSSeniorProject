@@ -1,8 +1,10 @@
 import asyncio
+import random
 
 from poke_env import AccountConfiguration
 from poke_env.data import GenData
-from poke_env.player import Player, RandomPlayer, MaxBasePowerPlayer, SimpleHeuristicsPlayer, cross_evaluate
+from poke_env.player import Player, RandomPlayer, MaxBasePowerPlayer, SimpleHeuristicsPlayer
+from poke_env.teambuilder import ConstantTeambuilder
 from tabulate import tabulate
 
 from src.poke_env_classes import MultiTeambuilder, TrainedRLPlayer
@@ -31,25 +33,41 @@ class MaxDamagePlayer(Player):
         else:
             return self.choose_random_move(battle)
 
+def single_battle(player:TrainedRLPlayer, opponent: Player, teams:list[str]) -> bool:
+    """Returns true if the player won, false if they didn't"""
+    player._team = ConstantTeambuilder(random.choice(teams))
+    opponent._team = ConstantTeambuilder(random.choice(teams))
+    wins_before = player.n_won_battles
+    asyncio.get_event_loop().run_until_complete(player.battle_against(opponent))
+    wins_after = player.n_won_battles
+    return wins_after > wins_before
 
-def benchmark_player(player:TrainedRLPlayer, n_challenges:int=100, teambuilder=None) -> dict[str,dict[str,float]]:
+
+
+
+def benchmark_player(player:TrainedRLPlayer, teams:list[str],n_challenges:int=100) -> dict[str,float]:
     """Each player in players plays against the others n_challenges times, the resulting win rates are stored in a
-    dictionary of dictionaries."""
-    if teambuilder is None:
-        teambuilder = MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))
+    dictionary mapping opponents to the winrate against that opponent."""
     battle_format = player.format
     players = [
-        player,
-        MaxDamagePlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))),
-        RandomPlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams")),
+        MaxDamagePlayer(battle_format=battle_format, team=MultiTeambuilder(teams)),
+        RandomPlayer(battle_format=battle_format, team=MultiTeambuilder(teams),
                      account_configuration=AccountConfiguration("Random Benchmark", None)),
-        MaxBasePowerPlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))),
-        SimpleHeuristicsPlayer(battle_format=battle_format, team=MultiTeambuilder(get_packed_teams(repo_root / "packed_teams"))),
+        MaxBasePowerPlayer(battle_format=battle_format, team=MultiTeambuilder(teams)),
+        SimpleHeuristicsPlayer(battle_format=battle_format, team=MultiTeambuilder(teams)),
     ]
 
-    cross_eval_results = asyncio.get_event_loop().run_until_complete(cross_evaluate(players, n_challenges=n_challenges))
+    winrates = {}
 
-    return cross_eval_results
+    for opponent in players:
+        wins = 0
+        for i in range(n_challenges):
+            player_won = single_battle(player, opponent, teams=teams)
+            if player_won:
+                wins += 1
+        winrates[opponent.username] = wins/n_challenges
+
+    return winrates
 
 
 if __name__ == '__main__':
@@ -63,7 +81,7 @@ if __name__ == '__main__':
     format = 'gen4anythinggoes'
     rl_player = TrainedRLPlayer(model=MODEL_PATH,battle_format=format, team=teambuilder, account_configuration=p1)
 
-    cross_eval_results = benchmark_player(rl_player, NUM_CHALLENGES, teambuilder)
+    cross_eval_results = benchmark_player(rl_player, packed_teams, NUM_CHALLENGES)
 
 
     table = [["-"] + [p.username for p in cross_eval_results.keys()]]
