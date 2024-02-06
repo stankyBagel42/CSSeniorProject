@@ -1,6 +1,6 @@
-# [1. Getting Started](./11_AboutPokemon.md)
-### [1.1 About Pokemon](./11_AboutPokemon.md)
-### [1.2 About Pokemon Showdown](./12_AboutShowdown.md)
+# 1. [Getting Started](./11_AboutPokemon.md)
+### 1.1 [About Pokemon](./11_AboutPokemon.md)
+### 1.2 [About Pokemon Showdown](./12_AboutShowdown.md)
 
 # 2. Setting Up Pokemon Showdown
 
