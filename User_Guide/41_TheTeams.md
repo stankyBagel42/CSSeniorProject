@@ -7,17 +7,17 @@ Each Pokemon entry will include its nickname (if applicable), item, ability, EVs
 ## The OG
 This team was adapted from the oldest entry I could find on the Gen IV smogon forum. I'll include notes from the original author.
 
-![Roserade](./PokemonImages/Roserade.webp)
+![Roserade](./PokemonImages/Roserade.webp)  
 Moves:
 - Grass Knot
 - Hidden Power Fire
 - Sleep Powder
 - Toxic Spikes
-Item: Focus Sash
-Ability: Natural Cure
-EVs: 4 Def / 252 Spe / 252 SpA
-Nature: Timid (+Spd, -Atk)
-> I ended up sticking with Hidden Power Fire as the main move, to deter stall (Skarmory / Forretress primarily) from setting up after allowing a Pokemon to absorb sleep. I also settled on Sleep Powder + Toxic Spikes over Grass Whistle + Spikes because Sleep Powder's accuracy was much more appealing and 1 layer of Toxic Spikes is just a little worse than 1 layer of Spikes for the initial switch in.
+Item: Focus Sash  
+Ability: Natural Cure  
+EVs: 4 Def / 252 Spe / 252 SpA  
+Nature: Timid (+Spd, -Atk)  
+> I ended up sticking with Hidden Power Fire as the main move, to deter stall (Skarmory / Forretress primarily) from setting up after allowing a Pokemon to absorb sleep. I also settled on Sleep Powder + Toxic Spikes over Grass Whistle + Spikes because Sleep Powder's accuracy was much more appealing and 1 layer of Toxic Spikes is just a little worse than 1 layer of Spikes for the initial switch in.  
 
 ## Stall Team
 ## Teacher's Out
