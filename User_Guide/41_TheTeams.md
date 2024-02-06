@@ -12,7 +12,7 @@ Moves:
 - Grass Knot
 - Hidden Power Fire
 - Sleep Powder
-- Toxic Spikes
+- Toxic Spikes  
 Item: Focus Sash  
 Ability: Natural Cure  
 EVs: 4 Def / 252 Spe / 252 SpA  
