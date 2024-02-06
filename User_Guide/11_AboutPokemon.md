@@ -1,4 +1,4 @@
-### [prev](./0_TableOfContents.md) | [next](./12_AboutShowdown.md)
+### [TOC](./0_TableOfContents.md) | [next](./12_AboutShowdown.md)
 # 1.1 About Pokemon
 "Pokémon," short for "Pocket Monsters," is a popular multimedia franchise created by Nintendo, Game Freak, and Creatures. The franchise was introduced by Nintendo in 1996 and has since become one of the most successful and recognizable brands in the world. The concept of Pokémon revolves around fictional creatures called Pokémon, which humans, known as Pokémon Trainers, catch and train to battle each other for sport.
 
@@ -16,4 +16,4 @@ Key elements of the Pokémon franchise include:
 
 The success of Pokémon is attributed to its captivating world, diverse and imaginative creatures, and the sense of adventure and camaraderie it instills in players and fans. The franchise continues to evolve with new generations of games, expansions to the TCG, and ongoing additions to the animated series and movies.
 
-### [prev](./0_TableOfContents.md) | [next](./12_AboutShowdown.md)
+### [TOC](./0_TableOfContents.md) | [next](./12_AboutShowdown.md)
