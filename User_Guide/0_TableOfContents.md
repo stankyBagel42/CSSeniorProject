@@ -9,3 +9,6 @@
 # 4. [Playing a Game](./41_TheTeams.md)
 ### 4.1 [The Teams](./41_TheTeams.md)
 ### 4.2 [Challenging the Bot](./42_ChallengingTheBot.md)
+
+# Appendices
+### Appendix A: Abbreviations
