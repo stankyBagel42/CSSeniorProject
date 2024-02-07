@@ -11,4 +11,4 @@
 ### 4.2 [Challenging the Bot](./42_ChallengingTheBot.md)
 
 # Appendices
-### Appendix A: Abbreviations
+### Appendix A: Abbreviations and Acronyms
