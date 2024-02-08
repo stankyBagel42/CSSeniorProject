@@ -57,22 +57,22 @@ class Weather(Enum):
     SUNNYDAY = 3
 
 
-def test_vs_random(player, teams: list[str], n_challenges: int = 100, random_player: RandomPlayer = None,
+def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_player = None,
                    format: str = "gen4anythinggoes") -> float:
-    """Battle the given player against a random player for n_challenges times. Useful for benchmarking performance
+    """Battle the given player against a baseline player for n_challenges times. Useful for benchmarking performance
     over time when training"""
 
-    original_wins=random_player.n_won_battles
-    original_battles = random_player.n_finished_battles
-    if random_player is None:
-        random_player = RandomPlayer(battle_format=format)
+    original_wins=baseline_player.n_won_battles
+    original_battles = baseline_player.n_finished_battles
+    if baseline_player is None:
+        baseline_player = RandomPlayer(battle_format=format)
 
     for i in range(n_challenges):
-        random_player._team = ConstantTeambuilder(random.choice(teams))
-        asyncio.get_event_loop().run_until_complete(random_player.battle_against(player, n_battles=1))
+        baseline_player._team = ConstantTeambuilder(random.choice(teams))
+        asyncio.get_event_loop().run_until_complete(baseline_player.battle_against(player, n_battles=1))
 
-    new_wins = random_player.n_won_battles - original_wins
-    new_battles = random_player.n_finished_battles - original_battles
+    new_wins = baseline_player.n_won_battles - original_wins
+    new_battles = baseline_player.n_finished_battles - original_battles
     return 1 - (new_wins/new_battles)
 
 

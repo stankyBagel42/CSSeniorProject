@@ -6,17 +6,19 @@ from dataclasses import asdict
 from pathlib import Path
 from threading import Thread
 
+from poke_env.environment import AbstractBattle
+from poke_env.player import SimpleHeuristicsPlayer
+
 import wandb
-from poke_env.player import RandomPlayer
 from tqdm import tqdm
 from poke_env import AccountConfiguration
 
 from benchmark import benchmark_player
-from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer
+from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer, MaxDamagePlayer
 from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
 from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all
-from src.utils.pokemon import test_vs_random
+from src.utils.pokemon import test_vs_bot
 
 
 async def battle_handler(player1: SimpleRLPlayer, player2: SimpleRLPlayer, num_challenges, teams: list[str] = None):
@@ -28,6 +30,21 @@ async def battle_handler(player1: SimpleRLPlayer, player2: SimpleRLPlayer, num_c
         player1.agent.send_challenges(player2.username, num_challenges),
         player2.agent.accept_challenges(player1.username, num_challenges, packed_team=player2_team),
     )
+
+
+def is_battle_finished(battle: AbstractBattle) -> bool:
+    """Poke env hangs annoyingly, this might help with that?"""
+    all_fainted_team = True
+    all_fainted_opponent = True
+    for mon in battle.team.values():
+        if not (mon.fainted or mon.current_hp_fraction == 0):
+            all_fainted_team = False
+            break
+    for mon in battle.opponent_team.values():
+        if not (mon.fainted or mon.current_hp_fraction == 0):
+            all_fainted_opponent = False
+            break
+    return all_fainted_team or all_fainted_opponent
 
 
 def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int, position: int = 0):
@@ -48,6 +65,11 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
     for i in range(num_steps):
         # if the current battle is done (can happen before any moves because the opponent could end it)
         if current_battle.finished:
+            player.reset_env()
+            # IT HANGS HERE SOMETIMES WHEN ALL POKEMON ARE FAINTED BUT ONLY ONE THREAD RECOGNIZES THE BATTLE IS FINISHED?
+            # ADDING SOMETHING LIKE player.current_battle._finish_battle() MIGHT HELP BECAUSE IT MARKS THE BATTLE AS NOT FINISHD OTHERWISE
+            assert is_battle_finished(current_battle)
+            current_battle._finish_battle()
             state = player.reset()
             current_battle = player.battles[sorted(list(player.battles.keys()))[-1]]
         if isinstance(state, tuple):
@@ -118,7 +140,7 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         _ = player.step(-1)
 
 
-def load_latest(checkpoint_directory: str | Path, cfg:AgentConfig, **kwargs) -> PokemonAgent:
+def load_latest(checkpoint_directory: str | Path, cfg: AgentConfig, **kwargs) -> PokemonAgent:
     latest_checkpoint = latest_ckpt_file(checkpoint_directory)
     agent = PokemonAgent(cfg, checkpoint=latest_checkpoint, **kwargs)
     return agent
@@ -130,16 +152,17 @@ def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: Traine
     trained_bot.model = copy.deepcopy(player.model.online_net).cpu()
     target_bot.model = copy.deepcopy(player.model.target_net).cpu()
 
-    wr = test_vs_random(trained_bot, n_challenges=num_validate_battles, random_player=baseline_player, teams=teams)
-    target_wr = test_vs_random(target_bot, n_challenges=num_validate_battles, random_player=baseline_player, teams=teams)
+    wr = test_vs_bot(trained_bot, n_challenges=num_validate_battles, baseline_player=baseline_player, teams=teams)
+    target_wr = test_vs_bot(target_bot, n_challenges=num_validate_battles, baseline_player=baseline_player,
+                               teams=teams)
 
     val_end = time.time()
     wandb.log({f"{player.username}/val/wr": wr, f"{player.username}/val/target_wr": target_wr,
                "step": player.model.curr_step})
     print("\n\n" + "-" * 30)
     print(f"RL Bot at {player.model.curr_step} Steps")
-    print(f"Online net vs Random WR: {wr:0.2%}")
-    print(f"Target net vs Random WR: {target_wr:0.2%}")
+    print(f"Online net vs Baseline WR: {wr:0.2%}")
+    print(f"Target net vs Baseline WR: {target_wr:0.2%}")
     print(f"Validation took {val_end - val_start:0.2f}s")
     print("-" * 30 + "\n\n")
 
@@ -186,12 +209,12 @@ if __name__ == "__main__":
     cfg.pop('checkpoint_dir')
     cfg.pop('run_name')
     resume = cfg.pop('resume')
-    resume_from = cfg.pop('resume_from')
+    resume_from = Path(cfg.pop('resume_from'))
 
     agent_config = AgentConfig(state_dim=STATE_DIM, action_dim=9, save_dir=checkpoint_dir / 'player_1', **cfg)
 
     # save agent config, has some repeated keys, but it also has some extra info like the state dim
-    write_yaml(asdict(agent_config),checkpoint_dir / 'agent_config.yaml')
+    write_yaml(asdict(agent_config), checkpoint_dir / 'agent_config.yaml')
     if resume:
         player1 = SimpleRLPlayer(
             battle_format=BATTLE_FORMAT,
@@ -234,9 +257,9 @@ if __name__ == "__main__":
     trained_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
     target_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
 
-    random_player = RandomPlayer(account_configuration=AccountConfiguration("Random Baseline", None),
-                          battle_format=BATTLE_FORMAT,
-                          team=MultiTeambuilder(teams))
+    baseline_player = SimpleHeuristicsPlayer(account_configuration=AccountConfiguration("HeuristicBaseline", None),
+                                      battle_format=BATTLE_FORMAT,
+                                      team=MultiTeambuilder(teams))
 
     # set the 2 players to face each other
     player1.set_opponent(player2)
@@ -264,7 +287,7 @@ if __name__ == "__main__":
         # validate against random (once the model is out of warmup)
         if num_battles % validate_freq == 0 and player1.model.curr_step > cfg['warmup_steps']:
             for p in [player1, player2]:
-                validate_player(p, random_player, trained_player, target_player)
+                validate_player(p, baseline_player, trained_player, target_player)
 
     # Wait for thread completion (training to finish)
     t1.join()
