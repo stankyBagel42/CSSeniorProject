@@ -57,7 +57,8 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
 
 
 class TrainedRLPlayer(Player):
-    def __init__(self, model: PokeNet | str | Path, game_state:GameState = None, use_argmax:bool=True, *args, **kwargs):
+    def __init__(self, model: PokeNet | str | Path, game_state: GameState = None, use_argmax: bool = True, *args,
+                 **kwargs):
         """model is the pytorch model used to make actions given a battle state (can be a model or a PathLike object
         pointing to the saved weights. Args and Kwargs are sent to Player init"""
         super().__init__(*args, **kwargs)
@@ -68,7 +69,7 @@ class TrainedRLPlayer(Player):
         self.game_state = game_state
         self.use_argmax = use_argmax
         # load the model
-        if isinstance(model,str | Path):
+        if isinstance(model, str | Path):
             model_info = torch.load(model)
             model = PokeNet(num_inputs=self.game_state.length, num_outputs=9,
                             layers_per_side=model_info['cfg']['num_layers_per_side'],
@@ -118,6 +119,7 @@ class TrainedRLPlayer(Player):
             else:
                 return self.choose_random_move(battle)
 
+
 class MaxDamagePlayer(Player):
 
     # Same method as in previous examples
@@ -130,9 +132,13 @@ class MaxDamagePlayer(Player):
                 type_multiplier = move.type.damage_multiplier(battle.opponent_active_pokemon.type_1,
                                                               battle.opponent_active_pokemon.type_2,
                                                               type_chart=GEN_DATA.type_chart)
+                # STAB
+                if move.type in battle.active_pokemon.types:
+                    type_multiplier *= 1.5
                 if move.base_power * type_multiplier > max_dmg:
                     max_dmg = move.base_power * type_multiplier
                     max_move = move
+
             return self.create_order(max_move)
 
         # If no attack is available, a random switch will be made

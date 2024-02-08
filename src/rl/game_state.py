@@ -23,7 +23,7 @@ class MoveMultiplier(Component):
     """Move Damage Multiplier"""
     length = 4
     low = np.zeros(length, dtype=np.float32)
-    high = np.full(length, 4, dtype=np.float32)  # max of 4
+    high = np.full(length, 6, dtype=np.float32)  # max of 6 (4x effective, 1.5x same type bonus)
 
 
 class NumFainted(Component):
@@ -157,6 +157,9 @@ class GameState:
                     battle.opponent_active_pokemon.type_2,
                     type_chart=GEN_DATA.type_chart
                 )
+                if move.type in battle.active_pokemon.types:
+                    moves_base_power[i] *= 1.5
+
 
         # encode opponent active pokemon
         opponent_idx = pokemon_to_index(battle.opponent_active_pokemon)
