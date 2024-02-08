@@ -13,7 +13,7 @@ import wandb
 from tqdm import tqdm
 from poke_env import AccountConfiguration
 
-from benchmark import benchmark_player
+from src.benchmark import benchmark_player
 from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer, MaxDamagePlayer
 from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
