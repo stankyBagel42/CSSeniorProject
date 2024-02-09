@@ -1480,9 +1480,517 @@ Nature: Bold
 > Notes  
 
 ## Team 16
-## Team 17
-## Team 18
+The rest of these teams were created by Alex and two of his friends. They are mostly just "fun" teams and will not be supplemented by documentation / reasoning.
+
+### Wobbuffet
+![Wobbuffet]()  
+Moves:  
+
+- Counter
+- Mirror Coat
+- Safeguard
+- Encore  
+
+Item: Leftovers  
+Ability: Shadow Tag  
+EVs: 28 HP / 228 Def / 252 SpD  
+Nature: Calm  
+
+### Mamoswine - "Oink Oink"
+![Mamoswine]()  
+Moves:  
+
+- Earthquake
+- Ice Shard
+- Stone Edge
+- Superpower  
+
+Item: Choice Band  
+Ability: Oblivious  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Jolly  
+
+### Metagross - "Cash Money"
+![Metagross]()  
+Moves:  
+
+- Earthquake
+- Meteor Mash
+- Zen Headbutt
+- Hammer Arm  
+
+Item: Shell Bell  
+Ability: Clear Body  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Nature: Adamant  
+
+### Vileplume - "W33DGOD!!!!!!!!!"
+![Vileplume]()  
+Moves:  
+
+- Sleep Powder
+- Leech Seed
+- Sludge Bomb
+- Substitute  
+
+Item: Focus Sash  
+Ability: Chlorophyll  
+EVs: 252 HP / 252 SpA / 4 Spe  
+Nature: Modest  
+
+### Suicune - "Reese's"
+![Suicune]()  
+Moves:  
+
+- Calm Mind
+- Surf
+- Ice Beam
+- Hidden Power Grass  
+
+Item: Leftovers  
+Ability: Pressure  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Nature: Modest  
+
+### Breloom - "Dionysus"
+![Breloom]()  
+Moves:  
+
+- Mach Punch
+- Spore
+- Seed Bomb
+- Focus Punch  
+
+Item: Toxic Orb  
+Ability: Poison Heal  
+EVs: 72 HP / 252 Atk / 184 Spe  
+Nature: Adamant  
+
+## Team 17 (Jack's Team)
+### Sceptile - "Scootch"
+![Sceptile]()  
+Moves:  
+
+- Substitute
+- Leech Seed
+- Energy Ball
+- Dragon Pulse  
+
+Item: Leftovers  
+Ability: Overgrow  
+EVs: 252 HP / 4 Def / 252 Spe  
+Nature: Timid  
+
+### Aerodactyl - "Sour Milk"
+![Aerodactyl]()  
+Moves:  
+
+- Rock Slide
+- Earthquake
+- Aerial Ace
+- Double-Edge  
+
+Item: Choice Band  
+Ability: Rock Head  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Adamant  
+
+### Starmie - "Roswell Mk3"
+![Starmie]()  
+Moves:  
+
+- Surf
+- Psychic
+- Thunderbolt
+- Ice Beam  
+
+Item: Mystic Water  
+Ability: Natural Cure  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Nature: Timid  
+
+### Salamence - "Junior"
+![Salamence]()  
+Moves:  
+
+- Fire Fang
+- Dragon Claw
+- Aerial Ace
+- Earthquake  
+
+Item: Lum Berry  
+Ability: Intimidate  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Nature: Adamant  
+
+### Skarmory - "Los Orca"
+![Skarmory]()  
+Moves:  
+
+- Toxic
+- Whirlwind
+- Spikes
+- Aerial Ace  
+
+Item: Leftovers  
+Ability: Keen Eye  
+EVs: 252 HP / 252 Def / 4 SpD  
+Nature: Impish  
+
+### Slaking - "Chiquitita"
+![Slaking]()  
+Moves:  
+
+- Return
+- Earthquake
+- Brick Break
+- Shadow Claw  
+
+Item: Choice Band  
+Ability: Truant  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Nature: Adamant  
+
+## Team 18 (Kev's Team)
+### Heracross - "Beetleborg"
+![Heracross]()  
+Moves:  
+
+- Megahorn
+- Protect
+- Rock Slide
+- Close Combat  
+
+Item: Flame Orb  
+Ability: Guts  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Nature: Jolly  
+
+### Dragonite - "Icarus"
+![Dragonite]()  
+Moves:  
+
+- Draco Meteor
+- Earthquake
+- Extreme Speed
+- Aerial Ace  
+
+Item: Life Orb  
+Ability: Technician  
+EVs: 252 Atk / 252 Spe  
+Nature: Lonely  
+
+### Scizor - "Alphonse"
+![Scizor]()  
+Moves:  
+
+- Bullet Punch
+- Bug Bite
+- Swords Dance
+- Aerial Ace  
+
+Item: Leftovers  
+Ability: Technician  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Nature: Adamant  
+
+### Gliscor - "Meta Naito"
+![Gliscor]()  
+Moves:  
+
+- Sky Attack
+- Earthquake
+- Tailwind
+- U-turn  
+
+Item: Power Herb  
+Ability: Hyper Cutter  
+EVs: 220 HP / 252 Atk / 36 Def  
+Nature: Impish  
+
+### Porygon-Z - "Marauder"
+![Porygon-Z]()  
+Moves:  
+
+- Tri Attack
+- Dark Pulse
+- Ice Beam
+- Thunderbolt  
+
+Item: Choice Specs  
+Ability: Adaptability  
+EVs: 4 Def / 252 SpA / 252 Spe  
+Nature: Modest  
+
+### Gengar - "Liebe"
+![Gengar]()  
+Moves:  
+
+- Shadow Ball
+- Taunt
+- Energy Ball
+- Thunderbolt  
+
+Item: Focus Sash  
+Ability: Levitate  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Nature: Timid  
+
 ## Doggies!!
+
+### Arcanine - "Air Bud"
+![Arcanine]()  
+Moves:  
+
+- Flare Blitz
+- Extreme Speed
+- Roar
+- Iron Head  
+
+Item: Lum Berry  
+Ability: Intimidate  
+EVs: 192 HP / 252 Atk / 64 Spe  
+Nature: Adamant  
+
+### Manectric - "Bolt"
+![Manectric]()  
+Moves:  
+
+- Discharge
+- Switcheroo
+- Flamethrower
+- Roar  
+
+Item: Choice Scarf  
+Ability: Static  
+EVs: 252 SpA / 252 Spe  
+Nature: Modest  
+
+### Houndoom - "Hades"
+![Houndoom]()  
+Moves:  
+
+- Pursuit
+- Roar
+- Fire Blast
+- Sucker Punch  
+
+Item: Life Orb  
+Ability: Flash Fire  
+EVs: 252 Atk / 32 SpA / 224 Spe  
+Nature: Hasty  
+
+### Mightyena - "IV"
+![Mightyena]()  
+Moves:  
+
+- Taunt
+- Super Fang
+- Sucker Punch
+- Roar  
+
+Item: Sitrus Berry  
+Ability: Intimidate  
+EVs: 248 HP / 116 Atk / 144 Spe  
+Nature: Adamant  
+
+### Lucario - "Anubis"
+![Lucario]()  
+Moves:  
+
+- Roar
+- Close Combat
+- Extreme Speed
+- Ice Punch  
+
+Item: Life Orb  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Jolly  
+
+### Granbull - "Gollum"
+![Granbull]()  
+Moves:  
+
+- Roar
+- Thunder Wave
+- Return
+- Earthquake  
+
+Item: Sitrus Berry  
+Ability: Intimidate  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Nature: Impish  
+
 ## Gym-timidation
-## Rain Team 
+
+### Arcanine - "Pitbull"
+![Arcanine]()  
+Moves:  
+
+- Flare Blitz
+- Extreme Speed
+- Iron Head
+- Thunder Fang  
+
+Item: Choice Band  
+Ability: Intimidate  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Jolly  
+
+### Luxray - "Panther"
+![Luxray]()  
+Moves:  
+
+- Superpower
+- Thunderbolt
+- Ice Fang
+- Crunch  
+
+Item: Life Orb  
+Ability: Intimidate  
+EVs: 204 Atk / 156 SpA / 148 Spe  
+Nature: Naughty  
+
+### Hitmontop - "Baby Arm"
+![Hitmontop]()  
+Moves:  
+
+- Close Combat
+- Stone Edge
+- Rapid Spin
+- Sucker Punch  
+
+Item: Chesto Berry  
+Ability: Intimidate  
+EVs: 252 HP / 252 Def / 4 SpD  
+Nature: Impish  
+
+### Mawile - "Venus"
+![Mawile]()  
+Moves:  
+
+- Substitute
+- Swords Dance
+- Baton Bass
+- Taunt  
+
+Item: Leftovers  
+Ability: Intimidate  
+EVs: 252 HP / 28 Def / 228 Spe  
+Nature: Jolly  
+
+### Tauros - "Bull"
+![Tauros]()  
+Moves:  
+
+- Return
+- Iron Head
+- Earthquake
+- Pursuit  
+
+Item: Choice Band  
+Ability: Intimidate  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Nature: Jolly  
+
+### Salamence - "Chad"
+![Salamence]()  
+Moves:  
+
+- Earthquake
+- Aerial Ace
+- Dragon Claw
+- Crunch  
+
+Item: Yache Berry  
+Ability: Intimidate  
+EVs: 244 HP / 12 Atk / 252 SpD  
+Nature: Careful  
+
+## Rain Team
+
+### Crobat
+![Crobat]()  
+Moves:  
+
+- Rain Dance
+- U-turn
+- Taunt
+- Hypnosis  
+
+Item: Damp Rock  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Jolly  
+
+### Scizor
+![Scizor]()  
+Moves:  
+
+- Pursuit
+- Brick Break
+- U-turn
+- Bullet Punch  
+
+Item: Sitrus Berry  
+Ability: Technician  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Nature: Adamant  
+
+### Rotom-W
+![Rotom-W]()  
+Moves:  
+
+- Thunder
+- Hydro Pump
+- Shadow Ball
+- Rain Dance  
+
+Item: Damp Rock  
+Ability: Levitate  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Nature: Timid  
+
+### Ludicolo
+![Ludicolo]()  
+Moves:  
+
+- Surf
+- Energy Ball
+- Ice Beam
+- Rain Dance  
+
+Item: Life Orb  
+Ability: Swift Swim  
+EVs: 60 HP / 252 SpA / 196 SPe  
+Nature: Modest  
+
+### Kabutops
+![Kabutops]()  
+Moves:  
+
+- Swords Dance
+- Waterfall
+- Stone Edge
+- Aqua Jet  
+
+Item: Focus Sash  
+Ability: Swift Swim  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Adamant  
+
+### Dugtrio
+![Dugtrio]()  
+Moves:  
+
+- Earthquake
+- Stone Edge
+- Sucker Punch
+- Toxic  
+
+Item: Expert Belt  
+Ability: Arena Trap  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Nature: Adamant  
 ### [prev]() | [next](./42_ChallengingTheBot.md)
