@@ -1262,6 +1262,130 @@ Nature: Adamant (+Atk, -SpA)
 > Swords Dance Lucario, a flagship set from the Gen IV era which was extremely powerful has lost it's strength but is still great for this team. Lucario is only used at late-game situations when the opposing team is battered and +2 Extremespeed can proceed to sweep. Swords Dance is a must here as otherwise non-STAB Extremespeed won't do much as Lucario's base-Attack is good but not great. I opted for Dual Priority as otherwise Gengar would be a problem as it's immune to both Close Combat and Extremespeed. Close Combat smacks Ferrothorn and other steels who would otherwise wall this set entirely. EVs are standard to max speed and attack with Adamant nature as the speed boost wouldn't really help with Dual Priority as the Attack boost is much more beneficial. Air Balloon gives it a temporary immunity it can really use. Overall Lucario works well as a late-game cleaner and usually is my last hope when things go awry.  
 
 ## The Gang
+This team is a somewhat optimized version of the set Alex used in his last Pokemon Diamond playthrough.
+
+### Luxray - "Quagmire"
+![Luxray]()  
+Moves:  
+
+- Thunderbolt
+- Superpower
+- Crunch
+- Hidden Power Grass  
+
+Item: Life Orb  
+Ability: Intimidate  
+EVs: 204 Atk / 156 SpA / 148 Spe  
+Nature: Naughty  
+> This set takes advantage of Luxray's mixed attacking stats, making him a good wallbreaker. Thunderbolt deals with bulky Water-types, while Superpower decimates most special walls and does good damage to Rock- and Steel-types. Crunch damages Uxie and Claydol and OHKOes Rotom and Mismagius. There are many options for the final moveslot. Hidden Power Grass and Hidden Power Water both cover Ground-types, with Donphan and Rhyperior being 2HKOed by a combination of Superpower and Hidden Power. Hidden Power Grass covers Quagsire, while Hidden Power Water allows Luxray to 2HKO Steelix with Superpower followed by Hidden Power Water. Ice Fang hits Venusaur and Altaria on their weaker Defense stat, while dealing hefty damage to Torterra, though you lose the ability to significantly damage most Ground-types.
+>  
+> Superpower is the best move to open with, while special walls expecting Thunderbolt or a weak Spark are 2HKOed or OHKOed. If you discover that your opponent is using a Ghost- or Psychic-type to wall Superpower, choose Crunch (or Thunderbolt for Spiritomb) next time Luxray is in.
+>
+> The EVs give a nice balance to Luxray's offenses. The Special Attack EVs are enough to always OHKO Slowbro after Stealth Rock damage, while a heavy investment in Attack powers up Superpower as much as possible. The Speed EVs allow Luxray to reach 213, outspeeding every UU wall except for Uxie, who will likely paralyze Luxray with Thunder Wave anyway. 
+
+### Staraptor - "Jimmy Jams"
+![Staraptor]()  
+Moves:  
+
+- Brave Bird
+- Return
+- Close Combat
+- U-turn  
+
+Item: Choice Band  
+Ability: Intimidate  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Nature: Adamant  
+> Staraptor's good Speed and Attack stats make it a good candidate for a Choice Band set. Intimidate makes him a good choice as a lead and helps when sending him out later, just don't get too over zealous when switching into physical attacks; his defenses are still poor. Brave Bird and Return provide raw power, while Close Combat rounds off the coverage. U-turn allows Staraptor to scout.  
+>
+> Brave Bird and Return are his main weapons and both hit incredibly hard, while Close Combat hits for at least neutral damage on every Rock- and Steel-type. The STAB Normal attacks are mostly for Electric-types, especially Zapdos, who also resists Fighting. Double-Edge guarantees an OHKO on Zapdos, but Return is usually preferable as two recoil moves is rather excessive, let alone when paired with a Stealth Rock weakness.
+>
+> The fourth slot is the sort of "utility" move. U-turn allows you to scout your counter and get in a hit, while Pursuit is always a great move on Choice Banders and Staraptor makes good use of it. It's especially good against the likes of Celebi and Blissey, who will run, fearing a Brave Bird. Quick Attack is for protection against Reversal/Flail users and to take down other weakened but faster foes. It does upwards of 45% to the likes of Azelf, Raikou, and Weavile (just be careful of Weavile using Ice Shard).
+
+### Gyarados - "Gyaradosiclitis"
+![Gyarados]()  
+Moves:  
+
+- Dragon Dance
+- Waterfall
+- Ice Fang
+- Earthquake  
+
+Item: Wacan Berry  
+Ability: Intimidate  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Nature: Adamant  
+> Gyarados is bulky enough to set up one Dragon Dance and start attacking. Waterfall is Gyarados's main means of doing damage, being able to break through the many walls that don't resist Water. The most common coverage option is Ice Fang, as Gyarados struggles to damage Latias and Breloom with just Waterfall. Gyarados often completes its coverage with Earthquake, as it hits Steel-types such as Jirachi, Empoleon, Metagross, and Magnezone super effectively.
+>
+> Gyarados gets the most out of maximum Attack and Speed EVs to outspeed Dragonite and hit as hard as possible. Gyarados can run some arbitrary bulk to better survive attacks, as it only needs 184 Speed EVs to outspeed Tyranitar before a Dragon Dance and Starmie at +1. An Adamant nature helps Gyarados hit as hard as possible---a Jolly nature is possible to outspeed slower Choice Scarf Pokemon such as Metagross, Magneton, and Heatran at +1 and Choice Scarf Latias at +2, but Gyarados loses a lot of power doing so and typically cannot get to +2 anyway.
+>
+> Gyarados has many possible items it can run to circumvent normal checks. The most prominent one is a Wacan Berry, as Gyarados can survive weaker Electric-type attacks and KO or heavily damage the foe, such as Choice Scarf Latias, Choice Scarf Flygon, Choice Scarf Jirachi, Choice Scarf Lucario, offensive Suicune, and Jirachi. 8 HP EVs and 16 Special Defense EVs let Gyarados survive Choice Scarf Rotom-A’s Thunderbolt without Stealth Rock after sand.
+>
+> Unless Gyarados has Rapid Spin support, it should aim to hit the field relatively early before Stealth Rock is up, or even lead, and set up Dragon Dance. With the additional Speed and power, Gyarados can break through defensive counterplay depending on its coverage. Once Gyarados is at +1, it generally should just attack unless there’s a specific reason to do so, as taking additional heavy damage getting to +2 often is not worth it. While Gyarados can sweep, it typically opens opposing teams for another offensive Pokemon to break through. Gyarados is fantastic at forcing predictable responses, like Latias or Skarmory being forced to switch in on Dragon Dance and either try to phaze it or use Counter in Skarmory’s case. Taking advantage of these responses, either through Gyarados’s moveset choices or teammates, is critical to getting the most out of it.
+>
+> Gyarados can also be used a bit later in the game as a punishment for setting up Stealth Rock, as dealing with a full health Gyarados can be daunting. In this scenario, Gyarados typically comes in on a Pokemon that cannot really damage it like offensive Swampert. From here, Gyarados can break through the Choice Scarf Pokemon or even opposing offensive Gyarados tasked with checking it. This can open up the opposing team to other offensive threats.
+
+### Infernape - "Harambe"
+![Infernape]()  
+Moves:  
+
+- Fire Blast
+- Close Combat
+- U-turn
+- Grass Knot  
+
+Item: Expert Belt  
+Ability: Blaze  
+EVs: 64 Atk / 252 SpA / 192 Spe  
+Nature: Naive  
+> Infernape's offensive typing and movepool allow it to be an effective mixed attacker. Fire Blast hits physically bulky Steel-types super effectively, OHKOing Skarmory, Metagross, and Jirachi without bulk investment. Overheat is another option, especially with a physically-oriented set to maintain those OHKOs on Metagross and Jirachi. It also is a good option when using Leftovers, as it will guarantee a KO on maximum HP Jirachi after Stealth Rock, unlike Fire Blast. Close Combat lets Infernape hammer more specially defensive Steel-types such as Empoleon and Heatran while OHKOing Clefable and Tyranitar, as well as Blissey after Stealth Rock. It is also a strong, perfectly accurate attack that hits neutral targets such as Flygon, Swampert, and Suicune effectively if Infernape lacks the correct coverage move.  
+>
+> U-turn lets Infernape pivot effectively, as common checks such as Latias and Starmie are weak to it and it racks up entry hazard damage on targets such as Gyarados, Gengar, and Dragonite, so their ability to answer Infernape diminishes. Grass Knot covers Water- and Ground-types, for example OHKOing Swampert and Quagsire with a boosting item and 2HKOing Milotic, Hippowdon, Starmie, and Suicune.
+>
+> With a Naive or Hasty nature, 192 Speed EVs allow Infernape to outrun positive-nature base 100s, such as Jirachi and Flygon. From there, its Special Attack and Attack EVs can be split up depending on its moveset, its coverage options, and what it needs to deal with. This specific EV spread is for specially-based Infernape to maximize its utility from its coverage moves while still handling Clefable, Tyranitar, Empoleon, and Heatran with Close Combat. Without a boosting item, it should run at least 144 Attack EVs to OHKO specially defensive Clefable with Close Combat. From there, the remaining EVs can be dumped into Special Attack. Alternatively, if running mostly physical moves, Infernape should use primarily Attack EVs. A good benchmark for physically-based sets is 92 Special Attack EVs, as this allows Infernape to OHKO Jirachi lacking bulk EVs with Overheat. A Speed-boosting nature is usually best to outspeed crucial targets such as offensive Jirachi, mixed Flygon, offensive Zapdos, and Gliscor. However, an Attack- or Special Attack-boosting nature can compensate for its lesser power, especially without Expert Belt or Life Orb. Infernape's nature should lower either of its defenses, but lowering Special Defense is preferred, as it can take physical attacks such as Jirachi's Body Slam and Choice Scarf Lucario's Close Combat with its Defense intact. A Defense-hindering nature helps against Life Orb Gengar and Choice Scarf Rotom-A, but surviving physical attacks is preferred.
+>
+> For Infernape's item, Expert Belt offers the best mix between power and survivability. It gives the necessary power boost for targets such as maximum HP Jirachi, Swampert, and Dragonite, and Gliscor without Stealth Rock, while not costing 10% of its health every turn. However, it does not boost neutral hits, leaving something to be desired against defensive Pokemon such as Rotom-A and Zapdos. 
+>
+> Infernape's frailty and susceptibility to residual damage mean it should avoid switching in directly, and instead it should try to get in on a forced switch or U-turn, or after a teammate is KOed. With U-turn, Infernape is quite effective at wearing down its answers in conjunction with Stealth Rock, so even if it can hit the foe super effectively, using U-turn can be good to help wear down the opposing team. Avoid bringing Infernape in too many times early on, as it will get worn down quickly. With Expert Belt, Infernape should aim to hit as hard as possible for as long as possible; do not be afraid to predict switches, as hitting something super effectively with an Expert Belt can be devastating.
+
+### Alakazam - "Buddy Rho"
+![Alakazam]()  
+Moves:  
+
+- Psychic
+- Signal Beam
+- Focus Blast
+- Trick  
+
+Item: Choice Specs  
+Ability: Synchronize  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Nature: Timid  
+> Alakazam holds the title for the highest Special Attack in the UU tier, so it's a no-brainer that it can utilize a Choice Specs set. However, wielding a Choice Specs set is a mixed blessing. Alakazam will seriously dent a number of things with a stat of 607 or 553, depending on the nature of choice, but its type coverage allows a number of Pokemon to switch in through immunity. The worst possible scenario would be getting trapped by Spiritomb since it is immune to a good portion of this set. All in all, this set attempts to play riskily while dishing out a good amount of damage. This set holds the best possible coverage Alakazam can have.
+>
+> Psychic will hit anything who doesn't resist it incredibly hard -- a possible OHKO for the most part. Signal Beam and Focus Blast round off the coverage nicely. Signal Beam is your only hope against Spiritomb if you predict right. Focus Blast is your main weapon against Steel-types and Chansey. Trick is an excellent move for restricting Chansey from doing much. 
+>
+> Getting rid of Spiritomb beforehand is a good idea before sending out Alakazam. Spiritomb absolutely walls the set with no worry, and it can counteract with Pursuit to remove Alakazam from the entire match. Your best bet is to lure in Spiritomb to ensure it is present on the opponent's team. If you opt to use Focus Blast, be sure to remove Spiritomb beforehand so Alakazam has an easier time.
+>
+> For the most part you would want to save Alakazam for the late game once everything is revealed and dented. You can chip away the opponent's HP by using Stealth Rock and Spikes, providing Alakazam a string of OHKOs in the end of the match. Although it's not a requirement, a spinblocker would be helpful for the entire team (including Alakazam) to keep entry hazards present on the field.
+
+### Clefable - "Peppa Thepig"
+![Clefable]()  
+Moves:  
+
+- Ice Beam
+- Soft-Boiled
+- Seismic Toss
+- Thunder Wave  
+
+Item: Leftovers  
+Ability: Magic Guard  
+EVs: 252 HP / 4 Def / 252 SpD  
+Nature: Calm  
+> Though she may be looked at as a poor man's Chansey, Clefable has two big notable advantages over the pink pudgy egg blob: a usable Special Attack stat and access to Encore. Unfortunately, due to the way Clefable is played, she can only take advantage of one of these perks at a time. Ice Beam is the recommended choice because it allows Clefable to break Rotom's Substitutes. Soft-Boiled is a great recovery option. Seismic Toss provides consistent damage to everything (excluding Ghost-types) and is the best attack Clefable has against walls like Registeel. Thunder Wave spreads paralysis.
+>
+> The EV spread given maximizes Clefable's special walling prowess. While this may seem like a futile attempt at making Clefable as bulky as Chansey, it actually allows Clefable to handily wall various special threats, such as Life Orb Venusaur and Milotic, and eventually defeat them. A more physically defensive EV spread of 252 HP / 152 Def / 100 SpD / 4 Spe allows Clefable to more easily defeat Donphan and Rhyperior, but Clefable is much more adept at walling special threats.
+  
 ## I Hate Sand
 ## Team 16
 ## Team 17
