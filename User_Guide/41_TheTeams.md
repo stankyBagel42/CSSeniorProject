@@ -783,11 +783,484 @@ Nature: Naive (+Spe, -SpD)
 > And we finish at the start. After looking over the team, I needed a few things with only one slot available: A stealth rocker, a lead, and something that can switch into Rotom and electricity in general. Synergy wise, Heatran was the only Pokemon that really made sense. I started out with Heatran, who worked great, but it left me very vulnerable to Choice Specs Jolteon, who can easily come in on Vaporeon. I tested many other leads: Gliscor, Celebi, even Camerupt, but none of them really fit that well, even costing me some sleep. It was then that Phil suggested to me to just add a scarf to Heatran. After testing this, it worked out great. Yeah, Jolteon or Rotom can switch in on Vaporeon, but then I can just go to Heatran, always outspeed and kill it. This works great since Heatran does not get worn down by electric attacks, since Vaporeon can wish on the switch, Heatran can continually switch in and receive the Wish, healing itself. The scarf also lets me check Lucario again, so the opponent never knows whether to crunch or Close Combat, as I can go to either Gengar or Heatran, and another check to Latias, who can set up on Vaporeon, in case Scizor gets trapped early.  
 
 ## Team Rose Tyler
-Team Rose Tyler aims to make use of Toxic Spikes, which are provided by a Roserade lead, in order to stall out the opposing team. In this team, Vashta uses a core of Substitute + Charge Beam Rotom, Curse Swampert and Substitute + Calm Mind Jirachi to stall for Toxic damage and then finish off the weakened team. Team Rose Tyler helped to inspire the increase in popularity of semi-stall as a playstyle, and its fantastic presentation along with its extensive descriptions make it a model RMT.
+Team Rose Tyler aims to make use of Toxic Spikes, which are provided by a Roserade lead, in order to stall out the opposing team. In this team, Vashta uses a core of Substitute + Charge Beam Rotom, Curse Swampert and Substitute + Calm Mind Jirachi to stall for Toxic damage and then finish off the weakened team. Team Rose Tyler helped to inspire the increase in popularity of semi-stall as a playstyle, and its fantastic presentation along with its extensive descriptions make it a model RMT.  
+
+### Roserade - "Fallen Leaves"
+![Roserade]()  
+Moves:  
+
+- Leaf Storm
+- Sleep Powder
+- Toxic Spikes
+- Hidden Power Ground  
+
+Item: Focus Sash  
+Ability: Natural Cure  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Nature: Timid (+Spe, -Atk)  
+> Roserade, aside from Swampert, is probably the best lead I have come across in all my time in competitive battling. With its Moderate Speed + Focus Sash, it easily allows me to set up the most vital segment of my team: Toxic Spikes. Not only does it allow the setup of Toxic Spikes, it also induces Sleep upon those that may be opposing leads or immune to Toxic Spikes itself. Focus Sash has saved my ass a lot, especially when it comes to needing a last-resort counter to Pokemon that may cause problems. With Natural Cure, I have a pseudo-status absorber if I cannot for whatever reason switch to my Swampert. Since Roserade can generally switch into any status inducer that Swampert cannot, which is another boost. Leaf Storm provides me with a valuable STAB move for bulky Water-types such as Suicune and Vaporeon that could otherwise prove annoying if I lack boosts for Rotom-W, or lose Jirachi early somehow. Therefore, I do not use this Roserade as a suicide lead, as it has its great points at mid-game as well. Sleep Powder in conjunction with Roserade's other moves allows me to set up easier or eliminate foes quicker without the annoyances that could occur without its Sleep inducing qualities. It also aids my other Pokemon with setting up or killing a said threat themselves. Now, some of you might be looking at this particular Roserade and think, "Who does this guy think he is using Hidden Power Ground???" Well, you would be surprised to see the amount of people who think Heatran walls Roserade to death as most appear to carry Leaf Storm + Hidden Power Fire. However, they greatly regret this as Hidden Power Ground easily scores a OHKO on Heatran and removes lead Heatran's Shuca Berry. It is also good for hitting lead Infernape, Metagross, and Heatran all together in one Hidden Power, as Hidden Power Fire fails to his the former and latter. Besides, Hidden Power Fire only hits opposing Grass-types and Scizor, more or less, who are both dealt by other team members wtih next to no problems.  
+>
+> The EVs are pretty standard for this set. They allowe me to outspeed all neutral base 100s, and achieve a speed tie with other base and 90-speed Pokemon such as Jolly Lucario. The Special Attack EVs are also maximized as per the standard to hit a clean OHKO on all 4 HP / 0 SpD Heatrans that may be foolish enough to switch in. Other than that, there is nothing specific about these given EVs.  
+>
+> When looking at team support, Roserade is an invaluable member of this team with its unique characteristics as the Pokemon with access to both Toxic Spikes and a Sleep Powder, as well as its ability to absorb an opposing Toxic Spiker. However, the latter isn't obligatory as only Swampert is affected by Toxic Spikes, and it has access to Sleep Talk, anyway. This dual statusing ability is great for this team in particular as it is the best method to setting up and potentially winning as soon as possible. As I mentioned, Roserade's moderate Speed, pseudo-dual statusing ability, and access to Leaf Storm as a strong STAB move allows it to perform as my perfect lead.  
+
+### Heatran - "Burn the Evidence"
+![Heatran]()  
+Moves:  
+
+- Fire Blast
+- Earth Power
+- Explosion
+- Stealth Rock  
+
+Item: Choice Scarf  
+Ability: Flash Fire  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Nature: Naive (+Spe, -SpD)  
+> Heatran acts as my check to various threats and as the Pokemon that sets up Stealth Rock. This thing is a beast with its massive Special Attack stat and reasonable Speed. With Choice Scarf, Heatran gives me a fighting chance in revenge killing foes such as weakened Rotom-A, Celebi, and Life Orb Heatran. What makes this Pokemon stand out the most is its myrad of immunities and resistances, as well as its ability to eliminate certain Pokemon such as Swords Dance Lucario and Scizor. With Choice Scarf, Heatran hits a total speed stat of 417, outspeeding other common Scarved Pokemon such as Modest Rotom-A, Breloom, and Metagross. Without a check to these Pokemon (and other fast Pokemon such as Jolteon with Hidden Power Grass), I would often have to sacrifice Pokemon unnecessarily just to kill these Pokemon. It may be unusual to see Stealth Rock on a Scarved Pokemon as it seems like it completely defeats the purpose of Stealth Rock's main role of allowing Heatran to outspeed certain Pokemon and attacking them. But for this team, Heatran had to be *the* Pokemon to carry Stealth Rock because I couldn't find any other way to fit it into the team without opening a huge gap. Fire Blast is Heatran's strongest STAB move, providing OHKOs against Pokemon such as Celebi, Metagross, and Jirachi. Unfortunately, Fire Blast can be unreliable at times due to its accuracy. Flamethrower can be an alternative for this, but you will lose the ability to OHKO. Earth Power complements Fire Blast by hitting opposing Fire-types / Fire-type resistant Pokemon. Explosion is for the end-game when Heatran can do no more, or for the obligatory kill on foes such as Salamence that resist both Fire Blast and Earth Power (this is assuming the defeat or lack of Metagross).  
+>
+> In regard to the EVs, maximizing Special Attack is an absolute necessity to achieve the aforementioned OHKOs. Maxing out Speed allows me to hit Speed ties with opposing Heatran that may carry Choice Scarf. I chose a Naive nature over Hasty as I primarily wanted to be able to switch into Scizor's Bullet Punches better.  
+
+### Metagross - "Turn Your Back"
+![Metagross]()  
+Moves:  
+
+- Meteor Mash
+- Bullet Punch
+- Earthquake
+- Thunder Punch  
+
+Item: Shuca Berry  
+Ability: Clear Body  
+EVs: 240 HP / 80 Atk / 188 SpD  
+Nature: Adamant  
+> Metagross is basically a 2-in-1 Pokemon; with its highly imporessive defensive capabilities, I am not only given a decent check to Gengar and the likes, but also to both Gyarados and Salamence. With a combination of Meteor Mash + Bullet Punch, Gengar and Salamence are both easily taken down. Shuca Berry prevents any form of knock out, while I can strike it to the stars with Meteor Mash and clean it up with Bullet Punch. Shuca Berry + Thunder Punch gives me a clean shot against Gyarados as well, who attemps to try and do more damage with Earthquake. Metagross is yet another great Pokemon that boasts great resistances which allow me to switch it in on Pokemon that could prove troublesome such as Blissey and beat them out of play with his already enormous Attack stat. Meteor Mash + Bullet Punch gives Metagross strong STAB attacks and will often cause frailer foes to fall with only one move made. Earthquake can be used against opposing Metagross, though this team has other safeguards for it.  
+>
+> The HP and SpD EVs render Gengar incapable of 2HKOing Metagross with Focus Blast and allows me to take more hits from other special attackers such as Starmie, Latias, etc. The Attack EVs enable me to get the OHKO on Gyarados with Thunder Punch, guarantee a simple 2HKO with Meteor Mash + Bullet Punch, and give a OHKO on Gengar.  
+
+### Rotom-W - "Standing in the Rain"
+![Rotom-W]()  
+Moves:  
+
+- Substitute
+- Will-O-Wisp
+- Shadow Ball
+- Charge Beam  
+
+Item: Leftovers  
+Ability: Levitate  
+EVs: 108 HP / 192 SpA / 210 Spe  
+Nature: Timid (+Spe, -Atk)  
+> Finally, onto one of my first of the three Toxic Spikes set up abusers and my spin blocker. This Rotom-W relies on the ability to switch into something that can do little or no damage, Substitue and either Will-O-Wisp a switch in, or Charge Beam accordingly. Substitute + moderate Speed in conjunction with Toxic Spikes applies the build up of Toxic Spikes and possibly forces switches allows me to set up and gain boosts from Charge Beam or build up potential Will-O-Wisp residuals. Will-O-Wisp is also rather effective against Pokemon that are immune to Toxic Spikes. Shadow Ball and Charge Beam prove to be great STAB moves and they synergize well with one another. Rotom-W gives me a reliable check to Mamoswine as well... especially Choice Band Mamoswine who could cause problems to the team otherwise. Rotom-W supports the other two setup relying Pokemon by weakening and eliminating a selection of foes; for Swampert, Celebi is an annoyance. With Rotom-W's great resistances, he can easily switch into Grass Knot, Substitute up, and Shadow Ball or Charge Beam accordingly; for Jirachi, Tyranitar is an annoyance. Though Rotom-W does not directly deal with Tyranitar in combat, it does quite a great job with crippling it if ever Toxic Spikes is absent.  
+>
+> The given EVs are specific indeed. The HP EVs allow Rotom-W to hit a total of 268 HP, which is divisible by 4, meaning that there is no HP wasted when making Substitutes. 210 Speed allows Rotom-W to outspeed Adamant Lucario and Jolly Mamoswine so I can hit the former with Will-O-Wisp and the latter with Shadow Ball. The rest of the EVs are put into Rotom-W's Special Attack so it can hit OHKOs on certian Pokemon with boosted Charge Beam.  
+>
+> In summary, Rotom-W is a great Pokemon and an asset to this team. Not only does it fulfill the Substitute aspect of the Toxic Spikes abuse, it provides the team with a Rapid Spin blocker and another crippler for those sweepers that may be immune to Toxic Spikes. With its bulk, I am able to switch into several threats and annoyances easier.  
+
+### Swampert - "River Below"
+![Swampert]()  
+Moves:  
+
+- Waterfall
+- Curse
+- Rest
+- Sleep Talk  
+
+Item: Leftovers  
+Ability: Torrent  
+EVs: 252 HP / 40 Def / 216 SpD  
+Nature: Careful (+SpD, -SpA)  
+> TODO: Notes (too much yapping)  
+
+### Jirachi - "Midnight Mass"
+![Jirachi]()  
+Moves:  
+
+- Flash Cannon
+- Calm Mind
+- Thunderbolt
+- Substitute  
+
+Item: Leftovers  
+Ability: Serene Grace  
+EVs: 252 HP / 76 SpA / 180 Spe  
+Nature: Timid (+Spe, -Atk)  
+> Notes  
+
 ## Six Paths of Pain
+This team was created in 2011 by tobi10 after being greatly influenced by his friend panamaxis. This set of Pokemon helped him win Sinnoh Cup, a professional Pokemon tournament at the time.  
+
+### Starmie
+![Starmie]()  
+Moves:  
+
+- Hydro Pump
+- Psychic
+- Trick
+- Rapid Spin  
+
+Item: Choice Specs  
+Ability: Natural Cure  
+EVs: 252 Spe / 252 SpA / 4 Def  
+Nature: Timid  
+> Starmie is an excellent anti-lead; not only can he cripple opposing leads, but he can also spin away their valuable Stealth Rock / (Toxic) Spikes. If I am forced out, then I still have a very potent offensive force because a Specs Hydro Pump hurts a lot, even when it is resisted. I usually use Trick on the Stealth Rock, then Rapid Spin on the switch. If I am forced out, I can spam Hydro Pump / Psychic later in the game. Or, if I am facing a stall team, try to get a Trick on Blissey. Starmie is very valuable for the team because it performs much better without having to deal with residual damage. My combination of Water and Psychic might seem strange but it actually has good coverage, and I can still 2HKO Shaymin and Rotom-A with Psychic. This guy is my favorite lead, and my only concern is Azelf because they are usually Banded or Scarfed (if I win the speed tie I OHKO, but the same can be said for them, so I usually do not risk Starmie and just switch to Heatran vs Azelf).  
+
+### Heatran
+![Heatran]()  
+Moves:  
+
+- Stealth Rock
+- Fire Blast / Flamethrower
+- Earth Power
+- Explosion  
+
+Item: Shuca Berry  
+Ability: Flash Fire  
+EVs: 252 SpA / 252 Spe / 4 Atk  
+Nature: Hasty  
+> I think that Heatran is the most "normal" Pokemon on my team, because it has a standard set. It works very nicely, though, so I don't really care! Heatran can easily switch in on Spikers and set up Stealth Rock, which is its main job. After that, its roles include luring Tyranitar, other Heatran, and Swampert. Having these Pokemon help Zapdos (or even Raikou in the right conditions) to clean up the game at the end. Stealth Rock is necessary for my team, especially since I don't use Spikes. I like the power of Fire Blast, but I later ended up switching it because I missed too much. Earth Power is standard and is used to remove Shuca Berry from Heatran and to weaken Tyranitar (which makes Dugtrio's job easier). Explosion is a last resort move I can use to get a switch-in without taking damage or just deal lots of damage when I am low on health.  
+>
+> There is not much to say about Heatran, except that he is cool.
+
+### Celebi
+![Celebi]()  
+Moves:  
+
+- Leaf Storm
+- Hidden Power Fire
+- Recover
+- U-Turn  
+
+Item: Leftovers  
+Ability: Natural Cure  
+EVs: 236 HP / 228 SpA / 44 Spe  
+Nature: Modest  
+> Celebi has been a favorite of mine since Silver / Gold, and it is part of the main core of my team (formed between Starmie and Heatran). With this set I can hit very hard with Leaf Storm or Hidden Power, and can still be bulky enough to take on guys like Gyarados, Suicune, and Rotom-A. Leaf Storm hits really hard as a STAB move that actually does heavy damage to Rotom and Vaporeon. Hidden Power allows me to hit Skarmory, Forretress, Scizor, and other Grass types like Celebi and Shaymin for pretty good damage. With Recover, I can stay alive longer throughout the game. Finally, U-Turn lets me scout to gain momentum and send Dugtrio unharmed against most of the Pokemon that Celebi attract.  
+
+### Dugtrio
+![Dugtrio]()  
+Moves:  
+
+- Earthquake
+- Stone Edge
+- Pursuit
+- Aerial Ace  
+
+Item: Choice Band  
+Ability: Arena Trap  
+EVs: 252 Spe / 252 Atk / 4 Def  
+Nature: Jolly  
+> Dugtrio is not the sweeper of this team, but without it I would not be able to win. He is my secret weapon used to eliminate Zapdos counters. I like how it is almost guaranteed to get at least one kill during a match, and an important one, like Heatran, Tyranitar, Jirachi, or Blissey. He usually switches in undamaged because of Celebi's U-Turn, which makes things even easier for him. Earthquake and Stone Edge give me pretty good coverage and are the moves I find myself using the most. The other two are just fillers in case I catch a Scarf Rotom using Trick / Tbolt or to revenge kill Breloom or Heracross. This guy traps and takes out the bad guys to let my Zapdos sweep. He is a real team player!  
+
+### Raikou
+![Raikou]()  
+Moves:  
+
+- Thunderbolt
+- Hidden Power Ice
+- Aura Sphere
+- Shadow Ball  
+
+Item: Choice Scarf  
+Ability: Pressure  
+EVs: 252 Spe / 252 SpA / 4 Def  
+Nature: Rash  
+> I have been using Scarf Raikou since early 2011, but I never took him seriously becuase he lacked a reliable fourth move; this changed with the introuction of Aura Sphere, though! Now, I found myself able to revenge kill Tyranitar and Lucario, as well as hitting Magnezone and Heatran for Super Effective damage, which is just priceless on a Scarf user. With Thunderbolt and Hidden Power Ice, I get nearly perfect coverage to revenge kill stuff like Gyarados and Dragonite if they manage to set up. Since Celebi is slow, I can U-Turn after my opponent which allows me to see if they attack or set up, so I can send Raikou undamaged. Raikou is in my opinion the best Scarfer in the game at the moment, with its high speed, special attack, bulk, and coverage.  
+
+### Zapdos
+![Zapdos]()  
+Moves:  
+
+- Thunderbolt
+- Hidden Power Ice
+- Roost
+- Agility  
+
+Item: Life Orb  
+Ability: Pressure  
+EVs: 240 HP / 226 SpA / 44 Spe  
+Nature: Modest  
+> After using Agility I can outspeed even Scarf Flygon and OHKO him with Hidden Power. Late game with its counters gone, there is not much that can stop this beast. This is probably the most anti-metagame sweeper there is at the moment, because he tears FWG (Fire, Water, Grass) cores easily, and the damage the common fillers of those teams, Dragon and Steel. Zapdos is not only really fast after an Agility, he is actually very strong and bulky too (I can even recover Life Orb / Sand damage with Roost!). Zapdos is my favorite sweeper and I made this team around him.  
+
 ## A Greek RMT
+This is a team build for the Manaphy suspect testing period. This team takes the hyper-offensive approach to the suspect metagame. Utilizing a core of heavy-hitting special sweepers, Stathakis focused on weakening the opponents' several walls; through his various stat-boosting Pokemon, he hit as hard as possible, with another sweeper ready to finish the job. This team is the epitome of heavy-offense, with an emphasis on constant sacrifices to bring in his next Pokemon. In the team building section, Stathakis clearly explains his team goal, utilizing his special sweepers to ultimately set up an Empoleon sweep (with the backup plan of his other sweepers winning the match as well).
+
+### Azelf - "Zorbas"
+![Azelf]()  
+Moves:  
+
+- Stealth Rock
+- Explosion
+- Fire Blast
+- Psychic  
+
+Item: Focus Sash  
+Ability: Levitate  
+EVs: 252 SpA, 4 Atk, 252 Spe  
+Nature: Naive (+Spe, -SpD)  
+> So, I start the match with suicide Azelf. Here's the reasoning: I get up Stealth Rock early, and I sacrifice Azelf, giving me a free switch-in to whatever kills it, generally giving me a free turn to set up and sweep or sacrifice or whatever. Generally, I don't set up Stealth Rock right away, but attack to 2HKO whatever is in, encouraging the opponent to switch as I set Stealth Rock. By doing this, I get damage on a first Pokemon, scout a little, set up my Stealth Rock, and maybe even continue denting stuff. Oftentimes, I decide to just not explode and continue to fire off strong psychics, which allows me to weaken enemy rotoms, as they are an annoying threat to this team, beating Manaphy and Infernape as well as forcing Jolteon out. So, Azelf generally puts me ahead from the start. Sometimes, I can just continually fire off Psychics, lulling poorer players into a sense of security and managing to blow up Blissey early in the game. It's also fun to hit Jirachi hard and then come in later. Basically, I don't explode immediately with this guy because it's somewhat expected. And if I happen to explode on a ghost, no sweat. If Azelf gets Stealth Rock and scouts a little, he's done his job. Besides, worse comes to worst, if I don't get a kill with Explosion, I still get the free turn from bringing in whoever I want. Azelf has failed me maybe once or twice to get a good start in the match, despite how prepared people are for him.  
+
+### Gengar - "Dimitris"
+![Gengar]()  
+Moves:  
+
+- Shadow Ball
+- Focus Blast
+- Explosion
+- Hypnosis  
+
+Item: Life Orb  
+Ability: Levitate  
+EVs: 252 SpA / 4 Atk / 252 Spe  
+Nature: Hasty (+Spe, -Def)  
+> Life Orb Gengar generally comes in early game, right after Azelf explodes. He can take on most things one-on-one with Hypnosis, and sleeping Scizors on the switch is pretty cool. Generally if the opponent has a Blissey, they're bringing it in immediately. If they don't bring it in due to being scared of Explosion, they're getting hit by incredibly strong Shadow Balls and getting frustrated enough to just bring her in anyways. I can generally scout the protect, and if I don't get Blissey dead, it's generally at low enough health for the rest of the team to take on. Gengar can generally just throw attacks without switching and KO or 2HKO everything, especially with Stealth Rock and Hypnosis forcing switches. He comes in early game and just does damage while scouting the team to hell. You don't know how many switches this guy forces. What's nice is, with Scizor getting Gengar, people have stopped worrying about it and letting it walk all over their teams. Well, Gengar is back and better. Even if Scizor Bullet Punches me dead, I've got like 3 guys who love coming in after Scizor Bullet Punches. So, this guy works in conjunction with Azelf for early game havoc generally. If it lives to see the lategame, it can sweep once bulkier Pokemon are weakened and Scizor is taken out / slept. But generally, I sacrifice this guy early so that doesn't happen often.  
+
+### Infernape - "Yiannis"
+![Infernape]()  
+Moves:  
+
+- Nasty Plot
+- Fire Blast
+- Focus Blast
+- Vacuum Wave  
+
+Item: Life Orb  
+Ability: Blaze  
+EVs: 252 SpA / 252 Spe / 4 HP  
+Nature: Timid (+Spe, -Atk)  
+> Nasty Plot Infernape. This guy is a threat that is not too often seen anymore. He is, however, incredibly potent. This guy generally comes in after Gengar, due to Scizor Bullet Punching me dead. As he plots the switch, he OHKOs Vaporeon, Swampert, Blissey, Zapdos, and all the rest of the usual suspects. Blaze Fire Blast is nothing to scoff at either, OHKOing even resists like Swampert and the bulkiest of Salamences. Vacuum Wave is mainly to revenge kill stuff if somehow I let something set up, as well as priority for random scarfers and priority users that may true to hurt Infernape after it's taken some damage. A lot of the time, opponents expect me to switch out to save Infernape and take the chance to set up Toxic Spikes or Rapid Spin, allowing me to get two +2 hits on annoying Pokemon, leaving it with very little health (and obviously not enough HP to deal with Empoleon). This guy exemplefies the team concept of sacrifices, generally busting open huge holes for me to exploit. By the time this guy is done rampaging, it's generally game over no matter what. Stroking Manaphies is is also fun as they can be a bit of a thorn in Empoleon's side, and nobody likes speed ties. This guy also completely decimates stall pretty much on his own, which is another plus, though stall really has no place vs. this team and its nature anyways.  
+
+### Manaphy - "Maria"
+![Manaphy]()  
+Moves:  
+
+- Tail Glow
+- Surf
+- Energy Ball
+- Ice Beam  
+
+Item: Life Orb  
+Ability: Hydration  
+EVs: 252 SpA / 252 Spe / 4 HP  
+Nature: Timid (+Spe, -Atk)  
+> The dreaded suspect Manaphy. Ironically, this guy has generally been the weak link of the team. When I win, he is rarely a substantial contributor, if I even reveal him at all. When I lose, he is usually just taking up space. Rarely did Manaphy help me at all, other than maybe to coax out other Manaphies to speed tie with me. The reason I built this team was to use Manaphy in the suspect test, and I found him quite underwhelming. So basically I theory'd him onto the team and was reluctant to remove him. He is quick and can OHKO frail stuff without setup, and once he is set up even the strongest of defenders can't take him on (even Blissey). If Blissey, for whatever reason, is still alive to take on Manaphy, I don't switch out. One time, I won a game because Manaphy set up as Blissey came in, set up again while getting Thunderwaved, then sacrificed himself to hit Blissey with powerful 70%+ Surfs, forcing her to Seismic Toss because she dies before Life Orb kills me. Basically, Manaphy is a bit of a glue for the team, OHKOing most everything while at the same time being bulky (and not early game death fodder) so that I can go to him mid-late game. Anyways, aside from serving as prime lategame stuff to sacrifice so that I can get an opening for Infernape or Jolteon to sweep, Manaphy didn't do too much.  
+
+### Empoleon - "Yiorgos"
+![Empoleon]()  
+Moves:  
+
+- Agility
+- Substitute
+- Hydro Pump
+- Ice Beam  
+
+Item: Petaya Berry  
+Ability: Torrent  
+EVs: 252 SpA / 232 Spe / 12 HP / 12 Def  
+Nature: Modest (+SpA, -Atk)  
+> Substitute Empoleon is quite possibly the most fearsome sweeper in OU. No, in fact, it *is* the most fearsome sweeper in OU. I think the only reason that he isn't seen more is because of the amount of support required to make him sweep, and the fact that you pretty much only get one chance to sweep. Well, that isn't an issue for this team, because every single member of this team is a win condition on its own, so even if Empolleon doesn't sweep, it's ok. Basically, I get him in midgame on a Scizor Bullet Punch, generally to kill off Infernape, and just sweep away the rest of the enemy team. He is quick enough after an Agility to sweep, though getting beat by Scarfed Flygon is kind of annoying. Basically, Empoleon is what makes all-special offense worthwhile over all-physical. His formidability as a way to end games in a snap is just insane. And with this team being as wearing as it is on Blissey and water-types, it's rare that he can't do his thing. I have Empoleon here using Hydro Pump and Ice Beam, mainly to kill off bulky things. If Empoleon were my only way to sweep, I'd be using Surf, but since the goal is to do as much damage before dying, Hydro Pump gets the nod in order to OHKO bulky Pokemon that might get in my other guys' way. Ice Beam, in the meantime, is here because I can deal with water-types with ease but not with flying-types as easily. This is kind of the Pokemon this team was built around, and he does a good job at what he does.  
+
+### Jolteon - "Eleni"
+![Jolteon]()  
+Moves:  
+
+- Thunderbolt
+- Shadow Ball
+- Baton Pass
+- Rain Dance  
+
+Item: Choice Specs  
+Ability: Volt Absorb  
+EVs: 252 SpA / 252 Spe / 4 HP  
+Nature: Timid (+Spe, -Atk)  
+> Specs Jolteon. This guy can OHKO pretty much any semi-frail Pokemon in Platinum. Zero set up. Just get in and kill stuff. This guy is mainly my lategame sweeper if for some reason there isn't an opening to set up on. He comes in usually just once and it's game over. The moveset might throw you guys off, but there is pretty alright reasoning behind it. Basically, I'm never *ever* going to use Hidden Power, so I figured why screw with the IVs and sacrifice Special Attack points to get a Hidden Power. It's much more likely that setting up Rain Dances before dying so that Manaphy or Empoleon can win with double STAB water attacks than it is to get a kill on Swampert with Hidden Power Grass. Swampert is nearly *always* dead by the time I should even think about bringing Jolteon in. So, no Hidden Powers. This is my guy who can beat Scarfed Gengar with his nice Special Defense, which is really sad because Scarfed Gengar does a number to this team. Luckily, they are usually saved for the lategame where Jolteon wins 1 vs. 1. This guy kind of functions like Deoxys-S did once upon a time. Not much to explain here, Jolteon just gets the job done when I need it to, and that job is just coming in lategame and killing stuff. I also generally go to Jolteon if I'm nervous about going to Infernape after Gengar explodes. Jolteon is another force that wins 1 vs. 1 against most things after an Explosion.  
+
 ## Pride & Prejudice
+Pride and Prejudice is largely responsible for coining the phrase "triple Dragon, triple Steel." The team's creator, TAY, shows how the two types have excellent synergy, using Magnezone to remove opposing Steel-types in order to allow his Draogn-types to sweep. This is an excellent example of an offensive team that makes the opponent think, as he loads up on Pokemon that have similar counters. Choice Band Salamence can pount through Kingdra's counters, allowing it to sweep, for example.
+
+### Heatran
+![Heatran]()  
+Moves:  
+
+- Fire Blast
+- Stealth Rock
+- Earth Power
+- Explosion  
+
+Item: Shuca Berry  
+Ability: Flash Fire  
+EVs: 252 Spe / 252 SpA / 4 Atk  
+Nature: Naive (+Spe, -SpD)  
+> For a team that doesn't care about the opponent getting Stealth Rock up, this is a monstrous lead. I played around with the idea of using Focus Sash instead, but eventually decided on Shuca since I want to be able to switch back in after my opponent lays rocks and bluff Choice Scarf (or just explode), and it's almost impossible to OHKO without Close Combat or a STAB Earthquake. The beauty of this lead is that most playes will assume I am running Choice Scarf and not Taunt it for fear of not being able to lay rocks, and Trick doesn't bother me since I just get a Scarfed Heatran. This also causes opponents to occasionally stay in as I Fire Blast, and allows me to bluff Choice Scarf later in the game -- something that has been vital more than you would think. I chose Naive over Hasty because Outrage is a whole lot harder to take than Dragon Pulse.  
+
+### Kingdra
+![Kingdra]()  
+Moves:  
+
+- Dragon Dance
+- Substitute
+- Waterfall
+- Outrage  
+
+Item: Lum Berry  
+Ability: Swift Swim  
+EVs: 252 Spe / 252 Atk / 4 HP  
+Nature: Adamant  
+> Kingdra is here for me to reap the benefits of its water type (hi Metagross), as well as to enjoy the almost-unresisted Water / Dragon STAB (Kingdra beats Empoleons who switch in anyway). The Substitute + Lum Berry combo is actually really useful, since I can Dragon Dance as they Thunderwave or Will-O-Wisp and the Substitute the next turn as they try to do it again. Lum Berry of course will also cure my confusion after using Outrage, which is a huge aid to sweeping, and prevents people from "stalling out" Outrage for Confusion. Another handy thing about Kingdra is that its lone Dragon weakness is resisted by half my team, so I usually have a safe play when it is out. Kingdra is sadly my best switch-in to Gyarados, since it cannot OHKO even with Life Orb Earthquake and I can deal enough damage between Outrage and Stealth Rock to revenge kill with Scizor if need be.  
+
+### Salamence
+![Choice Band]()  
+Moves:  
+
+- Outrage
+- Dragon Claw
+- Earthquake
+- Stone Edge  
+
+Item: Choice Band  
+Ability: Intimidate  
+EVs: 252 Spe / 252 Atk / 4 HP  
+Nature: Jolly (+Spe, -SpA) 
+> With Magnezone on the team, Choice Banded Salamence is incredibly powerful. Usually, I use Dragon Claw at first to scout for Steel types so that I can send out Magnezone (and if they don't send in a Steel type, they will take a hefty amount of damage). I don't use Fire Fang because the damage it deals is pretty pitiful against Skarmory, and I have Magnezone anyway. I know it seems silly to use Choice Band Dragon Claw when it is the same power as Outrage without Choice Band, but being able to switch out and save Salamence is horribly valuable. Since all of his weaknesses are resisted by steel I can usually find a safe switch, and come in later to clean up with Outrage. I use Jolly nature to mainly avoid being outsped by other Salamences and sometimes Jirachi, but you would be surprised at how much of the metagame Salamence actually outruns. With Latias running around everywhere, no one bothers to run Infernape; Gengar is a thing of the past due to all the Steels used to stop Latias and the Outrage users; and that leaves Azelf, Starmie, and Weavile as the only Pokemon in the top 30 usage spots to outspeed Salamence. And with Azelf almost exclusively being a suicide lead and Weavile being laughably easy for my team to handle, Salamence is almost always faster than whatever switches into him -- and when you're using a Choice Band with 135 base attack, that matters a lot.  
+
+### Latias
+![Latias]()  
+Moves:  
+
+- Calm Mind
+- Recover
+- Refresh
+- Dragon Pulse  
+
+Item: Leftovers  
+Ability: Levitate  
+EVs: 252 Spe / 128 SpA / 128 HP  
+Nature: Timid (+Spe, -Atk)  
+> With the ability to switch into pretty much any Infernape, Zapdos, or status user set, Latias solves a lot of the problems that offensive teams commonly run into. I know a few people have been running Substitute to stop status and block Pursuit from Tyranitar and Scizor, but I really appreciate the ability to actually switch into status users without concern. And, honestly, I have gotten into the habit of just double-switching straight out of Latias into Magnezone or Salamence, since it seems like everyone is carrying a hard Latias counter. Between this, Salamence, and Magnezone, it is pretty difficult for me to lose to defensive or even balanced teams, since no special wall can stop it (except for Exploders) and itis faster than just about everything that switches into it. It might seem weird to run max Speed on what would normally be a defensive set, but I really need to stay on the offense with this team.  
+
+### Scizor
+![Scizor]()  
+Moves:  
+
+- Bullet Punch
+- Superpower
+- Swords Dance
+- U-Turn  
+
+Item: Leftovers  
+Ability: Technician  
+EVs: 232 Spe / 252 Atk / 24 HP  
+Nature: Adamant (+Atk, -SpA)  
+> I've been made fun of for using Swords Dance + U-Turn, but I swear the set works! Rather than being a late game sweeper, it is designed to come in early and U-Turn out of the counters that switch into it, since Zapdos and Rotom cannot continually take U-Turn + Stealth Rock damage, and Heatran always fears Superpower. Leftovers allow it to do this as much as possible, and I don't really need Life Orb to push through the resisting counters since they will likely be gone by the time I attempt a Bullet Punch sweep. 232 Speed beats Rotoms trying to beat adamant Tyranitar, so I can get some decent damage and save Scizor even if I Swords Dance on their switch. This is my primary switch-in to Latias since most do not carry Hidden Power Fire, and U-Turn will put me in an advantageous position regardless of my opponent's play.  
+
+### Magnezone
+![Magnezone]()  
+Moves:  
+
+- Thunderbolt
+- Hidden Power Fire
+- Flash Cannon
+- Explosion  
+
+Item: Choice Scarf  
+Ability: Magnet Pull  
+EVs: 252 Spe / 252 SpA / 4 Atk  
+Nature: Naive  
+> Magneone really makes this team work. It takes out the steels that resist Outrage and Dragon Pulse and a couple of Scizor's counters as well. Not to mention it has amazing Defense to take Outrages and can explode to get rid of problem pokes. Flash Cannon is there for everyone who likes to switch Tyranitar in from their Bulky Waters, and the Special Defense drop has come in handy as well.  
+
 ## Champion Cynthia!
+This team is meant to be a somewhat more competitive version of Cynthia's team from the Gen IV games. The team was created by Energeia.
+
+### Garchomp
+![Garchomp]()  
+Moves:  
+
+- Stealth Rock
+- Outrage
+- Earthquake
+- Fire Blast  
+
+Item: Focus Sash  
+Ability: Rough Skin  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Nature: Naive (+Spe, -SpD)  
+> When looking through the team, I needed a rock setter and to my initial disappointment I didn't see a decent rock setter or one that could even set rocks for that matter. That was until battling for a couple of matches until I stumbled upon an opposing Garchomp lead that wasn't effective against me before as I lead with Scarfed Roserade, but gave me an idea for a good rock setter. Garchomp has just enough speed to outspeed other common rock setters like Jirachi and lets me hold momentum from the beginning. Stealth Rock is a must for this set and team as it's my only source of residual damage. Outrage is a hard hitting STAB that KOs most things that don't resist in one to two hits and is all but mandatory for any Garchomp. Earthquake allows me to smash opposing Jirachi leads and other Steels that may try to come in to swallow an Outrage excluding Ferrothorn. Fire Blast smacks Forretress and Ferrothorn for a clean 2HKO assuming Forretress has Sturdy intact. I opted for Rough Skin over Sand Veil for a common situational moment in the battle where I'll be matched up with someone who leads with Forretress or sends it in for their lead in where I'll throw up rocks then Fire Blast before the opposing Forretress can spin so when the Rapid Spin with 1% or so, they aren't allowed to spin away the Rocks as Forretress has gone down before Rapid Spin has resolved. The EVs are straight forward; Max Speed to outspeed common leads like Jirachi while maximizing Attack to hit as hard as possible. Garchomp is the best lead for the team and does what it has to do most of the time: set rocks and set the tempo early.  
+
+### Spiritomb
+![Spiritomb]()  
+Moves:  
+
+- Pursuit
+- Shadow Sneak
+- Sucker Punch
+- Will-O-Wisp  
+
+Item: Blackglasses  
+Ability: Infiltrator  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Nature: Adamant (+Atk, -SpA)  
+> Spiritomb is my Pursuit trapper and Revenge killer and in some cases can sweep lategame with a strong Sucker Punch. Spiritomb handles Espeon and Xatu that may try to come in and bounce rocks only to take heavy damage from Pursuit. I was thinking about making this a Band or Special set but found this to be more effective as an emergency answer to threats like Alakazam and such that may hurt the team. Double Priority may seem dumb but people may work around Sucker Punch so Shadow Sneak acts as a secondary check in case the opponent can predict and can call for mindgames as the opponenet tends to attack once I reveal Shadow Sneak. Will-O-Wisp is a great support move to cripple Steel types that come in a lot and acts as a soft check to things like Terrakion and co. 252 HP EVs maximize its bulk and 252 Atk EVs maximize its attacks' power. No point in trying to allocate EVs anywhere else as Spiritomb needs all the Attack it can get and it's too slow to outspeed anything important. Spiritomb does its job serving as an emergency check to weakened foes.  
+
+### Togekiss
+![Togekiss]()  
+Moves:  
+
+- Nasty Plot
+- Air Slash
+- Thunder Wave
+- Roost  
+
+Item: Leftovers  
+Ability: Serene Grace  
+EVs: 252 HP / 120 Def / 132 SpD / 4 Spe  
+Nature: Calm (+SpD, -Atk)  
+> Togekiss is blessed with a great ability although annoying if you're facing it in Serene Grace, so why not utilize it to the fullest? This set works just about the same way as Jirachi but has a more reliable recovery and a great boosting move that makes this an offensive threat in a hurry. Nasty Plot allows Togekiss to boost its uninvested Special Attack into threatening levels that can sweep unprepared teams. Air Slash is a must allowing Togekiss to flinch opposing Pokemon. Paired with Thunder Wave, the opposing Pokemon will just about roll over and die and perhaps cause the opponent to ragequit. Roost allows it to heal off damage it took and continue to cause raging Pokemon trainers. EVs maximize Togekiss' great mixed bulk as no Special Attack investment is really needed with a Nasty Plot boost. 4 Speed EVs allows it to speed creep on uninvested base 80 speed like Politoad and such. Togekiss performs its duty as an annoyer very well and causes ragequits as well as Jirachi does.  
+
+### Milotic
+![Milotic]()  
+Moves:  
+
+- Hydro Pump
+- Ice Beam
+- Hidden Power Flying
+- Recover  
+
+Item: Life Orb  
+Ability: Marvel Scale  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Nature: Modest (+SpA, -Atk)  
+> Milotic here is usually seen as a bulky Pokemon, but here I wanted to take a twist with it and turn it into a tank. With a respectable base 100 Special Attack boosted by Life Orb, Milotic does a decent job in dealing damage. Hydro Pump backed by STAB and Life Orb does amazing damage and with rain ever so popular, it is boosted even more. Underestimate the power of STAB + Life Orb + Rain Hydro Pump and you'll for sure pay. Ice Beam catches the likes of the genies on the switch and dangerous Dragons as the lack of a bulky steel can hurt. I opted for Hidden Power Flying over Hidden Power Grass as this team tends to have problems with Ludicolo and Toxicroak in rain if Togekiss is weakened or down. Recover lets it heal off Life Orb recoil to fire off more hits. Milotic here serves great as my pivot along with Togekiss in taking most of the hits for the team.  
+
+### Roserade
+![Roserade]()  
+Moves:  
+
+- Leaf Storm
+- Sludge Bomb
+- Hidden Power Fire
+- Sleep Powder  
+
+Item: Choice Scarf  
+Ability: Natural Cure  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Nature: Timid (+Spe, -Atk)  
+> In my opinion, all teams need a dedicated revenge killer and Roserade here was my choice. It has respectable speed along with great Special Attack with a base 125 Special Attack. STAB Leaf Storm smacks anything that doesn't resist it or isn't named Chansey, Blissey or Snorlax. Sludge Bomb is a great secondary STAB move that hits for decent damage on neutral targets. I'm thinking about swapping Hidden Power Fire for Hidden Power Ice to revenge kill Dragons, but I'll stick with Hidden Power Fire in the meantime. This allows me to hit Steels that hard counter this set otherwise. Sleep Powder allows me to shutdown problematic Pokemon and serves as an emergency check to boosting Pokemon like Nasty Plot Azelf although not popular anymore and such. EVs are straightforward to maximize speed and special attack. Roserade is a great revenge killer for this team and does its job well.  
+
+### Lucario
+![Lucario]()  
+Moves:  
+
+- Swords Dance
+- Extremespeed
+- Bullet Punch
+- Close Combat  
+
+Item: Air Balloon  
+Ability: Justified  
+EVs: 252 Atk / 4 Def / 252 Spe  
+Nature: Adamant (+Atk, -SpA)  
+> Swords Dance Lucario, a flagship set from the Gen IV era which was extremely powerful has lost it's strength but is still great for this team. Lucario is only used at late-game situations when the opposing team is battered and +2 Extremespeed can proceed to sweep. Swords Dance is a must here as otherwise non-STAB Extremespeed won't do much as Lucario's base-Attack is good but not great. I opted for Dual Priority as otherwise Gengar would be a problem as it's immune to both Close Combat and Extremespeed. Close Combat smacks Ferrothorn and other steels who would otherwise wall this set entirely. EVs are standard to max speed and attack with Adamant nature as the speed boost wouldn't really help with Dual Priority as the Attack boost is much more beneficial. Air Balloon gives it a temporary immunity it can really use. Overall Lucario works well as a late-game cleaner and usually is my last hope when things go awry.  
+
 ## The Gang
 ## I Hate Sand
 ## Team 16
