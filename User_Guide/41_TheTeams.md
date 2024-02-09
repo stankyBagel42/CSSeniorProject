@@ -1387,6 +1387,98 @@ Nature: Calm
 > The EV spread given maximizes Clefable's special walling prowess. While this may seem like a futile attempt at making Clefable as bulky as Chansey, it actually allows Clefable to handily wall various special threats, such as Life Orb Venusaur and Milotic, and eventually defeat them. A more physically defensive EV spread of 252 HP / 152 Def / 100 SpD / 4 Spe allows Clefable to more easily defeat Donphan and Rhyperior, but Clefable is much more adept at walling special threats.
   
 ## I Hate Sand
+This team was created by Nick.
+
+### Garchomp
+![Garchomp]()  
+Moves:  
+
+- Earthquake
+- Outrage
+- Stone Edge
+- Dragon Claw  
+
+Item: Choice Scarf  
+Ability: Sand Veil  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Nature: Jolly  
+> Notes  
+
+### Swampert
+![Swampert]()  
+Moves:  
+
+- Earthquake
+- Ice Beam
+- Stealth Rock
+- Roar  
+
+Item: Leftovers  
+Ability: Torrent  
+EVs: 252 HP / 152 Def / 100 SpD / 4 Spe  
+Nature: Relaxed  
+> Notes  
+
+### Scizor
+![Scizor]()  
+Moves:  
+
+- Bullet Punch
+- Pursuit
+- U-turn
+- Superpower  
+
+Item: Choice Band  
+Ability: Technician  
+EVs: 248 HP / 252 Atk / 8 Spe  
+Nature: Adamant  
+> Notes  
+
+### Tyranitar
+![Tyranitar]()  
+Moves:  
+
+- Dragon Dance
+- Stone Edge
+- Crunch
+- Earthquake  
+
+Item: Lum Berry  
+Ability: Sand Stream  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Nature: Jolly  
+> Notes  
+
+### Heatran
+![Heatran]()  
+Moves:  
+
+- Lava Plume
+- Earth Power
+- Protect
+- Roar  
+
+Item: Shuca Berry  
+Ability: Flash Fire  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Nature: Calm  
+> Notes  
+
+### Zapdos
+![Zapdos]()  
+Moves:  
+
+- Heat Wave
+- Thunderbolt
+- Roost
+- Roar  
+
+Item: Leftovers  
+Ability: Pressure  
+EVs: 248 HP / 228 Def / 32 Spe  
+Nature: Bold  
+> Notes  
+
 ## Team 16
 ## Team 17
 ## Team 18
