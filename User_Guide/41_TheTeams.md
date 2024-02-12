@@ -1,4 +1,4 @@
-### [prev]() | [next](./42_ChallengingTheBot.md)
+### [prev](./31_GameStateVector.md) | [next](./42_ChallengingTheBot.md)
 # 4.1 The Teams
 This section will provide information about the teams that are used in our training environment. Many of these teams were adapted from popular smogon teams of the Gen IV era, while some others were made by us. You might notice that the Pokemon are of varying levels. This is to balance teams with objectively stronger or weaker Pokemon.
 
@@ -1993,4 +1993,4 @@ Item: Expert Belt
 Ability: Arena Trap  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Adamant  
-### [prev]() | [next](./42_ChallengingTheBot.md)
+### [prev](./31_GameStateVector.md) | [next](./42_ChallengingTheBot.md)

@@ -1,3 +1,4 @@
+### [prev](./22_StartingTheServer) | [next](./41_TheTeams.md)
 # Game State Vector
 
 In the reinforcement learning training, we need to be able to convert a Pokémon battle to a state vector that we can 
@@ -45,3 +46,5 @@ The number following the state is how many numbers it takes to describe in the v
 * Gravity (1)
 * Mud Sport (1)
 * Water Sport (1)
+
+### [prev](./22_StartingTheServer) | [next](./41_TheTeams.md)

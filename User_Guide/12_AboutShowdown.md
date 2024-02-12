@@ -1,4 +1,4 @@
-### [prev](./11_AboutPokemon.md) | [next]()
+### [prev](./11_AboutPokemon.md) | [next](./21_ProjectSetup.md)
 # 1.2 About Pokemon Showdown
 Pokémon Showdown is a popular online battle simulator for the Pokémon video games. Developed by Zarel, it provides a platform for players to create and customize teams of Pokémon and battle against each other in a competitive environment. Here's an overview of Pokémon Showdown's key features:
 
@@ -17,4 +17,4 @@ Pokémon Showdown is a popular online battle simulator for the Pokémon video ga
 7. Updates and Support: The platform receives regular updates to ensure it stays current with changes in the official Pokémon games, including new Pokémon, moves, and abilities. Additionally, there is an active community of developers and moderators who maintain the platform and enforce fair play.
 
 Overall, Pokémon Showdown provides a convenient and competitive platform for Pokémon fans to engage in battles, test out strategies, and enjoy the thrill of competitive Pokémon gameplay online.
-### [prev](./11_AboutPokemon.md) | [next]()
+### [prev](./11_AboutPokemon.md) | [next](./21_ProjectSetup.md)
