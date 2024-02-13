@@ -329,10 +329,10 @@ Nature: Adamant (+ Atk, - SpA)
 ![Tyranitar](./PokemonImages/Tyranitar.webp)  
 Moves:  
 
-- Pursuit
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
-- Crunch  
+- [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)  
 
 Item: Choice Band  
 Ability: Sand Stream  
@@ -344,8 +344,8 @@ Nature: Adamant
 ![Blissey](./PokemonImages/Blissey.webp)  
 Moves:  
 
-- Thunder Wave
-- Softboiled
+- [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)
+- [Softboiled](https://www.serebii.net/attackdex-dp/softboiled.shtml)
 - [Flamethrower](https://www.serebii.net/attackdex-dp/flamethrower.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground  
 
@@ -362,7 +362,7 @@ Moves:
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)
-- Thunder Wave  
+- [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)  
 
 Item: Leftovers  
 Ability: Natural Cure  
@@ -376,8 +376,8 @@ Moves:
 
 - [Rest](https://www.serebii.net/attackdex-dp/rest.shtml)
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)
-- Waterfall
-- Dragon Dance  
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)  
 
 Item: Leftovers  
 Ability: Intimidate  
@@ -393,8 +393,8 @@ A pre-Platinum offense team that featured both Garchomp and Deoxys-S. At the tim
 Moves:  
 
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
-- Taunt
-- Rock Slide
+- [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)
+- [Rock Slide](https://www.serebii.net/attackdex-dp/rockslide.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
 Item: Focus Sash  
@@ -407,10 +407,10 @@ Nature: Jolly (+Spe, -SpA)
 ![Gyarados](./PokemonImages/Gyarados.webp)  
 Moves:  
 
-- Dragon Dance
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)
-- Waterfall  
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)  
 
 Item: Life Orb  
 Ability: Intimidate  
@@ -423,9 +423,9 @@ Nature: Adamant (+Atk, -SpA)
 Moves:  
 
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
-- Explosion
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
-- Hypnosis  
+- [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)  
 
 Item: Life Orb  
 Ability: Levitate  
@@ -439,8 +439,8 @@ Moves:
 
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
-- Fire Fang
-- Outrage  
+- [Fire Fang](https://www.serebii.net/attackdex-dp/firefang.shtml)
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)  
 
 Item: Choice Band  
 Ability: Sand Veil  
@@ -469,7 +469,7 @@ Moves:
 
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- Superpower
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)  
 
 Item: Life Orb  
@@ -485,9 +485,9 @@ This team was built early on in the Platinum release. It ultimately demonstrated
 ![Shaymin-S](./PokemonImages/Shaymin-S.webp)  
 Moves:  
 
-- Seed Flare
+- [Seed Flare](https://www.serebii.net/attackdex-dp/seedflare.shtml)
 - [Air Slash](https://www.serebii.net/attackdex-dp/airslash.shtml)
-- Earth Power
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire  
 
 Item: Choice Scarf  
@@ -502,7 +502,7 @@ Moves:
 
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
-- Ice Shard
+- [Ice Shard](https://www.serebii.net/attackdex-dp/iceshard.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
 Item: Leftovers  
@@ -531,7 +531,7 @@ Nature: Naive
 Moves:  
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- Heat Wave
+- [Heat Wave](https://www.serebii.net/attackdex-dp/heatwave.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
 
@@ -547,8 +547,8 @@ Moves:
 
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
-- Earth Power
-- Explosion  
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Choice Scarf  
 Ability: Flash Fire  
@@ -560,10 +560,10 @@ Nature: Naive (+Spe, -SpD)
 ![Kingdra](./PokemonImages/Kingdra.webp)  
 Moves:  
 
-- Dragon Dance
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
-- Waterfall
-- Outrage  
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)  
 
 Item: Leftovers  
 Ability: Sniper  
@@ -578,9 +578,9 @@ This team was build when Garchomp was still dominating the OU scene. It's a bala
 ![Yanmega](./PokemonImages/Yanmega.webp)  
 Moves:  
 
-- Bug Buzz
+- [Bug Buzz](https://www.serebii.net/attackdex-dp/bugbuzz.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground
-- Hypnosis
+- [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)  
 
 Item: Focus Sash  
@@ -600,9 +600,9 @@ Nature: Modest
 Moves:  
 
 - [Flamethrower](https://www.serebii.net/attackdex-dp/flamethrower.shtml)
-- Earth Power
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
-- Explosion  
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Life Orb  
 Ability: Flash Fire  
@@ -618,10 +618,10 @@ Nature: Hasty
 ![Bronzong](./PokemonImages/Bronzong.webp)  
 Moves:  
 
-- Gyro Ball
-- Reflect
-- Light Screen
-- Explosion  
+- [Gyro Ball](https://www.serebii.net/attackdex-dp/gyroball.shtml)
+- [Reflect](https://www.serebii.net/attackdex-dp/reflect.shtml)
+- [Light Screen](https://www.serebii.net/attackdex-dp/lightscreen.shtml)
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Light Clay  
 Ability: Levitate  
@@ -637,7 +637,7 @@ Nature: Relaxed
 ![Gyarados](./PokemonImages/Gyarados.webp)  
 Moves:  
 
-- Waterfall
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - [Rest](https://www.serebii.net/attackdex-dp/rest.shtml)
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)  
@@ -656,7 +656,7 @@ Nature: Impish
 ![Garchomp](./PokemonImages/Garchomp.webp)  
 Moves:  
 
-- Outrage
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)  
@@ -696,9 +696,9 @@ This team utilizes the classic duo of Salamence and Magnezone, combining them wi
 ![Salamence](./PokemonImages/Salamence.webp)  
 Moves:  
 
-- Outrage
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Dragon Dance
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)  
 
 Item: Life Orb  
@@ -729,7 +729,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
-- Explosion  
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Leftovers  
 Ability: Magnet Pull  
@@ -758,8 +758,8 @@ Moves:
 
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
-- Superpower
-- Pursuit  
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)  
 
 Item: Choice Band  
 Ability: Technician  
@@ -771,8 +771,8 @@ Nature: Adamant (+Atk, -SpA)
 ![Heatran](./PokemonImages/Heatran.webp)  
 Moves:  
 
-- Explosion
-- Earth Power
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)  
 
@@ -789,7 +789,7 @@ Team Rose Tyler aims to make use of Toxic Spikes, which are provided by a Rosera
 ![Roserade](./PokemonImages/Roserade.webp)  
 Moves:  
 
-- Leaf Storm
+- [Leaf Storm](https://www.serebii.net/attackdex-dp/leafstorm.shtml)
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)
 - [Toxic Spikes](https://www.serebii.net/attackdex-dp/toxicspikes.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground  
@@ -809,8 +809,8 @@ Nature: Timid (+Spe, -Atk)
 Moves:  
 
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
-- Earth Power
-- Explosion
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)  
 
 Item: Choice Scarf  
@@ -825,7 +825,7 @@ Nature: Naive (+Spe, -SpD)
 ![Metagross](./PokemonImages/Metagross.webp)  
 Moves:  
 
-- Meteor Mash
+- [Meteor Mash](https://www.serebii.net/attackdex-dp/meteormash.shtml)
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Thunder Punch](https://www.serebii.net/attackdex-dp/thunderpunch.shtml)  
@@ -843,9 +843,9 @@ Nature: Adamant
 Moves:  
 
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
-- Will-O-Wisp
+- [Will-O-Wisp](https://www.serebii.net/attackdex-dp/will-o-wisp.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
-- Charge Beam  
+- [Charge Beam](https://www.serebii.net/attackdex-dp/chargebeam.shtml)  
 
 Item: Leftovers  
 Ability: Levitate  
@@ -861,8 +861,8 @@ Nature: Timid (+Spe, -Atk)
 ![Swampert](./PokemonImages/Swampert.webp)  
 Moves:  
 
-- Waterfall
-- Curse
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
+- [Curse](https://www.serebii.net/attackdex-dp/curse.shtml)
 - [Rest](https://www.serebii.net/attackdex-dp/rest.shtml)
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)  
 
@@ -876,7 +876,7 @@ Nature: Careful (+SpD, -SpA)
 ![Jirachi](./PokemonImages/Jirachi.webp)  
 Moves:  
 
-- Flash Cannon
+- [Flash Cannon](https://www.serebii.net/attackdex-dp/flashcannon.shtml)
 - [Calm Mind](https://www.serebii.net/attackdex-dp/calmmind.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)  
@@ -896,7 +896,7 @@ Moves:
 
 - [Hydro Pump](https://www.serebii.net/attackdex-dp/hydropump.shtml)
 - [Psychic](https://www.serebii.net/attackdex-dp/psychic.shtml)
-- Trick
+- [Trick](https://www.serebii.net/attackdex-dp/trick.shtml)
 - [Rapid Spin](https://www.serebii.net/attackdex-dp/rapidspin.shtml)  
 
 Item: Choice Specs  
@@ -911,8 +911,8 @@ Moves:
 
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml) / Flamethrower
-- Earth Power
-- Explosion  
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Shuca Berry  
 Ability: Flash Fire  
@@ -926,7 +926,7 @@ Nature: Hasty
 ![Celebi](./PokemonImages/Celebi.webp)  
 Moves:  
 
-- Leaf Storm
+- [Leaf Storm](https://www.serebii.net/attackdex-dp/leafstorm.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
@@ -943,8 +943,8 @@ Moves:
 
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
-- Pursuit
-- Aerial Ace  
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
 Item: Choice Band  
 Ability: Arena Trap  
@@ -958,7 +958,7 @@ Moves:
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
-- Aura Sphere
+- [Aura Sphere](https://www.serebii.net/attackdex-dp/aurasphere.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)  
 
 Item: Choice Scarf  
@@ -974,7 +974,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
-- Agility  
+- [Agility](https://www.serebii.net/attackdex-dp/agility.shtml)  
 
 Item: Life Orb  
 Ability: Pressure  
@@ -990,7 +990,7 @@ This is a team build for the Manaphy suspect testing period. This team takes the
 Moves:  
 
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
-- Explosion
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Psychic](https://www.serebii.net/attackdex-dp/psychic.shtml)  
 
@@ -1006,8 +1006,8 @@ Moves:
 
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
-- Explosion
-- Hypnosis  
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
+- [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)  
 
 Item: Life Orb  
 Ability: Levitate  
@@ -1019,10 +1019,10 @@ Nature: Hasty (+Spe, -Def)
 ![Infernape](./PokemonImages/Infernape.webp)  
 Moves:  
 
-- Nasty Plot
+- [Nasty Plot](https://www.serebii.net/attackdex-dp/nastyplot.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
-- Vacuum Wave  
+- [Vacuum Wave](https://www.serebii.net/attackdex-dp/vacuumwave.shtml)  
 
 Item: Life Orb  
 Ability: Blaze  
@@ -1034,9 +1034,9 @@ Nature: Timid (+Spe, -Atk)
 ![Manaphy](./PokemonImages/Manaphy.webp)  
 Moves:  
 
-- Tail Glow
+- [Tail Glow](https://www.serebii.net/attackdex-dp/tailglow.shtml)
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
-- Energy Ball
+- [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)  
 
 Item: Life Orb  
@@ -1049,7 +1049,7 @@ Nature: Timid (+Spe, -Atk)
 ![Empoleon](./PokemonImages/Empoleon.webp)  
 Moves:  
 
-- Agility
+- [Agility](https://www.serebii.net/attackdex-dp/agility.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
 - [Hydro Pump](https://www.serebii.net/attackdex-dp/hydropump.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)  
@@ -1066,8 +1066,8 @@ Moves:
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
-- Baton Pass
-- Rain Dance  
+- [Baton Pass](https://www.serebii.net/attackdex-dp/batonpass.shtml)
+- [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)  
 
 Item: Choice Specs  
 Ability: Volt Absorb  
@@ -1084,8 +1084,8 @@ Moves:
 
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
-- Earth Power
-- Explosion  
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Shuca Berry  
 Ability: Flash Fire  
@@ -1097,10 +1097,10 @@ Nature: Naive (+Spe, -SpD)
 ![Kingdra](./PokemonImages/Kingdra.webp)  
 Moves:  
 
-- Dragon Dance
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
-- Waterfall
-- Outrage  
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)  
 
 Item: Lum Berry  
 Ability: Swift Swim  
@@ -1112,7 +1112,7 @@ Nature: Adamant
 ![Salamence](./PokemonImages/Salamence.webp)  
 Moves:  
 
-- Outrage
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)  
@@ -1143,7 +1143,7 @@ Nature: Timid (+Spe, -Atk)
 Moves:  
 
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
-- Superpower
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
 - [Swords Dance](https://www.serebii.net/attackdex-dp/swordsdance.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
@@ -1159,8 +1159,8 @@ Moves:
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
-- Flash Cannon
-- Explosion  
+- [Flash Cannon](https://www.serebii.net/attackdex-dp/flashcannon.shtml)
+- [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
 Item: Choice Scarf  
 Ability: Magnet Pull  
@@ -1176,7 +1176,7 @@ This team is meant to be a somewhat more competitive version of Cynthia's team f
 Moves:  
 
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
-- Outrage
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)  
 
@@ -1190,10 +1190,10 @@ Nature: Naive (+Spe, -SpD)
 ![Spiritomb](./PokemonImages/Spiritomb.webp)  
 Moves:  
 
-- Pursuit
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
 - Shadow Sneak
 - Sucker Punch
-- Will-O-Wisp  
+- [Will-O-Wisp](https://www.serebii.net/attackdex-dp/will-o-wisp.shtml)  
 
 Item: Blackglasses  
 Ability: Infiltrator  
@@ -1205,9 +1205,9 @@ Nature: Adamant (+Atk, -SpA)
 ![Togekiss](./PokemonImages/Togekiss.webp)  
 Moves:  
 
-- Nasty Plot
+- [Nasty Plot](https://www.serebii.net/attackdex-dp/nastyplot.shtml)
 - [Air Slash](https://www.serebii.net/attackdex-dp/airslash.shtml)
-- Thunder Wave
+- [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)  
 
 Item: Leftovers  
@@ -1235,7 +1235,7 @@ Nature: Modest (+SpA, -Atk)
 ![Roserade](./PokemonImages/Roserade.webp)  
 Moves:  
 
-- Leaf Storm
+- [Leaf Storm](https://www.serebii.net/attackdex-dp/leafstorm.shtml)
 - Sludge Bomb
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)  
@@ -1269,8 +1269,8 @@ This team is a somewhat optimized version of the set Alex used in his last Pokem
 Moves:  
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- Superpower
-- Crunch
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
+- [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
 
 Item: Life Orb  
@@ -1306,8 +1306,8 @@ Nature: Adamant
 ![Gyarados](./PokemonImages/Gyarados.webp)  
 Moves:  
 
-- Dragon Dance
-- Waterfall
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
@@ -1355,7 +1355,7 @@ Moves:
 - [Psychic](https://www.serebii.net/attackdex-dp/psychic.shtml)
 - Signal Beam
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
-- Trick  
+- [Trick](https://www.serebii.net/attackdex-dp/trick.shtml)  
 
 Item: Choice Specs  
 Ability: Synchronize  
@@ -1376,7 +1376,7 @@ Moves:
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
 - Soft-Boiled
 - Seismic Toss
-- Thunder Wave  
+- [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)  
 
 Item: Leftovers  
 Ability: Magic Guard  
@@ -1394,7 +1394,7 @@ This team was created by Nick.
 Moves:  
 
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Outrage
+- [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)  
 
@@ -1424,9 +1424,9 @@ Nature: Relaxed
 Moves:  
 
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
-- Pursuit
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
-- Superpower  
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)  
 
 Item: Choice Band  
 Ability: Technician  
@@ -1438,9 +1438,9 @@ Nature: Adamant
 ![Tyranitar](./PokemonImages/Tyranitar.webp)  
 Moves:  
 
-- Dragon Dance
+- [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
-- Crunch
+- [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
 Item: Lum Berry  
@@ -1454,7 +1454,7 @@ Nature: Jolly
 Moves:  
 
 - Lava Plume
-- Earth Power
+- [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)
 - Roar  
 
@@ -1468,7 +1468,7 @@ Nature: Calm
 ![Zapdos](./PokemonImages/Zapdos.webp)  
 Moves:  
 
-- Heat Wave
+- [Heat Wave](https://www.serebii.net/attackdex-dp/heatwave.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - Roar  
@@ -1501,9 +1501,9 @@ Nature: Calm
 Moves:  
 
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Ice Shard
+- [Ice Shard](https://www.serebii.net/attackdex-dp/iceshard.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
-- Superpower  
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)  
 
 Item: Choice Band  
 Ability: Oblivious  
@@ -1515,7 +1515,7 @@ Nature: Jolly
 Moves:  
 
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Meteor Mash
+- [Meteor Mash](https://www.serebii.net/attackdex-dp/meteormash.shtml)
 - [Zen Headbutt](https://www.serebii.net/attackdex-dp/zenheadbutt.shtml)
 - Hammer Arm  
 
@@ -1573,7 +1573,7 @@ Moves:
 
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
 - [Leech Seed](https://www.serebii.net/attackdex-dp/leechseed.shtml)
-- Energy Ball
+- [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - Dragon Pulse  
 
 Item: Leftovers  
@@ -1585,9 +1585,9 @@ Nature: Timid
 ![Aerodactyl](./PokemonImages/Aerodactyl.webp)  
 Moves:  
 
-- Rock Slide
+- [Rock Slide](https://www.serebii.net/attackdex-dp/rockslide.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Aerial Ace
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)
 - Double-Edge  
 
 Item: Choice Band  
@@ -1613,9 +1613,9 @@ Nature: Timid
 ![Salamence](./PokemonImages/Salamence.webp)  
 Moves:  
 
-- Fire Fang
+- [Fire Fang](https://www.serebii.net/attackdex-dp/firefang.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
-- Aerial Ace
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
 Item: Lum Berry  
@@ -1630,7 +1630,7 @@ Moves:
 - [Toxic](https://www.serebii.net/attackdex-dp/toxic.shtml)
 - [Whirlwind](https://www.serebii.net/attackdex-dp/whirlwind.shtml)
 - [Spikes](https://www.serebii.net/attackdex-dp/spikes.shtml)
-- Aerial Ace  
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
 Item: Leftovers  
 Ability: Keen Eye  
@@ -1658,7 +1658,7 @@ Moves:
 
 - Megahorn
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)
-- Rock Slide
+- [Rock Slide](https://www.serebii.net/attackdex-dp/rockslide.shtml)
 - [Close Combat](https://www.serebii.net/attackdex-dp/closecombat.shtml)  
 
 Item: Flame Orb  
@@ -1673,7 +1673,7 @@ Moves:
 - [Draco Meteor](https://www.serebii.net/attackdex-dp/dracometeor.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Extremespeed](https://www.serebii.net/attackdex-dp/extremespeed.shtml)
-- Aerial Ace  
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
 Item: Life Orb  
 Ability: Technician  
@@ -1687,7 +1687,7 @@ Moves:
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
 - Bug Bite
 - [Swords Dance](https://www.serebii.net/attackdex-dp/swordsdance.shtml)
-- Aerial Ace  
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
 Item: Leftovers  
 Ability: Technician  
@@ -1727,8 +1727,8 @@ Nature: Modest
 Moves:  
 
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
-- Taunt
-- Energy Ball
+- [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)
+- [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)  
 
 Item: Focus Sash  
@@ -1770,7 +1770,7 @@ Nature: Modest
 ![Houndoom](./PokemonImages/Houndoom.webp)  
 Moves:  
 
-- Pursuit
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
 - Roar
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - Sucker Punch  
@@ -1784,7 +1784,7 @@ Nature: Hasty
 ![Mightyena](./PokemonImages/Mightyena.webp)  
 Moves:  
 
-- Taunt
+- [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)
 - Super Fang
 - Sucker Punch
 - Roar  
@@ -1813,7 +1813,7 @@ Nature: Jolly
 Moves:  
 
 - Roar
-- Thunder Wave
+- [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)
 - Return
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
@@ -1842,10 +1842,10 @@ Nature: Jolly
 ![Luxray](./PokemonImages/Luxray.webp)  
 Moves:  
 
-- Superpower
+- [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)
-- Crunch  
+- [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)  
 
 Item: Life Orb  
 Ability: Intimidate  
@@ -1873,7 +1873,7 @@ Moves:
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
 - [Swords Dance](https://www.serebii.net/attackdex-dp/swordsdance.shtml)
 - Baton Bass
-- Taunt  
+- [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)  
 
 Item: Leftovers  
 Ability: Intimidate  
@@ -1887,7 +1887,7 @@ Moves:
 - Return
 - Iron Head
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Pursuit  
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)  
 
 Item: Choice Band  
 Ability: Intimidate  
@@ -1899,9 +1899,9 @@ Nature: Jolly
 Moves:  
 
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
-- Aerial Ace
+- [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
-- Crunch  
+- [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)  
 
 Item: Yache Berry  
 Ability: Intimidate  
@@ -1914,10 +1914,10 @@ Nature: Careful
 ![Crobat](./PokemonImages/Crobat.webp)  
 Moves:  
 
-- Rain Dance
+- [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
-- Taunt
-- Hypnosis  
+- [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)
+- [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)  
 
 Item: Damp Rock  
 Ability: Inner Focus  
@@ -1928,7 +1928,7 @@ Nature: Jolly
 ![Scizor](./PokemonImages/Scizor.webp)  
 Moves:  
 
-- Pursuit
+- [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
 - [Brick Break](https://www.serebii.net/attackdex-dp/brickbreak.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)  
@@ -1945,7 +1945,7 @@ Moves:
 - Thunder
 - [Hydro Pump](https://www.serebii.net/attackdex-dp/hydropump.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
-- Rain Dance  
+- [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)  
 
 Item: Damp Rock  
 Ability: Levitate  
@@ -1957,9 +1957,9 @@ Nature: Timid
 Moves:  
 
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
-- Energy Ball
+- [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
-- Rain Dance  
+- [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)  
 
 Item: Life Orb  
 Ability: Swift Swim  
@@ -1971,7 +1971,7 @@ Nature: Modest
 Moves:  
 
 - [Swords Dance](https://www.serebii.net/attackdex-dp/swordsdance.shtml)
-- Waterfall
+- [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - Aqua Jet  
 
