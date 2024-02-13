@@ -16,7 +16,7 @@ Moves:
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)
 - [Toxic Spikes](https://www.serebii.net/attackdex-dp/toxicspikes.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Natural Cure  
 EVs: 4 Def / 252 Spe / 252 SpA  
 Nature: Timid (+ Spd, - Atk)  
@@ -31,7 +31,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Hydro Pump](https://www.serebii.net/attackdex-dp/hydropump.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Torrent  
 EVs: 240 HP / 216 Def / 52 SpD  
 Nature: Relaxed (+ Def, - SpD)  
@@ -46,7 +46,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Levitate  
 EVs: 4 Def / 252 Spe / 252 SpA  
 Nature: Timid (+ Spe, - Atk)  
@@ -61,7 +61,7 @@ Moves:
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
 - [Extremespeed](https://www.serebii.net/attackdex-dp/extremespeed.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Inner Focus  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Adamant (+ Atk, - SpA)  
@@ -76,7 +76,7 @@ Moves:
 - [Thunder Punch](https://www.serebii.net/attackdex-dp/thunderpunch.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Blaze  
 EVs: 156 Atk / 232 Spe / 120 SpA  
 Nature: Naive (+ Spd, - SpD)  
@@ -91,7 +91,7 @@ Moves:
 - [Brick Break](https://www.serebii.net/attackdex-dp/brickbreak.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Intimidate  
 EVs: 76 Atk / 180 Spe / 252 SpA  
 Nature: Rash (+ SpA, - SpD)  
@@ -109,7 +109,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Sand Stream  
 EVs: 252 HP / 24 Atk / 192 Def / 40 SpD  
 Nature: Impish (+ Def, - SpA)  
@@ -125,7 +125,7 @@ Moves:
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - [Brave Bird](https://www.serebii.net/attackdex-dp/bravebird.shtml)  
 
-Item: Shed Shell  
+Item: [Shed Shell](https://www.serebii.net/itemdex/shedshell.shtml)  
 Ability: Keen Eye  
 EVs: 252 HP / 200 Def / 40 SpD / 16 Spe  
 Nature: Impish (+ Def, - SpA)  
@@ -141,7 +141,7 @@ Moves:
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Electric  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Liquid Ooze  
 EVs: 252 HP / 120 Def / 136 SpD  
 Nature: Calm (+ SpD, - Atk)  
@@ -156,7 +156,7 @@ Moves:
 - [Flamethrower](https://www.serebii.net/attackdex-dp/flamethrower.shtml)
 - [Toxic](https://www.serebii.net/attackdex-dp/toxic.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Natural Cure  
 EVs: 252 Def / 40 SpA / 216 SpD  
 Nature: Calm (+ SpD, - Atk)  
@@ -180,7 +180,7 @@ Moves:
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Natural Cure  
 EVs: 252 HP / 216 Def / 8 SpD / 32 Spe  
 Nature: Bold (+ Def, - Atk)  
@@ -199,7 +199,7 @@ Moves:
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fighting  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Pressure  
 EVs: 252 HP / 100 Def / 156 SpD  
 Nature: Calm (+ SpD, - Atk)  
@@ -217,7 +217,7 @@ Moves:
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Salac Berry  
+Item: [Salac Berry](https://www.serebii.net/itemdex/salacberry.shtml)  
 Ability: Sand Veil  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Jolly  
@@ -231,7 +231,7 @@ Moves:
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)  
 
-Item: Black Sludge  
+Item: [Black Sludge](https://www.serebii.net/itemdex/blacksludge.shtml)  
 Ability: Levitate  
 EVs: 4 Def / 252 SpA / 252 Spe  
 Nature: Timid  
@@ -245,7 +245,7 @@ Moves:
 - [Body Slam](https://www.serebii.net/attackdex-dp/bodyslam.shtml)
 - [Air Slash](https://www.serebii.net/attackdex-dp/airslash.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Serene Grace  
 EVs: 252 HP / 188 Def / 68 SpD  
 Nature: Bold  
@@ -259,7 +259,7 @@ Moves:
 - [Leech Seed](https://www.serebii.net/attackdex-dp/leechseed.shtml)
 - [Focus Punch](https://www.serebii.net/attackdex-dp/focuspunch.shtml)  
 
-Item: Toxic Orb  
+Item: [Toxic Orb](https://www.serebii.net/itemdex/toxicorb.shtml)  
 Ability: Poison Heal  
 EVs: 252 HP / 48 Atk / 208 Def  
 Nature: Adamant  
@@ -273,7 +273,7 @@ Moves:
 - [Payback](https://www.serebii.net/attackdex-dp/payback.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: No Guard  
 EVs: 128 HP / 252 Atk / 128 Spe  
 Nature: Adamant  
@@ -287,7 +287,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Psychic](https://www.serebii.net/attackdex-dp/psychic.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Serene Grace  
 EVs: 252 HP / 80 SpA / 176 Spe  
 Nature: Timid  
@@ -304,7 +304,7 @@ Moves:
 - [Zen Headbutt](https://www.serebii.net/attackdex-dp/zenheadbutt.shtml)
 - [Body Slam](https://www.serebii.net/attackdex-dp/bodyslam.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Serene Grace  
 EVs: 252 HP / 8 Atk / 216 Def / 32 Spe  
 Nature: Impish (+ Def, - SpA)  
@@ -319,7 +319,7 @@ Moves:
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)
 - [Ice Punch](https://www.serebii.net/attackdex-dp/icepunch.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: No Guard  
 EVs: 252 HP / 220 Atk / 36 Def  
 Nature: Adamant (+ Atk, - SpA)  
@@ -334,7 +334,7 @@ Moves:
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Sand Stream  
 EVs: 252 HP / 252 Atk / 4 SpD  
 Nature: Adamant  
@@ -349,7 +349,7 @@ Moves:
 - [Flamethrower](https://www.serebii.net/attackdex-dp/flamethrower.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Natural Cure  
 EVs: 252 Def / 80 SpA / 176 SpD  
 Nature: Calm (+ SpD, - Atk)  
@@ -364,7 +364,7 @@ Moves:
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)
 - [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Natural Cure  
 EVs: 252 HP / 220 Def / 4 SpD / 32 Spe  
 Nature: Bold (+Def, -Atk)  
@@ -379,7 +379,7 @@ Moves:
 - [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
 - [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Intimidate  
 EVs: 252 HP / 176 Atk / 60 Def / 20 Spe  
 Nature: Adamant  
@@ -397,7 +397,7 @@ Moves:
 - [Rock Slide](https://www.serebii.net/attackdex-dp/rockslide.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Pressure  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Jolly (+Spe, -SpA)  
@@ -412,7 +412,7 @@ Moves:
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)
 - [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Intimidate  
 EVs: 80 HP / 252 Atk / 176 Spe  
 Nature: Adamant (+Atk, -SpA)  
@@ -427,7 +427,7 @@ Moves:
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
 - [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Levitate  
 EVs: 40 Atk / 252 Spe / 216 SpA  
 Nature: Timid  
@@ -442,7 +442,7 @@ Moves:
 - [Fire Fang](https://www.serebii.net/attackdex-dp/firefang.shtml)
 - [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Sand Veil  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Adamant (+Atk, -SpA)  
@@ -457,7 +457,7 @@ Moves:
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
 - [Extremespeed](https://www.serebii.net/attackdex-dp/extremespeed.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Inner Focus  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Adamant (+Atk, -SpA)  
@@ -472,7 +472,7 @@ Moves:
 - [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Pressure  
 EVs: 4 Atk / 252 Spe / 252 SpA  
 Nature: Naive (+Spe, -SpD)  
@@ -490,7 +490,7 @@ Moves:
 - [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Serene Grace  
 EVs: 4 HP / 252 Spe / 252 SpA  
 Nature: Modest (+SpA, -Atk)  
@@ -505,7 +505,7 @@ Moves:
 - [Ice Shard](https://www.serebii.net/attackdex-dp/iceshard.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Snow Cloak  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Jolly (+Spe, -SpA)  
@@ -520,7 +520,7 @@ Moves:
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Blaze  
 EVs: 24 Atk / 232 Spd / 252 SpA  
 Nature: Naive  
@@ -535,7 +535,7 @@ Moves:
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Pressure  
 EVs: 252 HP / 220 Def / 36 Spe  
 Nature: Calm (+SpD, -Atk)  
@@ -550,7 +550,7 @@ Moves:
 - [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Flash Fire  
 EVs: 252 Spe / 252 SpA / 4 HP  
 Nature: Naive (+Spe, -SpD)  
@@ -565,7 +565,7 @@ Moves:
 - [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
 - [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Sniper  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Adamant (+Atk, -SpA)  
@@ -583,7 +583,7 @@ Moves:
 - [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Speed Boost  
 EVs: 104 Def / 152 Spe / 252 SpA  
 Nature: Modest  
@@ -604,7 +604,7 @@ Moves:
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Flash Fire  
 EVs: 4 Atk / 252 Spe / 252 SpA  
 Nature: Hasty  
@@ -623,7 +623,7 @@ Moves:
 - [Light Screen](https://www.serebii.net/attackdex-dp/lightscreen.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Light Clay  
+Item: [Light Clay](https://www.serebii.net/itemdex/lightclay.shtml)  
 Ability: Levitate  
 EVs: 252 HP / 148 Atk / 108 SpD  
 Nature: Relaxed  
@@ -642,7 +642,7 @@ Moves:
 - [Rest](https://www.serebii.net/attackdex-dp/rest.shtml)
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Intimidate  
 EVs: 216 HP / 252 Def / 40 SpD  
 Nature: Impish  
@@ -661,7 +661,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Sand Veil  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Adamant  
@@ -680,7 +680,7 @@ Moves:
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
 - [Calm Mind](https://www.serebii.net/attackdex-dp/calmmind.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Serene Grace  
 EVs: 252 HP / 176 Spe / 80 SpA  
 Nature: Timid  
@@ -701,7 +701,7 @@ Moves:
 - [Dragon Dance](https://www.serebii.net/attackdex-dp/dragondance.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Intimidate  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Jolly (+Spe, -SpA)  
@@ -716,7 +716,7 @@ Moves:
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Levitate  
 EVs: 4 HP / 252 Spe / 252 SpA  
 Nature: Timid (+Spe, -Atk)  
@@ -731,7 +731,7 @@ Moves:
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Magnet Pull  
 EVs: 42 HP / 214 Spe / 252 SpA  
 Nature: Naive (+Spd, -SpD)  
@@ -746,7 +746,7 @@ Moves:
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Electric  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Water Absorb  
 EVs: 188 HP / 252 Def / 70 Spe  
 Nature: Bold (+Def, -Atk)  
@@ -761,7 +761,7 @@ Moves:
 - [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
 - [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Technician  
 EVs: 198 HP / 252 Atk / 60 Spe  
 Nature: Adamant (+Atk, -SpA)  
@@ -776,7 +776,7 @@ Moves:
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Flash Fire  
 EVs: 6 Atk / 252 Spe / 252 SpA  
 Nature: Naive (+Spe, -SpD)  
@@ -794,7 +794,7 @@ Moves:
 - [Toxic Spikes](https://www.serebii.net/attackdex-dp/toxicspikes.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Natural Cure  
 EVs: 4 HP / 252 SpA / 252 Spe  
 Nature: Timid (+Spe, -Atk)  
@@ -813,7 +813,7 @@ Moves:
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Flash Fire  
 EVs: 4 Atk / 252 SpA / 252 Spe  
 Nature: Naive (+Spe, -SpD)  
@@ -830,7 +830,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Thunder Punch](https://www.serebii.net/attackdex-dp/thunderpunch.shtml)  
 
-Item: Shuca Berry  
+Item: [Shuca Berry](https://www.serebii.net/itemdex/shucaberry.shtml)  
 Ability: Clear Body  
 EVs: 240 HP / 80 Atk / 188 SpD  
 Nature: Adamant  
@@ -847,7 +847,7 @@ Moves:
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Charge Beam](https://www.serebii.net/attackdex-dp/chargebeam.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Levitate  
 EVs: 108 HP / 192 SpA / 210 Spe  
 Nature: Timid (+Spe, -Atk)  
@@ -866,7 +866,7 @@ Moves:
 - [Rest](https://www.serebii.net/attackdex-dp/rest.shtml)
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Torrent  
 EVs: 252 HP / 40 Def / 216 SpD  
 Nature: Careful (+SpD, -SpA)  
@@ -881,7 +881,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Serene Grace  
 EVs: 252 HP / 76 SpA / 180 Spe  
 Nature: Timid (+Spe, -Atk)  
@@ -899,7 +899,7 @@ Moves:
 - [Trick](https://www.serebii.net/attackdex-dp/trick.shtml)
 - [Rapid Spin](https://www.serebii.net/attackdex-dp/rapidspin.shtml)  
 
-Item: Choice Specs  
+Item: [Choice Specs](https://www.serebii.net/itemdex/choicespecs.shtml)  
 Ability: Natural Cure  
 EVs: 252 Spe / 252 SpA / 4 Def  
 Nature: Timid  
@@ -914,7 +914,7 @@ Moves:
 - [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Shuca Berry  
+Item: [Shuca Berry](https://www.serebii.net/itemdex/shucaberry.shtml)  
 Ability: Flash Fire  
 EVs: 252 SpA / 252 Spe / 4 Atk  
 Nature: Hasty  
@@ -931,7 +931,7 @@ Moves:
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Natural Cure  
 EVs: 236 HP / 228 SpA / 44 Spe  
 Nature: Modest  
@@ -946,7 +946,7 @@ Moves:
 - [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)
 - [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Arena Trap  
 EVs: 252 Spe / 252 Atk / 4 Def  
 Nature: Jolly  
@@ -961,7 +961,7 @@ Moves:
 - [Aura Sphere](https://www.serebii.net/attackdex-dp/aurasphere.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Pressure  
 EVs: 252 Spe / 252 SpA / 4 Def  
 Nature: Rash  
@@ -976,7 +976,7 @@ Moves:
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - [Agility](https://www.serebii.net/attackdex-dp/agility.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Pressure  
 EVs: 240 HP / 226 SpA / 44 Spe  
 Nature: Modest  
@@ -994,7 +994,7 @@ Moves:
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Psychic](https://www.serebii.net/attackdex-dp/psychic.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Levitate  
 EVs: 252 SpA, 4 Atk, 252 Spe  
 Nature: Naive (+Spe, -SpD)  
@@ -1009,7 +1009,7 @@ Moves:
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)
 - [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Levitate  
 EVs: 252 SpA / 4 Atk / 252 Spe  
 Nature: Hasty (+Spe, -Def)  
@@ -1024,7 +1024,7 @@ Moves:
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
 - [Vacuum Wave](https://www.serebii.net/attackdex-dp/vacuumwave.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Blaze  
 EVs: 252 SpA / 252 Spe / 4 HP  
 Nature: Timid (+Spe, -Atk)  
@@ -1039,7 +1039,7 @@ Moves:
 - [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Hydration  
 EVs: 252 SpA / 252 Spe / 4 HP  
 Nature: Timid (+Spe, -Atk)  
@@ -1054,7 +1054,7 @@ Moves:
 - [Hydro Pump](https://www.serebii.net/attackdex-dp/hydropump.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)  
 
-Item: Petaya Berry  
+Item: [Petaya Berry](https://www.serebii.net/itemdex/petayaberry.shtml)  
 Ability: Torrent  
 EVs: 252 SpA / 232 Spe / 12 HP / 12 Def  
 Nature: Modest (+SpA, -Atk)  
@@ -1069,7 +1069,7 @@ Moves:
 - [Baton Pass](https://www.serebii.net/attackdex-dp/batonpass.shtml)
 - [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)  
 
-Item: Choice Specs  
+Item: [Choice Specs](https://www.serebii.net/itemdex/choicespecs.shtml)  
 Ability: Volt Absorb  
 EVs: 252 SpA / 252 Spe / 4 HP  
 Nature: Timid (+Spe, -Atk)  
@@ -1087,7 +1087,7 @@ Moves:
 - [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Shuca Berry  
+Item: [Shuca Berry](https://www.serebii.net/itemdex/shucaberry.shtml)  
 Ability: Flash Fire  
 EVs: 252 Spe / 252 SpA / 4 Atk  
 Nature: Naive (+Spe, -SpD)  
@@ -1102,7 +1102,7 @@ Moves:
 - [Waterfall](https://www.serebii.net/attackdex-dp/waterfall.shtml)
 - [Outrage](https://www.serebii.net/attackdex-dp/outrage.shtml)  
 
-Item: Lum Berry  
+Item: [Lum Berry](https://www.serebii.net/itemdex/lumberry.shtml)  
 Ability: Swift Swim  
 EVs: 252 Spe / 252 Atk / 4 HP  
 Nature: Adamant  
@@ -1117,7 +1117,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Intimidate  
 EVs: 252 Spe / 252 Atk / 4 HP  
 Nature: Jolly (+Spe, -SpA) 
@@ -1132,7 +1132,7 @@ Moves:
 - [Refresh](https://www.serebii.net/attackdex-dp/recover.shtml)
 - [Dragon Pulse](https://www.serebii.net/attackdex-dp/dragonpulse.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Levitate  
 EVs: 252 Spe / 128 SpA / 128 HP  
 Nature: Timid (+Spe, -Atk)  
@@ -1147,7 +1147,7 @@ Moves:
 - [Swords Dance](https://www.serebii.net/attackdex-dp/swordsdance.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Technician  
 EVs: 232 Spe / 252 Atk / 24 HP  
 Nature: Adamant (+Atk, -SpA)  
@@ -1162,7 +1162,7 @@ Moves:
 - [Flash Cannon](https://www.serebii.net/attackdex-dp/flashcannon.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Magnet Pull  
 EVs: 252 Spe / 252 SpA / 4 Atk  
 Nature: Naive  
@@ -1180,7 +1180,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Rough Skin  
 EVs: 252 Atk / 4 SpA / 252 Spe  
 Nature: Naive (+Spe, -SpD)  
@@ -1195,7 +1195,7 @@ Moves:
 - [Sucker Punch](https://www.serebii.net/attackdex-dp/suckerpunch.shtml)
 - [Will-O-Wisp](https://www.serebii.net/attackdex-dp/will-o-wisp.shtml)  
 
-Item: Blackglasses  
+Item: [Black Glasses](https://www.serebii.net/itemdex/blackglasses.shtml)  
 Ability: Infiltrator  
 EVs: 252 HP / 252 Atk / 4 SpD  
 Nature: Adamant (+Atk, -SpA)  
@@ -1210,7 +1210,7 @@ Moves:
 - [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Serene Grace  
 EVs: 252 HP / 120 Def / 132 SpD / 4 Spe  
 Nature: Calm (+SpD, -Atk)  
@@ -1225,7 +1225,7 @@ Moves:
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Flying
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Marvel Scale  
 EVs: 252 HP / 252 SpA / 4 SpD  
 Nature: Modest (+SpA, -Atk)  
@@ -1240,7 +1240,7 @@ Moves:
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Natural Cure  
 EVs: 252 SpA / 4 SpD / 252 Spe  
 Nature: Timid (+Spe, -Atk)  
@@ -1255,7 +1255,7 @@ Moves:
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)
 - [Close Combat](https://www.serebii.net/attackdex-dp/closecombat.shtml)  
 
-Item: Air Balloon  
+Item: [Air Balloon](https://www.serebii.net/itemdex/airballoon.shtml)  
 Ability: Justified  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Nature: Adamant (+Atk, -SpA)  
@@ -1273,7 +1273,7 @@ Moves:
 - [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Intimidate  
 EVs: 204 Atk / 156 SpA / 148 Spe  
 Nature: Naughty  
@@ -1292,7 +1292,7 @@ Moves:
 - [Close Combat](https://www.serebii.net/attackdex-dp/closecombat.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Intimidate  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Nature: Adamant  
@@ -1311,7 +1311,7 @@ Moves:
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Wacan Berry  
+Item: [Wacan Berry](https://www.serebii.net/itemdex/wacanberry.shtml)  
 Ability: Intimidate  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Nature: Adamant  
@@ -1334,7 +1334,7 @@ Moves:
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)  
 
-Item: Expert Belt  
+Item: [Expert Belt](https://www.serebii.net/itemdex/expertbelt.shtml)  
 Ability: Blaze  
 EVs: 64 Atk / 252 SpA / 192 Spe  
 Nature: Naive  
@@ -1357,7 +1357,7 @@ Moves:
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
 - [Trick](https://www.serebii.net/attackdex-dp/trick.shtml)  
 
-Item: Choice Specs  
+Item: [Choice Specs](https://www.serebii.net/itemdex/choicespecs.shtml)  
 Ability: Synchronize  
 EVs: 4 HP / 252 SpA / 252 Spe  
 Nature: Timid  
@@ -1378,7 +1378,7 @@ Moves:
 - [Seismic Toss](https://www.serebii.net/attackdex-dp/seismictoss.shtml)
 - [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Magic Guard  
 EVs: 252 HP / 4 Def / 252 SpD  
 Nature: Calm  
@@ -1398,7 +1398,7 @@ Moves:
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Sand Veil  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Jolly  
@@ -1413,7 +1413,7 @@ Moves:
 - [Stealth Rock](https://www.serebii.net/attackdex-dp/stealthrock.shtml)
 - [Roar](https://www.serebii.net/attackdex-dp/roar.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Torrent  
 EVs: 252 HP / 152 Def / 100 SpD / 4 Spe  
 Nature: Relaxed  
@@ -1428,7 +1428,7 @@ Moves:
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
 - [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Technician  
 EVs: 248 HP / 252 Atk / 8 Spe  
 Nature: Adamant  
@@ -1443,7 +1443,7 @@ Moves:
 - [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Lum Berry  
+Item: [Lum Berry](https://www.serebii.net/itemdex/lumberry.shtml)  
 Ability: Sand Stream  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Jolly  
@@ -1458,7 +1458,7 @@ Moves:
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)
 - [Roar](https://www.serebii.net/attackdex-dp/roar.shtml)  
 
-Item: Shuca Berry  
+Item: [Shuca Berry](https://www.serebii.net/itemdex/shucaberry.shtml)  
 Ability: Flash Fire  
 EVs: 252 HP / 4 SpA / 252 SpD  
 Nature: Calm  
@@ -1473,7 +1473,7 @@ Moves:
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - [Roar](https://www.serebii.net/attackdex-dp/roar.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Pressure  
 EVs: 248 HP / 228 Def / 32 Spe  
 Nature: Bold  
@@ -1491,7 +1491,7 @@ Moves:
 - [Safeguard](https://www.serebii.net/attackdex-dp/safeguard.shtml)
 - [Encore](https://www.serebii.net/attackdex-dp/encore.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Shadow Tag  
 EVs: 28 HP / 228 Def / 252 SpD  
 Nature: Calm  
@@ -1505,7 +1505,7 @@ Moves:
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Oblivious  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Jolly  
@@ -1519,7 +1519,7 @@ Moves:
 - [Zen Headbutt](https://www.serebii.net/attackdex-dp/zenheadbutt.shtml)
 - [Hammer Arm](https://www.serebii.net/attackdex-dp/hammerarm.shtml)  
 
-Item: Shell Bell  
+Item: [Shell Bell](https://www.serebii.net/itemdex/shellbell.shtml)  
 Ability: Clear Body  
 EVs: 252 HP / 252 Atk / 4 SpD  
 Nature: Adamant  
@@ -1533,7 +1533,7 @@ Moves:
 - [Sludge Bomb](https://www.serebii.net/attackdex-dp/sludgebomb.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Chlorophyll  
 EVs: 252 HP / 252 SpA / 4 Spe  
 Nature: Modest  
@@ -1547,7 +1547,7 @@ Moves:
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
 - [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Pressure  
 EVs: 252 HP / 252 SpA / 4 SpD  
 Nature: Modest  
@@ -1561,7 +1561,7 @@ Moves:
 - [Seed Bomb](https://www.serebii.net/attackdex-dp/seedbomb.shtml)
 - [Focus Punch](https://www.serebii.net/attackdex-dp/focuspunch.shtml)  
 
-Item: Toxic Orb  
+Item: [Toxic Orb](https://www.serebii.net/itemdex/toxicorb.shtml)  
 Ability: Poison Heal  
 EVs: 72 HP / 252 Atk / 184 Spe  
 Nature: Adamant  
@@ -1576,7 +1576,7 @@ Moves:
 - [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - [Dragon Pulse](https://www.serebii.net/attackdex-dp/dragonpulse.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Overgrow  
 EVs: 252 HP / 4 Def / 252 Spe  
 Nature: Timid  
@@ -1590,7 +1590,7 @@ Moves:
 - [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)
 - [Double-Edge](https://www.serebii.net/attackdex-dp/double-edge.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Rock Head  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Adamant  
@@ -1604,7 +1604,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)  
 
-Item: Mystic Water  
+Item: [Mystic Water](https://www.serebii.net/itemdex/mysticwater.shtml)  
 Ability: Natural Cure  
 EVs: 4 Def / 252 SpA / 252 Spe  
 Nature: Timid  
@@ -1618,7 +1618,7 @@ Moves:
 - [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Lum Berry  
+Item: [Lum Berry](https://www.serebii.net/itemdex/lumberry.shtml)  
 Ability: Intimidate  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Nature: Adamant  
@@ -1632,7 +1632,7 @@ Moves:
 - [Spikes](https://www.serebii.net/attackdex-dp/spikes.shtml)
 - [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Keen Eye  
 EVs: 252 HP / 252 Def / 4 SpD  
 Nature: Impish  
@@ -1646,7 +1646,7 @@ Moves:
 - [Brick Break](https://www.serebii.net/attackdex-dp/brickbreak.shtml)
 - [Shadow Claw](https://www.serebii.net/attackdex-dp/shadowclaw.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Truant  
 EVs: 4 HP / 252 Atk / 252 Spe  
 Nature: Adamant  
@@ -1661,7 +1661,7 @@ Moves:
 - [Rock Slide](https://www.serebii.net/attackdex-dp/rockslide.shtml)
 - [Close Combat](https://www.serebii.net/attackdex-dp/closecombat.shtml)  
 
-Item: Flame Orb  
+Item: [Flame Orb](https://www.serebii.net/itemdex/flameorb.shtml)  
 Ability: Guts  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Nature: Jolly  
@@ -1675,7 +1675,7 @@ Moves:
 - [Extremespeed](https://www.serebii.net/attackdex-dp/extremespeed.shtml)
 - [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Technician  
 EVs: 252 Atk / 252 Spe  
 Nature: Lonely  
@@ -1689,7 +1689,7 @@ Moves:
 - [Swords Dance](https://www.serebii.net/attackdex-dp/swordsdance.shtml)
 - [Aerial Ace](https://www.serebii.net/attackdex-dp/aerialace.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Technician  
 EVs: 248 HP / 252 Atk / 8 SpD  
 Nature: Adamant  
@@ -1703,7 +1703,7 @@ Moves:
 - [Tailwind](https://www.serebii.net/attackdex-dp/tailwind.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
-Item: Power Herb  
+Item: [Power Herb](https://www.serebii.net/itemdex/powerherb.shtml)  
 Ability: Hyper Cutter  
 EVs: 220 HP / 252 Atk / 36 Def  
 Nature: Impish  
@@ -1717,7 +1717,7 @@ Moves:
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)  
 
-Item: Choice Specs  
+Item: [Choice Specs](https://www.serebii.net/itemdex/choicespecs.shtml)  
 Ability: Adaptability  
 EVs: 4 Def / 252 SpA / 252 Spe  
 Nature: Modest  
@@ -1731,7 +1731,7 @@ Moves:
 - [Energy Ball](https://www.serebii.net/attackdex-dp/energyball.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Levitate  
 EVs: 252 SpA / 4 SpD / 252 Spe  
 Nature: Timid  
@@ -1747,7 +1747,7 @@ Moves:
 - [Roar](https://www.serebii.net/attackdex-dp/roar.shtml)
 - [Iron Head](https://www.serebii.net/attackdex-dp/ironhead.shtml)  
 
-Item: Lum Berry  
+Item: [Lum Berry](https://www.serebii.net/itemdex/lumberry.shtml)  
 Ability: Intimidate  
 EVs: 192 HP / 252 Atk / 64 Spe  
 Nature: Adamant  
@@ -1761,7 +1761,7 @@ Moves:
 - [Flamethrower](https://www.serebii.net/attackdex-dp/flamethrower.shtml)
 - [Roar](https://www.serebii.net/attackdex-dp/roar.shtml)  
 
-Item: Choice Scarf  
+Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: Static  
 EVs: 252 SpA / 252 Spe  
 Nature: Modest  
@@ -1775,7 +1775,7 @@ Moves:
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Sucker Punch](https://www.serebii.net/attackdex-dp/suckerpunch.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Flash Fire  
 EVs: 252 Atk / 32 SpA / 224 Spe  
 Nature: Hasty  
@@ -1789,7 +1789,7 @@ Moves:
 - [Sucker Punch](https://www.serebii.net/attackdex-dp/suckerpunch.shtml)
 - [Roar](https://www.serebii.net/attackdex-dp/roar.shtml)  
 
-Item: Sitrus Berry  
+Item: [Sitrus Berry](https://www.serebii.net/itemdex/sitrusberry.shtml)  
 Ability: Intimidate  
 EVs: 248 HP / 116 Atk / 144 Spe  
 Nature: Adamant  
@@ -1803,7 +1803,7 @@ Moves:
 - [Extremespeed](https://www.serebii.net/attackdex-dp/extremespeed.shtml)
 - [Ice Punch](https://www.serebii.net/attackdex-dp/icepunch.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Inner Focus  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Jolly  
@@ -1817,7 +1817,7 @@ Moves:
 - [Return](https://www.serebii.net/attackdex-dp/return.shtml)
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)  
 
-Item: Sitrus Berry  
+Item: [Sitrus Berry](https://www.serebii.net/itemdex/sitrusberry.shtml)  
 Ability: Intimidate  
 EVs: 248 HP / 252 Atk / 8 SpD  
 Nature: Impish  
@@ -1833,7 +1833,7 @@ Moves:
 - [Iron Head](https://www.serebii.net/attackdex-dp/ironhead.shtml)
 - [Thunder Fang](https://www.serebii.net/attackdex-dp/thunderfang.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Intimidate  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Jolly  
@@ -1847,7 +1847,7 @@ Moves:
 - [Ice Fang](https://www.serebii.net/attackdex-dp/icefang.shtml)
 - [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Intimidate  
 EVs: 204 Atk / 156 SpA / 148 Spe  
 Nature: Naughty  
@@ -1861,7 +1861,7 @@ Moves:
 - [Rapid Spin](https://www.serebii.net/attackdex-dp/rapidspin.shtml)
 - [Sucker Punch](https://www.serebii.net/attackdex-dp/suckerpunch.shtml)  
 
-Item: Chesto Berry  
+Item: [Chesto Berry](https://www.serebii.net/itemdex/chestoberry.shtml)  
 Ability: Intimidate  
 EVs: 252 HP / 252 Def / 4 SpD  
 Nature: Impish  
@@ -1875,7 +1875,7 @@ Moves:
 - [Baton Pass](https://www.serebii.net/attackdex-dp/batonpass.shtml)
 - [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)  
 
-Item: Leftovers  
+Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: Intimidate  
 EVs: 252 HP / 28 Def / 228 Spe  
 Nature: Jolly  
@@ -1889,7 +1889,7 @@ Moves:
 - [Earthquake](https://www.serebii.net/attackdex-dp/earthquake.shtml)
 - [Pursuit](https://www.serebii.net/attackdex-dp/pursuit.shtml)  
 
-Item: Choice Band  
+Item: [Choice Band](https://www.serebii.net/itemdex/choiceband.shtml)  
 Ability: Intimidate  
 EVs: 252 Atk / 4 Def / 252 Spe  
 Nature: Jolly  
@@ -1903,7 +1903,7 @@ Moves:
 - [Dragon Claw](https://www.serebii.net/attackdex-dp/dragonclaw.shtml)
 - [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)  
 
-Item: Yache Berry  
+Item: [Yache Berry](https://www.serebii.net/itemdex/yacheberry.shtml)  
 Ability: Intimidate  
 EVs: 244 HP / 12 Atk / 252 SpD  
 Nature: Careful  
@@ -1919,7 +1919,7 @@ Moves:
 - [Taunt](https://www.serebii.net/attackdex-dp/taunt.shtml)
 - [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)  
 
-Item: Damp Rock  
+Item: [Damp Rock](https://www.serebii.net/itemdex/damprock.shtml)  
 Ability: Inner Focus  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Jolly  
@@ -1933,7 +1933,7 @@ Moves:
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)
 - [Bullet Punch](https://www.serebii.net/attackdex-dp/bulletpunch.shtml)  
 
-Item: Sitrus Berry  
+Item: [Sitrus Berry](https://www.serebii.net/itemdex/sitrusberry.shtml)  
 Ability: Technician  
 EVs: 248 HP / 252 Atk / 8 SpD  
 Nature: Adamant  
@@ -1947,7 +1947,7 @@ Moves:
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)  
 
-Item: Damp Rock  
+Item: [Damp Rock](https://www.serebii.net/itemdex/damprock.shtml)  
 Ability: Levitate  
 EVs: 252 SpA / 4 SpD / 252 Spe  
 Nature: Timid  
@@ -1961,7 +1961,7 @@ Moves:
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
 - [Rain Dance](https://www.serebii.net/attackdex-dp/raindance.shtml)  
 
-Item: Life Orb  
+Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: Swift Swim  
 EVs: 60 HP / 252 SpA / 196 SPe  
 Nature: Modest  
@@ -1975,7 +1975,7 @@ Moves:
 - [Stone Edge](https://www.serebii.net/attackdex-dp/stoneedge.shtml)
 - [Aqua Jet](https://www.serebii.net/attackdex-dp/aquajet.shtml)  
 
-Item: Focus Sash  
+Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: Swift Swim  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Adamant  
@@ -1989,7 +1989,7 @@ Moves:
 - [Sucker Punch](https://www.serebii.net/attackdex-dp/suckerpunch.shtml)
 - [Toxic](https://www.serebii.net/attackdex-dp/toxic.shtml)  
 
-Item: Expert Belt  
+Item: [Expert Belt](https://www.serebii.net/itemdex/expertbelt.shtml)  
 Ability: Arena Trap  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Nature: Adamant  
