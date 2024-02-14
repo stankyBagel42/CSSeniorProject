@@ -12,7 +12,7 @@ This team was made circa November 2007 by Aldaron, during the spike of stall bas
 Moves:
 
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
+- [Hidden Power Fire](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)
 - [Toxic Spikes](https://www.serebii.net/attackdex-dp/toxicspikes.shtml)  
 
@@ -44,7 +44,7 @@ Moves:
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice  
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: [Levitate](https://www.serebii.net/abilitydex/levitate.shtml)  
@@ -74,7 +74,7 @@ Moves:
 - [Close Combat](https://www.serebii.net/attackdex-dp/closecombat.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Thunder Punch](https://www.serebii.net/attackdex-dp/thunderpunch.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice  
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: [Blaze](https://www.serebii.net/abilitydex/blaze.shtml)  
@@ -139,7 +139,7 @@ Moves:
 - [Toxic Spikes](https://www.serebii.net/attackdex-dp/toxicspikes.shtml)
 - [Rapid Spin](https://www.serebii.net/attackdex-dp/rapidspin.shtml)
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Electric  
+- [Hidden Power Electric](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: [Liquid Ooze](https://www.serebii.net/abilitydex/liquidooze.shtml)  
@@ -197,7 +197,7 @@ Moves:
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Rest](https://www.serebii.net/attackdex-dp/rest.shtml)
 - [Sleep Talk](https://www.serebii.net/attackdex-dp/sleeptalk.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fighting  
+- [Hidden Power Fighting](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: [Pressure](https://www.serebii.net/abilitydex/pressure.shtml)  
@@ -347,7 +347,7 @@ Moves:
 - [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)
 - [Softboiled](https://www.serebii.net/attackdex-dp/softboiled.shtml)
 - [Flamethrower](https://www.serebii.net/attackdex-dp/flamethrower.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground  
+- [Hidden Power Ground](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: [Natural Cure](https://www.serebii.net/abilitydex/naturalcure.shtml)  
@@ -360,7 +360,7 @@ Nature: Calm (+ SpD, - Atk)
 Moves:  
 
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)
 - [Thunder Wave](https://www.serebii.net/attackdex-dp/thunderwave.shtml)  
 
@@ -488,7 +488,7 @@ Moves:
 - [Seed Flare](https://www.serebii.net/attackdex-dp/seedflare.shtml)
 - [Air Slash](https://www.serebii.net/attackdex-dp/airslash.shtml)
 - [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire  
+- [Hidden Power Fire](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
 Ability: [Serene Grace](https://www.serebii.net/abilitydex/serenegrace.shtml)  
@@ -516,7 +516,7 @@ Nature: Jolly (+Spe, -SpA)
 Moves:  
 
 - [Close Combat](https://www.serebii.net/attackdex-dp/closecombat.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
 - [Grass Knot](https://www.serebii.net/attackdex-dp/grassknot.shtml)  
 
@@ -533,7 +533,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Heat Wave](https://www.serebii.net/attackdex-dp/heatwave.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
+- [Hidden Power Grass](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: [Pressure](https://www.serebii.net/abilitydex/pressure.shtml)  
@@ -546,7 +546,7 @@ Nature: Calm (+SpD, -Atk)
 Moves:  
 
 - [Fire Blast](https://www.serebii.net/attackdex-dp/fireblast.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Earth Power](https://www.serebii.net/attackdex-dp/earthpower.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
@@ -579,7 +579,7 @@ This team was build when Garchomp was still dominating the OU scene. It's a bala
 Moves:  
 
 - [Bug Buzz](https://www.serebii.net/attackdex-dp/bugbuzz.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground
+- [Hidden Power Ground](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Hypnosis](https://www.serebii.net/attackdex-dp/hypnosis.shtml)
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)  
 
@@ -713,7 +713,7 @@ Moves:
 
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)
 - [Focus Blast](https://www.serebii.net/attackdex-dp/focusblast.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
+- [Hidden Power Fire](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)  
 
 Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
@@ -727,7 +727,7 @@ Nature: Timid (+Spe, -Atk)
 Moves:  
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass
+- [Hidden Power Grass](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Substitute](https://www.serebii.net/attackdex-dp/substitute.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
@@ -744,7 +744,7 @@ Moves:
 - [Wish](https://www.serebii.net/attackdex-dp/wish.shtml)
 - [Protect](https://www.serebii.net/attackdex-dp/protect.shtml)
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Electric  
+- [Hidden Power Electric](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: [Water Absorb](https://www.serebii.net/abilitydex/waterabsorb.shtml)  
@@ -792,7 +792,7 @@ Moves:
 - [Leaf Storm](https://www.serebii.net/attackdex-dp/leafstorm.shtml)
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)
 - [Toxic Spikes](https://www.serebii.net/attackdex-dp/toxicspikes.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ground  
+- [Hidden Power Ground](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Focus Sash](https://www.serebii.net/itemdex/focussash.shtml)  
 Ability: [Natural Cure](https://www.serebii.net/abilitydex/naturalcure.shtml)  
@@ -927,7 +927,7 @@ Nature: Hasty
 Moves:  
 
 - [Leaf Storm](https://www.serebii.net/attackdex-dp/leafstorm.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
+- [Hidden Power Fire](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)
 - [U-turn](https://www.serebii.net/attackdex-dp/u-turn.shtml)  
 
@@ -957,7 +957,7 @@ Nature: Jolly
 Moves:  
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Aura Sphere](https://www.serebii.net/attackdex-dp/aurasphere.shtml)
 - [Shadow Ball](https://www.serebii.net/attackdex-dp/shadowball.shtml)  
 
@@ -972,7 +972,7 @@ Nature: Rash
 Moves:  
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Ice
+- [Hidden Power Ice](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Roost](https://www.serebii.net/attackdex-dp/roost.shtml)
 - [Agility](https://www.serebii.net/attackdex-dp/agility.shtml)  
 
@@ -1158,7 +1158,7 @@ Nature: Adamant (+Atk, -SpA)
 Moves:  
 
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
+- [Hidden Power Fire](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Flash Cannon](https://www.serebii.net/attackdex-dp/flashcannon.shtml)
 - [Explosion](https://www.serebii.net/attackdex-dp/explosion.shtml)  
 
@@ -1222,7 +1222,7 @@ Moves:
 
 - [Hydro Pump](https://www.serebii.net/attackdex-dp/hydropump.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Flying
+- [Hidden Power Flying](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Recover](https://www.serebii.net/attackdex-dp/recover.shtml)  
 
 Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
@@ -1237,7 +1237,7 @@ Moves:
 
 - [Leaf Storm](https://www.serebii.net/attackdex-dp/leafstorm.shtml)
 - [Sludge Bomb](https://www.serebii.net/attackdex-dp/sludgebomb.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Fire
+- [Hidden Power Fire](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)
 - [Sleep Powder](https://www.serebii.net/attackdex-dp/sleeppowder.shtml)  
 
 Item: [Choice Scarf](https://www.serebii.net/itemdex/choicescarf.shtml)  
@@ -1271,7 +1271,7 @@ Moves:
 - [Thunderbolt](https://www.serebii.net/attackdex-dp/thunderbolt.shtml)
 - [Superpower](https://www.serebii.net/attackdex-dp/superpower.shtml)
 - [Crunch](https://www.serebii.net/attackdex-dp/crunch.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
+- [Hidden Power Grass](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Life Orb](https://www.serebii.net/itemdex/lifeorb.shtml)  
 Ability: [Intimidate](https://www.serebii.net/abilitydex/intimidate.shtml)  
@@ -1545,7 +1545,7 @@ Moves:
 - [Calm Mind](https://www.serebii.net/attackdex-dp/calmmind.shtml)
 - [Surf](https://www.serebii.net/attackdex-dp/surf.shtml)
 - [Ice Beam](https://www.serebii.net/attackdex-dp/icebeam.shtml)
-- [Hidden Power](https://www.serebii.net/attackdex-dp/hiddenpower.shtml) Grass  
+- [Hidden Power Grass](https://www.serebii.net/attackdex-dp/hiddenpower.shtml)  
 
 Item: [Leftovers](https://www.serebii.net/itemdex/leftovers.shtml)  
 Ability: [Pressure](https://www.serebii.net/abilitydex/pressure.shtml)  
