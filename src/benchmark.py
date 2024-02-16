@@ -79,7 +79,7 @@ def benchmark_player(player: TrainedRLPlayer, teams: list[str], n_challenges: in
 
 if __name__ == '__main__':
     MODEL_PATH = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402003_1mil_LowGammaLowSync\player_1\PokeNet_121.pt"
-    NUM_CHALLENGES = 500
+    NUM_CHALLENGES = 1000
 
     packed_teams = get_packed_teams(repo_root / 'packed_teams')
     teambuilder = MultiTeambuilder(packed_teams)
@@ -91,20 +91,3 @@ if __name__ == '__main__':
     cross_eval_results = benchmark_player(rl_player, packed_teams, NUM_CHALLENGES)
     print(f"RESULTS FOR {MODEL_PATH}:")
     pprint.pp(cross_eval_results)
-    # players = [
-    #     rl_player,
-    #     RandomPlayer(account_configuration=AccountConfiguration("Random", None), battle_format=format,
-    #                  team=MultiTeambuilder(packed_teams)),
-    #     MaxDamagePlayer(account_configuration=AccountConfiguration("MaxDmg", None), battle_format=format,
-    #                     team=MultiTeambuilder(packed_teams)),
-    #     MaxBasePowerPlayer(account_configuration=AccountConfiguration("MaxPow", None), battle_format=format,
-    #                        team=MultiTeambuilder(packed_teams)),
-    #     SimpleHeuristicsPlayer(account_configuration=AccountConfiguration("Heuristics", None), battle_format=format,
-    #                            team=MultiTeambuilder(packed_teams))
-    # ]
-    # cross_eval_results = asyncio.get_event_loop().run_until_complete(cross_evaluate(players, NUM_CHALLENGES))
-    #
-    # table = [["-"] + [p.username for p in players]]
-    # for p_1, results in cross_eval_results.items():
-    #     table.append([p_1] + [cross_eval_results[p_1][p_2] for p_2 in results])
-    # print(tabulate(table))

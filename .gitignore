@@ -10,3 +10,4 @@ scratch/
 checkpoints/
 replays/
 wandb/
+data/
