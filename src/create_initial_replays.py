@@ -7,6 +7,8 @@ from threading import Thread
 from poke_env.player import SimpleHeuristicsPlayer, RandomPlayer
 from tqdm import tqdm
 
+from src.rl.game_state import GameState, MoveComponents, TeamComponents, StatBoosts, OneSideEffects, FullFieldEffects, \
+    NotableAbilities, EstimatedMatchups
 from src.poke_env_classes import PlayerMemoryWrapper, MultiTeambuilder
 from src.utils.general import get_packed_teams, repo_root
 from src.utils.pokemon import create_player
@@ -96,6 +98,22 @@ if __name__ == '__main__':
     MEM_SIZE = 50_000
     NUM_STEPS = 50_000
 
+    GAME_STATE = GameState(components=[
+        # active pokemon description
+        MoveComponents(),
+        TeamComponents(),
+        # stat boosts for active Pokémon (ally, opponent)
+        StatBoosts(),
+        # side effects for both teams
+        OneSideEffects(),
+        # current field effects
+        FullFieldEffects(),
+        # notable abilities
+        NotableAbilities(),
+        # estimated matchups for all switches
+        EstimatedMatchups()
+    ])
+
     out_dir = repo_root / 'data' / 'replay_buffers'
     (out_dir/ REPLAY_NAME).mkdir(parents=True, exist_ok=True)
 
@@ -110,7 +128,8 @@ if __name__ == '__main__':
         start_challenging=False,
         mem_size=MEM_SIZE,
         battle_format=BATTLE_FORMAT,
-        team=MultiTeambuilder(teams)
+        team=MultiTeambuilder(teams),
+        game_state=GAME_STATE
     )
     player2 = create_player(
         PlayerMemoryWrapper,
@@ -119,7 +138,8 @@ if __name__ == '__main__':
         start_challenging=False,
         mem_size=MEM_SIZE,
         battle_format=BATTLE_FORMAT,
-        team=MultiTeambuilder(teams)
+        team=MultiTeambuilder(teams),
+        game_state=GAME_STATE
     )
 
 
