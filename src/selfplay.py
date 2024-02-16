@@ -11,14 +11,13 @@ from poke_env.player import SimpleHeuristicsPlayer
 
 import wandb
 from tqdm import tqdm
-from poke_env import AccountConfiguration
 
 from src.benchmark import benchmark_player
-from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer, MaxDamagePlayer
+from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer
 from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
-from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all
-from src.utils.pokemon import test_vs_bot
+from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all, RunningAvg
+from src.utils.pokemon import test_vs_bot, create_player
 
 
 async def battle_handler(player1: SimpleRLPlayer, player2: SimpleRLPlayer, num_challenges, teams: list[str] = None):
@@ -47,7 +46,7 @@ def is_battle_finished(battle: AbstractBattle) -> bool:
     return all_fainted_team or all_fainted_opponent
 
 
-def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int, position: int = 0):
+def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int, position: int = 0, is_p1:bool=True):
     """Learning loop for the agents"""
     train_start = time.time()
     # wait until the bot starts a battle
@@ -59,17 +58,16 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
 
     prev_q = -1
     prev_loss = -1
+    # wandb suggests limiting to 100k per attribute logged, so we will average over iterations until we log 100k for
+    # the total steps
+    log_freq = max(num_steps // 100_000, 1)
+    log_avg = RunningAvg(log_freq)
 
     # for each step in training
     pbar = tqdm(total=num_steps, desc=f"{player.username} Steps", position=position)
     for i in range(num_steps):
         # if the current battle is done (can happen before any moves because the opponent could end it)
         if current_battle.finished:
-            player.reset_env()
-            # IT HANGS HERE SOMETIMES WHEN ALL POKEMON ARE FAINTED BUT ONLY ONE THREAD RECOGNIZES THE BATTLE IS FINISHED?
-            # ADDING SOMETHING LIKE player.current_battle._finish_battle() MIGHT HELP BECAUSE IT MARKS THE BATTLE AS NOT FINISHD OTHERWISE
-            assert is_battle_finished(current_battle)
-            current_battle._finish_battle()
             state = player.reset()
             current_battle = player.battles[sorted(list(player.battles.keys()))[-1]]
         if isinstance(state, tuple):
@@ -79,13 +77,13 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
 
         # send action to environment and get results
         try:
-            next_state, reward, done, truncated, _ = player.step(action)
+            next_state, reward, done, _, _ = player.step(action)
 
         # if it fails here we just continue on, as the server is still running (usually a message parsing error)
         except Exception as e:
             print(f"EXCEPTION RAISED {e}")
-            next_state = player1.embed_battle(current_battle)
-            reward = player1.calc_reward(copy.deepcopy(current_battle), player1.current_battle)
+            next_state = player.embed_battle(current_battle)
+            reward = player.calc_reward(copy.deepcopy(current_battle), player.current_battle)
             done = current_battle.finished
         # remember this action state transition
         player.model.cache(state, next_state, action, reward, done)
@@ -94,6 +92,8 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         q, loss = player.model.learn()
         prev_q = q if q else prev_q
         prev_loss = loss if loss else prev_loss
+
+        # setup logs for console and wandb
         # log dictionary
         log = {
             'step': player.model.curr_step,
@@ -109,20 +109,24 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         pbar.set_postfix(log)
         pbar.update()
         step = log.pop('step')
-        wandb_log = {
-            f"{player.username}/{k}": float(v) for k, v in log.items()
-        }
+        user = 'RL Bot 1' if is_p1 else 'RL Bot 2'
+        wandb_log = log_avg.log({
+            f"{user}/{k}": float(v) for k, v in log.items()
+        })
         wandb_log['step'] = step
-        # log player values under separate folders
-        wandb.log(wandb_log)
 
+        if step % log_freq == 0:
+            # log player values under separate folders
+            wandb.log(wandb_log)
+
+        # prepare next state and loop
         state = next_state
         if done or current_battle.finished:
             state = player.reset()
             current_battle = player.battles[sorted(list(player.battles.keys()))[-1]]
     train_end = time.time()
     # log total time
-    print(f"{player.username} finished {len(player.battles)} battles in {train_end - train_start}s with "
+    print(f"{player.username} finished {player.n_finished_battles} battles in {train_end - train_start}s with "
           f"a {player.win_rate:0.2%} win rate!")
     # we are done with training
     player.done_training = True
@@ -146,18 +150,22 @@ def load_latest(checkpoint_directory: str | Path, cfg: AgentConfig, **kwargs) ->
     return agent
 
 
-def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: TrainedRLPlayer, target_bot: TrainedRLPlayer):
+def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: TrainedRLPlayer, target_bot: TrainedRLPlayer,
+                    num_challenges: int = 100, teams: list[str] = None, is_p1:bool=True):
     """Validate the given player's current model against the given baseline"""
+    if teams is None:
+        teams = get_packed_teams(repo_root / 'packed_teams')
     val_start = time.time()
     trained_bot.model = copy.deepcopy(player.model.online_net).cpu()
     target_bot.model = copy.deepcopy(player.model.target_net).cpu()
 
-    wr = test_vs_bot(trained_bot, n_challenges=num_validate_battles, baseline_player=baseline_player, teams=teams)
-    target_wr = test_vs_bot(target_bot, n_challenges=num_validate_battles, baseline_player=baseline_player,
-                               teams=teams)
+    wr = test_vs_bot(trained_bot, n_challenges=num_challenges, baseline_player=baseline_player, teams=teams)
+    target_wr = test_vs_bot(target_bot, n_challenges=num_challenges, baseline_player=baseline_player,
+                            teams=teams)
 
     val_end = time.time()
-    wandb.log({f"{player.username}/val/wr": wr, f"{player.username}/val/target_wr": target_wr,
+    user = 'RL Bot 1' if is_p1 else 'RL Bot 2'
+    wandb.log({f"{user}/val/wr": wr, f"{user}/val/target_wr": target_wr,
                "step": player.model.curr_step})
     print("\n\n" + "-" * 30)
     print(f"RL Bot at {player.model.curr_step} Steps")
@@ -167,7 +175,7 @@ def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: Traine
     print("-" * 30 + "\n\n")
 
 
-if __name__ == "__main__":
+def main():
     # Set random seed
     seed_all(42)
 
@@ -179,21 +187,17 @@ if __name__ == "__main__":
     else:
         wandb.init(project='pokemon_reinforcement_learning',
                    config=cfg)
-    p1 = AccountConfiguration('RL Bot 1', None)
-    p2 = AccountConfiguration('RL Bot 2', None)
 
     BATTLE_FORMAT = "gen4anythinggoes"
 
     # description of game state
     game_state = GameState()
 
-    STATE_DIM = game_state.length
-
     checkpoint_dir = Path(cfg['checkpoint_dir']) / cfg['run_name']
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
 
     write_yaml(cfg, checkpoint_dir / 'train_config.yaml')
-    # only get teams if we arent in a random format
+    # only get teams if we aren't in a random format
     if 'random' not in BATTLE_FORMAT.lower():
         teams = get_packed_teams(repo_root / 'packed_teams')
         teambuilder = MultiTeambuilder(teams)
@@ -209,57 +213,71 @@ if __name__ == "__main__":
     cfg.pop('checkpoint_dir')
     cfg.pop('run_name')
     resume = cfg.pop('resume')
-    resume_from = Path(cfg.pop('resume_from'))
+    resume_from = cfg.pop('resume_from')
+    resume_from = Path(resume_from) if resume_from else None
+    use_replays = cfg.pop('use_existing_buffer')
+    pretrain_steps = cfg.pop('pre_train_steps')
+    replay_path = cfg.pop('replay_buffer_path')
 
-    agent_config = AgentConfig(state_dim=STATE_DIM, action_dim=9, save_dir=checkpoint_dir / 'player_1', **cfg)
+    agent_config = AgentConfig(state_dim=game_state.length, action_dim=9, save_dir=checkpoint_dir / 'player_1', **cfg)
 
     # save agent config, has some repeated keys, but it also has some extra info like the state dim
     write_yaml(asdict(agent_config), checkpoint_dir / 'agent_config.yaml')
-    if resume:
-        player1 = SimpleRLPlayer(
-            battle_format=BATTLE_FORMAT,
-            opponent="placeholder",
-            start_challenging=False,
-            account_configuration=p1,
-            model=load_latest(resume_from / 'player_1', agent_config),
-            team=teambuilder
-        )
-        agent_config.save_dir = checkpoint_dir / 'player_2'
-        player2 = SimpleRLPlayer(
-            battle_format=BATTLE_FORMAT,
-            opponent="placeholder",
-            start_challenging=False,
-            account_configuration=p2,
-            model=load_latest(resume_from / 'player_2', agent_config),
-            team=teambuilder
-        )
-    else:
-        player2 = SimpleRLPlayer(
-            battle_format=BATTLE_FORMAT,
-            opponent="placeholder",
-            start_challenging=False,
-            account_configuration=p2,
-            agent_config=agent_config,
-            team=teambuilder
-        )
-        agent_config.save_dir = checkpoint_dir / 'player_2'
 
-        player1 = SimpleRLPlayer(
-            battle_format=BATTLE_FORMAT,
-            opponent=player2,
-            start_challenging=False,
-            account_configuration=p1,
-            agent_config=agent_config,
-            team=teambuilder
-        )
+    # change params based on if we are loading a model or not
+    if resume:
+        models = [load_latest(resume_from / 'player_1', agent_config)]
+        agent_config.save_dir = checkpoint_dir / 'player_2'
+        models.append(load_latest(resume_from / 'player_2', agent_config))
+        agent_configs = [None, None]
+    else:
+        models = [None, None]
+        agent_configs = [agent_config]
+        cfg2 = copy.deepcopy(agent_config)
+        cfg2.save_dir = checkpoint_dir / 'player_2'
+        agent_configs.append(cfg2)
+
+    # create 2 players
+    player1 = create_player(
+        SimpleRLPlayer,
+        username="RL Bot 1",
+        battle_format=BATTLE_FORMAT,
+        opponent="placeholder",
+        start_challenging=False,
+        model=models[0],
+        agent_config=agent_configs[0],
+        team=teambuilder
+    )
+    player2 = create_player(
+        SimpleRLPlayer,
+        username="RL Bot 2",
+        battle_format=BATTLE_FORMAT,
+        opponent="placeholder",
+        start_challenging=False,
+        model=models[1],
+        agent_config=agent_configs[1],
+        team=teambuilder
+    )
+
+    # load memories if needed
+    if use_replays:
+        player1.model.set_memory(replay_path)
+        # only load the memories once, we can copy them here to speed it up
+        player2.model.memory = copy.deepcopy(player1.model.memory)
+
+        if pretrain_steps > 0:
+            print(f"Pretraining player1")
+            player1.model.pretrain(pretrain_steps, True)
+            print(f"Pretraining player2")
+            player2.model.pretrain(pretrain_steps, False)
 
     # create validation players once
-    trained_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
-    target_player = TrainedRLPlayer(None, battle_format=BATTLE_FORMAT, team=MultiTeambuilder(teams))
-
-    baseline_player = SimpleHeuristicsPlayer(account_configuration=AccountConfiguration("HeuristicBaseline", None),
-                                      battle_format=BATTLE_FORMAT,
-                                      team=MultiTeambuilder(teams))
+    trained_player = create_player(TrainedRLPlayer, model=None, battle_format=BATTLE_FORMAT,
+                                   team=MultiTeambuilder(teams))
+    target_player = create_player(TrainedRLPlayer, model=None, battle_format=BATTLE_FORMAT,
+                                  team=MultiTeambuilder(teams))
+    baseline_player = create_player(SimpleHeuristicsPlayer, 'HeuristicPlayer', battle_format=BATTLE_FORMAT,
+                                    team=MultiTeambuilder(teams))
 
     # set the 2 players to face each other
     player1.set_opponent(player2)
@@ -273,10 +291,10 @@ if __name__ == "__main__":
     start = time.time()
 
     # 2 threads, one for each player
-    t1 = Thread(target=learn_loop, args=(player1, player2, num_steps, 0), daemon=True)
-    t1.start()
+    t1 = Thread(target=learn_loop, args=(player1, player2, num_steps, 0, True), daemon=True)
+    t2 = Thread(target=learn_loop, args=(player2, player1, num_steps, 1, False), daemon=True)
 
-    t2 = Thread(target=learn_loop, args=(player2, player1, num_steps, 1), daemon=True)
+    t1.start()
     t2.start()
 
     num_battles = 0
@@ -286,8 +304,15 @@ if __name__ == "__main__":
         num_battles += 1
         # validate against random (once the model is out of warmup)
         if num_battles % validate_freq == 0 and player1.model.curr_step > cfg['warmup_steps']:
-            for p in [player1, player2]:
-                validate_player(p, baseline_player, trained_player, target_player)
+            validate_player(player1, baseline_player, trained_player, target_player,
+                            num_challenges=num_validate_battles,
+                            teams=teams,
+                            is_p1=True)
+            validate_player(player2, baseline_player, trained_player, target_player,
+                            num_challenges=num_validate_battles,
+                            teams=teams,
+                            is_p1=False
+                            )
 
     # Wait for thread completion (training to finish)
     t1.join()
@@ -316,8 +341,16 @@ if __name__ == "__main__":
             total_wr += win_rate
             count += 1
             print(f"Bot WR vs {opponent.lower()}: {win_rate}")
+            # log based off of the name, not the number of the bot
             wandb.log({f'benchmark/{opponent.lower()}': win_rate})
 
     wandb.log({"benchmark/average_winrate": total_wr / count})
 
     wandb.finish()
+
+    player1.model.save(save_name="final")
+    player2.model.save(save_name="final")
+
+
+if __name__ == '__main__':
+    main()

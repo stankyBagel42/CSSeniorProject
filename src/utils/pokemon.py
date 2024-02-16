@@ -3,6 +3,8 @@ import os
 import random
 from enum import Enum
 
+import poke_env.exceptions
+from poke_env import AccountConfiguration
 from poke_env.data import GenData
 from poke_env.environment import Pokemon
 from poke_env.player import RandomPlayer
@@ -57,12 +59,12 @@ class Weather(Enum):
     SUNNYDAY = 3
 
 
-def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_player = None,
-                   format: str = "gen4anythinggoes") -> float:
+def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_player=None,
+                format: str = "gen4anythinggoes") -> float:
     """Battle the given player against a baseline player for n_challenges times. Useful for benchmarking performance
     over time when training"""
 
-    original_wins=baseline_player.n_won_battles
+    original_wins = baseline_player.n_won_battles
     original_battles = baseline_player.n_finished_battles
     if baseline_player is None:
         baseline_player = RandomPlayer(battle_format=format)
@@ -73,7 +75,7 @@ def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_play
 
     new_wins = baseline_player.n_won_battles - original_wins
     new_battles = baseline_player.n_finished_battles - original_battles
-    return 1 - (new_wins/new_battles)
+    return 1 - (new_wins / new_battles)
 
 
 def pokemon_to_index(pokemon_obj: Pokemon) -> int:
@@ -97,3 +99,36 @@ def run_showdown_cmd(cmd: str, args: str) -> str:
 
     os.chdir(cwd)
     return ret
+
+
+def create_player(player_class, username: str = None, **kwargs):
+    """Creates a player with the given username, increments (or adds) the last number if the user is taken. it also
+    limits the username size to -18"""
+    count = 0
+    if username is None:
+        name = player_class.__name__
+    else:
+        name = username
+    while True:
+        # create a new player object with the given configuration
+        try:
+            if count == 0:
+                account = AccountConfiguration(name[:18], None)
+            else:
+                for i in name:
+                    if i.isnumeric():
+                        break
+                count_len = len(str(count))
+                account = AccountConfiguration(name[:name.index(i)][:18-count_len] + str(count), None)
+                assert len(account.username) <= 18, f"{account.username} is too long!"
+
+            player = player_class(account_configuration=account, **kwargs)
+            asyncio.get_event_loop().run_until_complete(player.ps_client.wait_for_login(wait_for=10))
+            if player.ps_client.logged_in.is_set():
+                return player
+        except poke_env.exceptions.ShowdownException | NameError:
+            print(f"IGNORED AN EXCEPTION")
+        if not name[-1].isnumeric():
+            # max size is -18
+            name = name[:18] + "0"
+        count += 1

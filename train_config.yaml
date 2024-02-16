@@ -10,6 +10,18 @@ run_name: 240131_TestRun
 resume: false
 resume_from: null
 
+# initialize the replay buffer with memories (deque of tensors saved via torch.save)
+use_existing_buffer: true
+# can pass a single file path or multiple
+replay_buffer_path:
+  - 240212_AbilityState_50k\player1_memory.pt
+  - 240212_AbilityState_50k\player2_memory.pt
+  - 240212_AbilityState_vsRandom50k\player1_memory.pt
+# steps to just learn on initialized memory (without adding new experiences)
+# NOTE: Each step will be seeing `batch_size` different samples, and this data will still be in the memory
+#  for the first iterations of training
+pre_train_steps: 100000
+
 # Training/Model Parameters
 batch_size: 128
 num_steps: 200000 # TURNS for each bot to play (not battles)

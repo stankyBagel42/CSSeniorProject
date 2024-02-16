@@ -1,13 +1,20 @@
 import copy
+import math
 import random
 from collections import deque
 from dataclasses import dataclass, asdict
+from os import PathLike
 from pathlib import Path
+from queue import Queue
+from threading import Thread
 
 import numpy as np
 import torch
+import wandb
+from tqdm import tqdm
 
 from src.rl.network import PokeNet
+from src.utils.general import load_pytorch, batch_iter, RunningAvg, repo_root
 
 
 @dataclass
@@ -134,15 +141,21 @@ class PokemonAgent:
         state, next_state, action, reward, done = map(torch.stack, zip(*batch))
         return state, next_state, action.squeeze(), reward.squeeze(), done.squeeze()
 
+    def get_memory_batch(self, batch_indices):
+        """Get a batch of memories from the replay buffer with specific indices (used in pretraining)"""
+        batch = [self.memory[idx] for idx in batch_indices]
+        state, next_state, action, reward, done = map(torch.stack, zip(*batch))
+        return state, next_state, action.squeeze(), reward.squeeze(), done.squeeze()
+
     def td_estimate(self, state, action):
-        current_Q = self.net(state, model='online')[np.arange(0, self.batch_size), action]  # Q_online(s,a)
+        current_Q = self.online_net(state)[np.arange(0, state.shape[0]), action]  # Q_online(s,a)
         return current_Q
 
     @torch.no_grad()
     def td_target(self, reward, next_state, done):
-        next_state_Q = self.net(next_state, model='online')
+        next_state_Q = self.online_net(next_state)
         best_action = torch.argmax(next_state_Q, axis=1)
-        next_Q = self.net(next_state, model='target')[np.arange(0, self.batch_size), best_action]
+        next_Q = self.target_net(next_state)[np.arange(0, self.batch_size), best_action]
         return (reward + (1 - done.float()) * self.gamma * next_Q).float()
 
     def update_Q_online(self, td_estimate, td_target):
@@ -182,9 +195,55 @@ class PokemonAgent:
 
         return (td_est.mean().item(), loss)
 
-    def save(self):
+    def pretrain(self, num_steps: int, is_p1: bool = True):
+        """Pre-train the model on the replay buffer"""
+        # use a shuffled list of indices, so we don't repeat learning on any steps
+        num_repeats = math.ceil((num_steps * 512) / len(self.memory))
+        indices = []
+        # shuffle individual 'epochs' of indices so we don't have the same step twice in a batch
+        for _ in range(num_repeats):
+            repeat_indices = list(range(len(self.memory)))
+            random.shuffle(repeat_indices)
+            indices.extend(repeat_indices)
+        log_freq = max(num_steps // 100_000, 1)
+        running_avg = RunningAvg(n=log_freq)
+        # run through the replay buffer
+        pbar = tqdm(desc=f"Batches Complete", total=num_steps)
+        for step, batch_indices in enumerate(batch_iter(indices, self.batch_size)):
+            # sync the target network weights
+            if step % self.sync_every == 0:
+                self.sync_Q_target()
+
+            # Sample from memory
+            state, next_state, action, reward, done = self.get_memory_batch(batch_indices)
+
+            # Get TD Estimate
+            td_est = self.td_estimate(state, action)
+
+            # Get TD Target
+            td_tgt = self.td_target(reward, next_state, done)
+
+            # Backpropagate loss through Q_online
+            loss = self.update_Q_online(td_est, td_tgt)
+            log_dict = {'loss': loss, 'q': td_est.mean().item()}
+            pbar.set_postfix(log_dict)
+            pbar.update()
+            user = 'RL Bot 1' if is_p1 else 'RL Bot 2'
+
+            log_dict = running_avg.log({f"pretrain/{user}/{k}": v for k, v in log_dict.items()})
+            if step % log_freq == 0:
+                wandb.log(log_dict)
+            if step > num_steps:
+                break
+
+        # save the pretrained model before the agent interacts with the environment
+        self.save(save_name='pretrained')
+
+    def save(self, save_name: str = None):
+        if save_name is None:
+            save_name = str(self.curr_step)
         self.save_dir.mkdir(parents=True, exist_ok=True)
-        save_path = self.save_dir / f"PokeNet_{int(self.curr_step // self.save_every)}.pt"
+        save_path = self.save_dir / f"PokeNet_{save_name}.pt"
         torch.save(
             dict(
                 online_model=self.online_net.state_dict(),
@@ -213,3 +272,31 @@ class PokemonAgent:
         self.target_net.load_state_dict(target_state_dict)
         self.optimizer.load_state_dict(optimizer_state_dict)
         self.exploration_rate = exploration_rate
+
+    def set_memory(self, new_memory: PathLike | list[PathLike]):
+        """Loads memory from a previously saved buffer into this agent's buffer"""
+        print(f"Loading new memories...")
+        torch_device = 'cuda' if self.use_cuda else 'cpu'
+        # if only one file, just load it in this thread
+        if isinstance(new_memory, PathLike):
+            self.memory = load_pytorch(repo_root / 'data' / 'replay_buffers' / new_memory, torch_device)
+
+        # use multiple data threads if there are many files
+        else:
+            data_queue = Queue()
+            # create the data loading threads
+            threads = [Thread(target=load_pytorch, daemon=True,
+                              args=(repo_root / 'data' / 'replay_buffers' / memory_path, torch_device, data_queue)) for
+                       memory_path in new_memory]
+
+            for thread in threads:
+                thread.start()
+            for thread in threads:
+                thread.join()
+
+            while not data_queue.empty():
+                replay_memory = data_queue.get()
+                # make sure the memories are the correct shape for the game state
+                assert replay_memory[0][0].shape[0] == self.cfg.state_dim, ("Cannot learn with out of date "
+                                                                            "replay memories.")
+                self.memory.extend(replay_memory)

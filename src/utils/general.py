@@ -1,5 +1,8 @@
+from collections import deque
+from os import PathLike
 from pathlib import Path
 import random
+from queue import Queue
 
 import numpy as np
 import torch
@@ -7,7 +10,28 @@ import yaml
 
 repo_root = Path(__file__).absolute().parents[2]
 
-def seed_all(seed:int):
+
+class RunningAvg:
+    def __init__(self, n):
+        """Keeps a running average of all keys in dictionaries passed to the log() method"""
+        self.n = n
+        self.mem = None
+
+    def log(self, log_dict: dict) -> dict:
+        if self.mem is None:
+            self.mem = {key: deque([val], maxlen=self.n) for key, val in log_dict.items() if
+                        isinstance(val, int | float | np.number)}
+
+        avg = {}
+        for key, val in log_dict.items():
+            if isinstance(val, int | float | np.number):
+                self.mem[key].append(val)
+            avg[key] = sum(self.mem[key]) / len(self.mem[key])
+
+        return avg
+
+
+def seed_all(seed: int):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -62,3 +86,22 @@ def latest_ckpt_file(checkpoint_dir: str | Path) -> Path:
     stem = f'PokeNet_{max(nums)}*'
     max_file = list(checkpoint_dir.glob(stem))[0]
     return max_file
+
+
+def load_pytorch(filepath: PathLike, device: str = None, queue: Queue = None):
+    """
+    Loads the data in the given filepath with pytorch, used when reading multiple files at once in different
+    threads
+    """
+    data = torch.load(filepath, map_location=device)
+    if queue is not None:
+        queue.put(data)
+    else:
+        return data
+
+
+def batch_iter(iterable, n=1):
+    """Batch the given iterable, so it returns constant sized chunks"""
+    l = len(iterable)
+    for ndx in range(0, l, n):
+        yield iterable[ndx:min(ndx + n, l)]

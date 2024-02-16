@@ -144,3 +144,58 @@ class MaxDamagePlayer(Player):
         # If no attack is available, a random switch will be made
         else:
             return self.choose_random_move(battle)
+
+
+class PlayerMemoryWrapper(Gen4EnvSinglePlayer):
+    def __init__(self, player: Player, mem_size: int = 100_000, *args, **kwargs):
+        """Wraps the given player object so we save all state/action pairs"""
+        self._player = player
+        self.mem_size = mem_size
+        self.memory = deque(maxlen=self.mem_size)
+        self.game_state = GameState()
+        self.last_action = None
+        self.last_state = None
+        super().__init__(*args, **kwargs)
+
+    def calc_reward(self, last_battle, current_battle) -> float:
+        return self.reward_computing_helper(
+            current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0, status_value=0.25
+        )
+
+    def describe_embedding(self) -> Space[ObsType]:
+        return self.game_state.description
+
+    def embed_battle(self, battle: AbstractBattle) -> ObsType:
+        # pass to game state object
+        return self.game_state.embed_state(battle)
+
+
+    def move_to_action(self, move: BattleOrder, battle: AbstractBattle) -> int:
+        """Translates a battle order (move) to an action integer for the memory"""
+        available_orders = [BattleOrder(move) for move in battle.available_moves]
+        available_orders.extend(
+            [BattleOrder(switch) for switch in battle.available_switches]
+        )
+
+        return available_orders.index(move)
+
+    def choose_move(self, battle: AbstractBattle) -> BattleOrder:
+        move = self._player.choose_move(battle)
+        return move
+
+    def cache(self, state, next_state, action, reward, done):
+        """
+        Store the experience to self.memory (replay buffer)
+        """
+        state = torch.FloatTensor(state)
+        next_state = torch.FloatTensor(next_state)
+        action = torch.LongTensor([action])
+        reward = torch.DoubleTensor([reward])
+        done = torch.BoolTensor([done])
+
+        self.memory.append((state, next_state, action, reward, done,))
+
+
+    def save_memory(self, output_path:Path):
+        """Saves the memories stored in this object to the given path"""
+        torch.save(self.memory, output_path)
