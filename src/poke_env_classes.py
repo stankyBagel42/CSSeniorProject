@@ -1,17 +1,19 @@
+from collections import deque
 from pathlib import Path
+from typing import Union, Awaitable
 
 import numpy as np
 import torch
 from gym.core import ObsType
-from gym.spaces import Box, Space
+from gym.spaces import Space
 from poke_env.environment import AbstractBattle
-from poke_env.player import Gen4EnvSinglePlayer, Player, ForfeitBattleOrder
+from poke_env.player import Gen4EnvSinglePlayer, Player, ForfeitBattleOrder, BattleOrder
 from poke_env.teambuilder import Teambuilder
 
 from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
-from src.rl.network import PokeNet
-from src.utils.pokemon import pokemon_to_index, POKEMON_IDX_MAP, STAT_IDX, SideCondition, Field, Weather, GEN_DATA
+from src.rl.network import PokeNet, DuelingPokeNet
+from src.utils.pokemon import GEN_DATA
 
 
 class MultiTeambuilder(Teambuilder):
@@ -34,11 +36,11 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
         # set the game state to avoid hard-coding embedding descriptions
         if game_state is None:
             game_state = GameState()
-        self.game_state = game_state
+        self.game_state: GameState = game_state
 
         if model is None:
             model = PokemonAgent(agent_config)
-        self.model = model
+        self.model: PokemonAgent = model
 
         # initialize base object
         super().__init__(*args, **kwargs)
@@ -71,9 +73,14 @@ class TrainedRLPlayer(Player):
         # load the model
         if isinstance(model, str | Path):
             model_info = torch.load(model)
-            model = PokeNet(num_inputs=self.game_state.length, num_outputs=9,
-                            layers_per_side=model_info['cfg']['num_layers_per_side'],
-                            base_nodes=model_info['cfg']['base_nodes_layer'])
+            if model_info['cfg']['dueling_dqn']:
+                model = DuelingPokeNet(num_inputs=self.game_state.length, num_outputs=9,
+                                layers_per_side=model_info['cfg']['num_layers_per_side'],
+                                base_nodes=model_info['cfg']['base_nodes_layer']).float()
+            else:
+                model = PokeNet(num_inputs=self.game_state.length, num_outputs=9,
+                                layers_per_side=model_info['cfg']['num_layers_per_side'],
+                                base_nodes=model_info['cfg']['base_nodes_layer']).float()
             model.load_state_dict(model_info['online_model'])
 
         self.model = model

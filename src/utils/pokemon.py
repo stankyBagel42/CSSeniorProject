@@ -124,6 +124,7 @@ def create_player(player_class, username: str = None, **kwargs):
 
             player = player_class(account_configuration=account, **kwargs)
             asyncio.get_event_loop().run_until_complete(player.ps_client.wait_for_login(wait_for=10))
+
             if player.ps_client.logged_in.is_set():
                 return player
         except poke_env.exceptions.ShowdownException | NameError:

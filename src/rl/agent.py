@@ -13,7 +13,7 @@ import torch
 import wandb
 from tqdm import tqdm
 
-from src.rl.network import PokeNet
+from src.rl.network import PokeNet, DuelingPokeNet
 from src.utils.general import load_pytorch, batch_iter, RunningAvg, repo_root
 
 
@@ -37,6 +37,7 @@ class AgentConfig:
     num_layers_per_side: int = 3
     memory_size: int = 100000
     use_argmax: bool = True
+    dueling_dqn:bool = True
 
 
 # made following https://pytorch.org/tutorials/intermediate/mario_rl_tutorial.html#environment
@@ -68,10 +69,16 @@ class PokemonAgent:
         self.use_cuda = torch.cuda.is_available()
 
         # create networks and optimizer
-        self.online_net = PokeNet(num_inputs=self.cfg.state_dim,
+        if self.cfg.dueling_dqn:
+            self.online_net = DuelingPokeNet(num_inputs=self.cfg.state_dim,
                                   num_outputs=self.cfg.action_dim,
                                   layers_per_side=self.cfg.num_layers_per_side,
                                   base_nodes=self.cfg.base_nodes_layer).float()
+        else:
+            self.online_net = PokeNet(num_inputs=self.cfg.state_dim,
+                                      num_outputs=self.cfg.action_dim,
+                                      layers_per_side=self.cfg.num_layers_per_side,
+                                      base_nodes=self.cfg.base_nodes_layer).float()
         self.target_net = copy.deepcopy(self.online_net)
         self.optimizer = torch.optim.Adam(self.online_net.parameters(), lr=self.cfg.lr)
         if self.use_cuda:
