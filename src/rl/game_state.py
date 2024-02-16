@@ -1,6 +1,6 @@
 import numpy as np
 from gym.spaces import Box
-from poke_env.environment import AbstractBattle
+from poke_env.environment import AbstractBattle, Pokemon
 
 from src.utils.pokemon import pokemon_to_index, GEN_DATA, STAT_IDX, SideCondition, Field, Weather
 
@@ -24,6 +24,23 @@ class MoveMultiplier(Component):
     length = 4
     low = np.zeros(length, dtype=np.float32)
     high = np.full(length, 6, dtype=np.float32)  # max of 6 (4x effective, 1.5x same type bonus)
+
+
+class CanHaveDamageAlteringAbility(Component):
+    """If a Pokémon can have levitate, flash fire, or any other damage altering abilities"""
+    # the abilities are levitate, volt/water absorb, flash fire, magic guard
+    length = 5
+    low = np.zeros(length, dtype=np.float32)
+    high = np.ones(length, dtype=np.float32)
+
+    @staticmethod
+    def check_abilities(pokemon: Pokemon) -> np.ndarray:
+        """Embeds a Pokémon into a vector for this component"""
+        arr = np.zeros(CanHaveDamageAlteringAbility.length, dtype=np.float32)
+        for i, ability in enumerate(['levitate', 'voltabsorb', 'waterabsorb', 'flashfire', 'magicguard']):
+            if ability in pokemon.possible_abilities:
+                arr[i] = 1
+        return arr
 
 
 class NumFainted(Component):
@@ -95,15 +112,18 @@ class GameState:
             OneSideEffects(),
             # current field effects
             FullFieldEffects(),
+            # ally then opponent damage altering abilities
+            CanHaveDamageAlteringAbility(),
+            CanHaveDamageAlteringAbility()
             # ally pokemon (active, then switch order)
-            PokemonIDX(),
-            PokemonIDX(),
-            PokemonIDX(),
-            PokemonIDX(),
-            PokemonIDX(),
-            PokemonIDX(),
-            # opponent active
-            PokemonIDX()
+            # PokemonIDX(),
+            # PokemonIDX(),
+            # PokemonIDX(),
+            # PokemonIDX(),
+            # PokemonIDX(),
+            # PokemonIDX(),
+            # # opponent active
+            # PokemonIDX()
         ]
 
         # attributes for describing battle embeddings
@@ -146,6 +166,13 @@ class GameState:
         field_conditions = np.zeros(4)
         weather_effects = np.zeros(4)
 
+        # sometimes this isnt updated yet so we wait here for that
+        while battle.active_pokemon is None or battle.opponent_active_pokemon is None:
+            pass
+
+        active_pokemon: Pokemon = battle.active_pokemon
+        opponent_active_pokemon: Pokemon = battle.opponent_active_pokemon
+
         # get move information
         for i, move in enumerate(battle.available_moves):
             moves_base_power[i] = (
@@ -157,23 +184,22 @@ class GameState:
                     battle.opponent_active_pokemon.type_2,
                     type_chart=GEN_DATA.type_chart
                 )
-                if move.type in battle.active_pokemon.types:
+                if move.type in active_pokemon.types:
                     moves_base_power[i] *= 1.5
 
-
-        # encode opponent active pokemon
-        opponent_idx = pokemon_to_index(battle.opponent_active_pokemon)
-        opponent_active_arr[opponent_idx] = 1
-
-        # encode ally pokemon
-        ally_active_arr[pokemon_to_index(battle.active_pokemon)] = 1
-        for i, switch in enumerate(battle.available_switches):
-            ally_indices[i][pokemon_to_index(switch)] = 1
+        # # encode opponent active pokemon
+        # opponent_idx = pokemon_to_index(battle.opponent_active_pokemon)
+        # opponent_active_arr[opponent_idx] = 1
+        #
+        # # encode ally pokemon
+        # ally_active_arr[pokemon_to_index(battle.active_pokemon)] = 1
+        # for i, switch in enumerate(battle.available_switches):
+        #     ally_indices[i][pokemon_to_index(switch)] = 1
 
         # encode stat boosts
-        for boost, val in battle.active_pokemon.boosts.items():
+        for boost, val in active_pokemon.boosts.items():
             ally_boosts[STAT_IDX.__getitem__(boost.upper()).value] = val
-        for boost, val in battle.opponent_active_pokemon.boosts.items():
+        for boost, val in opponent_active_pokemon.boosts.items():
             opponent_boosts[STAT_IDX.__getitem__(boost.upper()).value] = val
 
         for i, mon in enumerate(battle.team.values()):
@@ -216,6 +242,10 @@ class GameState:
             idx = Weather.__getitem__(weather.name.upper()).value
             weather_effects[idx] = 1
 
+        # check for levitate, volt/water absorb, flash fire, magic guard
+        ally_ability_flags = CanHaveDamageAlteringAbility.check_abilities(active_pokemon)
+        opponent_ability_flags = CanHaveDamageAlteringAbility.check_abilities(opponent_active_pokemon)
+
         final_vector = np.concatenate(
             [
                 moves_base_power,
@@ -230,8 +260,10 @@ class GameState:
                 side_conditions,
                 field_conditions,
                 weather_effects,
-                *ally_indices,
-                opponent_active_arr
+                ally_ability_flags,
+                opponent_ability_flags
+                # *ally_indices,
+                # opponent_active_arr
             ], dtype=np.float32
         )
 
