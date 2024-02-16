@@ -2,6 +2,7 @@ import asyncio
 import os
 import random
 from enum import Enum
+from pathlib import Path
 
 import poke_env.exceptions
 from poke_env import AccountConfiguration
@@ -57,6 +58,15 @@ class Weather(Enum):
     RAINDANCE = 1
     SANDSTORM = 2
     SUNNYDAY = 3
+
+
+class NotableAbility(Enum):
+    """Abilities that change the way the pokemon takes damage or otherwise significantly impact gameplay"""
+    LEVITATE = 0
+    VOLTABSORB = 1
+    WATERABSORB = 2
+    FLASHFIRE = 3
+    MAGICGUARD = 4
 
 
 def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_player=None,
@@ -119,7 +129,7 @@ def create_player(player_class, username: str = None, **kwargs):
                     if i.isnumeric():
                         break
                 count_len = len(str(count))
-                account = AccountConfiguration(name[:name.index(i)][:18-count_len] + str(count), None)
+                account = AccountConfiguration(name[:name.index(i)][:18 - count_len] + str(count), None)
                 assert len(account.username) <= 18, f"{account.username} is too long!"
 
             player = player_class(account_configuration=account, **kwargs)

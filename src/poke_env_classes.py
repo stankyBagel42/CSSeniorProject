@@ -159,7 +159,7 @@ class PlayerMemoryWrapper(Gen4EnvSinglePlayer):
         self._player = player
         self.mem_size = mem_size
         self.memory = deque(maxlen=self.mem_size)
-        self.game_state = GameState()
+        self.game_state = kwargs.pop('game_state', GameState())
         self.last_action = None
         self.last_state = None
         super().__init__(*args, **kwargs)

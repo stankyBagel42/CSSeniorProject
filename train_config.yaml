@@ -55,3 +55,19 @@ num_layers_per_side: 3
 # EXPERIMENTAL: If false, then the agent will treat model output as a probability distribution and sample actions from
 #   it, true will simply use argmax
 use_argmax: false
+
+
+# game state definition, see game_state.md for more details on each component
+# PokemonIDX is disabled since it made training harder, future architectures might help solve this problem.
+state_components:
+  - MovePower
+  - MoveMultiplier
+  - TeamHP
+  - Statuses
+  - NumFainted
+  - StatBoosts
+  - OneSideEffects
+  - FullFieldEffects
+  - NotableAbilities
+  - EstimatedMatchups
+#  - PokemonIDX

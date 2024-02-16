@@ -46,7 +46,7 @@ def is_battle_finished(battle: AbstractBattle) -> bool:
     return all_fainted_team or all_fainted_opponent
 
 
-def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int, position: int = 0, is_p1:bool=True):
+def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int, position: int = 0, is_p1: bool = True):
     """Learning loop for the agents"""
     train_start = time.time()
     # wait until the bot starts a battle
@@ -144,14 +144,17 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         _ = player.step(-1)
 
 
-def load_latest(checkpoint_directory: str | Path, cfg: AgentConfig, **kwargs) -> PokemonAgent:
+def load_latest(checkpoint_directory: str | Path, cfg: AgentConfig) -> tuple[PokemonAgent, GameState]:
     latest_checkpoint = latest_ckpt_file(checkpoint_directory)
-    agent = PokemonAgent(cfg, checkpoint=latest_checkpoint, **kwargs)
-    return agent
+    agent = PokemonAgent(cfg, checkpoint=latest_checkpoint)
+    # read the train config for the run we are resuming to get the game state
+    run_cfg = read_yaml(Path(checkpoint_directory).parent / 'train_config.yaml')
+    game_state = GameState.from_component_list(run_cfg['state_components'])
+    return agent, game_state
 
 
 def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: TrainedRLPlayer, target_bot: TrainedRLPlayer,
-                    num_challenges: int = 100, teams: list[str] = None, is_p1:bool=True):
+                    num_challenges: int = 100, teams: list[str] = None, is_p1: bool = True):
     """Validate the given player's current model against the given baseline"""
     if teams is None:
         teams = get_packed_teams(repo_root / 'packed_teams')
@@ -218,6 +221,7 @@ def main():
     use_replays = cfg.pop('use_existing_buffer')
     pretrain_steps = cfg.pop('pre_train_steps')
     replay_path = cfg.pop('replay_buffer_path')
+    state_components = cfg.pop('state_components')
 
     agent_config = AgentConfig(state_dim=game_state.length, action_dim=9, save_dir=checkpoint_dir / 'player_1', **cfg)
 
@@ -226,9 +230,10 @@ def main():
 
     # change params based on if we are loading a model or not
     if resume:
-        models = [load_latest(resume_from / 'player_1', agent_config)]
+        model1, game_state = load_latest(resume_from / 'player_1', agent_config)
         agent_config.save_dir = checkpoint_dir / 'player_2'
-        models.append(load_latest(resume_from / 'player_2', agent_config))
+        model2, _ = load_latest(resume_from / 'player_2', agent_config)
+        models = [model1, model2]
         agent_configs = [None, None]
     else:
         models = [None, None]
@@ -236,6 +241,7 @@ def main():
         cfg2 = copy.deepcopy(agent_config)
         cfg2.save_dir = checkpoint_dir / 'player_2'
         agent_configs.append(cfg2)
+        game_state = GameState.from_component_list(state_components)
 
     # create 2 players
     player1 = create_player(
@@ -246,7 +252,8 @@ def main():
         start_challenging=False,
         model=models[0],
         agent_config=agent_configs[0],
-        team=teambuilder
+        team=teambuilder,
+        game_state=game_state
     )
     player2 = create_player(
         SimpleRLPlayer,
@@ -256,7 +263,8 @@ def main():
         start_challenging=False,
         model=models[1],
         agent_config=agent_configs[1],
-        team=teambuilder
+        team=teambuilder,
+        game_state=game_state
     )
 
     # load memories if needed
