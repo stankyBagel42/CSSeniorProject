@@ -83,7 +83,7 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         except Exception as e:
             print(f"EXCEPTION RAISED {e}")
             next_state = player.embed_battle(current_battle)
-            reward = player.calc_reward(copy.deepcopy(current_battle), player.current_battle)
+            reward = player.calc_reward(None, player.current_battle)
             done = current_battle.finished
         # remember this action state transition
         player.model.cache(state, next_state, action, reward, done)
@@ -223,7 +223,8 @@ def main():
     replay_path = cfg.pop('replay_buffer_path')
     state_components = cfg.pop('state_components')
 
-    agent_config = AgentConfig(state_dim=game_state.length, action_dim=9, save_dir=checkpoint_dir / 'player_1', **cfg)
+    agent_config = AgentConfig(state_dim=game_state.length, action_dim=9, save_dir=checkpoint_dir / 'player_1',
+                               game_state=game_state, **cfg)
 
     # save agent config, has some repeated keys, but it also has some extra info like the state dim
     write_yaml(asdict(agent_config), checkpoint_dir / 'agent_config.yaml')

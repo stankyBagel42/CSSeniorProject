@@ -4,9 +4,8 @@ import random
 
 from poke_env import AccountConfiguration
 from poke_env.data import GenData
-from poke_env.player import Player, RandomPlayer, MaxBasePowerPlayer, SimpleHeuristicsPlayer, cross_evaluate
+from poke_env.player import Player, RandomPlayer, MaxBasePowerPlayer, SimpleHeuristicsPlayer
 from poke_env.teambuilder import ConstantTeambuilder
-from tabulate import tabulate
 from tqdm import tqdm
 
 from src.poke_env_classes import MultiTeambuilder, TrainedRLPlayer

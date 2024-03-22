@@ -6,12 +6,12 @@ import numpy as np
 import torch
 from gym.core import ObsType
 from gym.spaces import Space
-from poke_env.environment import AbstractBattle
+from poke_env.environment import AbstractBattle, Battle, Status
 from poke_env.player import Gen4EnvSinglePlayer, Player, ForfeitBattleOrder, BattleOrder
 from poke_env.teambuilder import Teambuilder
 
 from src.rl.agent import PokemonAgent, AgentConfig
-from src.rl.game_state import GameState
+from src.rl.game_state import GameState, get_game_state
 from src.rl.network import PokeNet, DuelingPokeNet
 from src.utils.pokemon import GEN_DATA
 
@@ -45,10 +45,20 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
         # initialize base object
         super().__init__(*args, **kwargs)
 
-    def calc_reward(self, last_battle, current_battle) -> float:
-        return self.reward_computing_helper(
-            current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0, status_value=0.25
-        )
+    def calc_reward(self, last_battle:Battle, current_battle:Battle) -> float:
+        status_val = 0.25
+        reward = self.reward_computing_helper(current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0,
+                                              status_value=status_val)
+
+        # we don't want enemy Pokémon to take advantage of statuses, but ours can
+        mult = [1, -1]
+        active_pokemon = [current_battle.active_pokemon, current_battle.opponent_active_pokemon]
+        for active_mon, mult in zip(active_pokemon, mult):
+            if active_mon.ability == 'guts' and active_mon.status == Status.BRN:
+                reward += status_val * 2 * mult
+            elif active_mon.ability == 'poisonheal' and active_mon.status in [Status.TOX, Status.PSN]:
+                reward += status_val * 2 * mult
+        return reward
 
     def describe_embedding(self) -> Space[ObsType]:
         return self.game_state.description
@@ -64,7 +74,9 @@ class TrainedRLPlayer(Player):
         """model is the pytorch model used to make actions given a battle state (can be a model or a PathLike object
         pointing to the saved weights. Args and Kwargs are sent to Player init"""
         super().__init__(*args, **kwargs)
-
+        # get game state info from the model if it exists
+        if isinstance(model, str | Path) and game_state is None:
+            game_state = get_game_state(model)
         # default game state
         if game_state is None:
             game_state = GameState()

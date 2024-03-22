@@ -1,10 +1,12 @@
 from abc import abstractmethod
+from pathlib import Path
 
 import numpy as np
 from gym.spaces import Box
-from poke_env.environment import AbstractBattle, Pokemon
+from poke_env.environment import Battle, MoveCategory
 
 from src.utils.pokemon import pokemon_to_index, GEN_DATA, STAT_IDX, SideCondition, Field, Weather, NotableAbility
+from utils.general import read_yaml
 
 
 class StateComponent:
@@ -14,7 +16,7 @@ class StateComponent:
     high: np.ndarray
 
     @abstractmethod
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         pass
 
 
@@ -24,7 +26,7 @@ class MovePower(StateComponent):
     low = np.full(length, -1, dtype=np.float32)  # min of -1 for none
     high = np.full(length, 4, dtype=np.float32)  # max of 4
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         moves_base_power = np.zeros(self.length)
         active_pokemon = battle.active_pokemon
 
@@ -45,7 +47,7 @@ class MoveMultiplier(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.full(length, 6, dtype=np.float32)  # max of 6 (4x effective, 1.5x same type bonus)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         moves_dmg_multiplier = np.zeros(self.length)
 
         # get move information
@@ -59,6 +61,61 @@ class MoveMultiplier(StateComponent):
         return moves_dmg_multiplier
 
 
+class MoveTags(StateComponent):
+    """Broad categories of moves generally, also includes some specific move categories for specific moves like 'protect'."""
+    # tags are defined as such:
+    # MOVE CATEGORY (physical, special, status)
+    # ALLY_SIDE EFFECT (tailwind, light screen, etc.)
+    # ENEMY SIDE EFFECT (Stealth rock, spikes, etc.)
+    # SELF SWITCH (baton pass, u-turn, etc.)
+    # ENEMY SWITCH (roar, whirlwind, etc.)
+    # WEATHER (starts a weather condition)
+    #
+
+    length = 48
+    low = np.full(length, -1, dtype=np.float32) # -1 when the moves arent available
+    high = np.ones(length, dtype=np.float32)
+
+    def embed(self, battle: Battle) -> np.ndarray:
+        flags = []
+        moves = battle.available_moves
+
+        for i in range(4):
+            # fill unavailable moves with -1
+            if i >= len(moves):
+                flags.extend(-1 for _ in range(12))
+                continue
+            move = moves[i]
+            move_flags = []
+            # add the move category
+            move_category = [0, 0, 0]  # physical, special, status
+            move_category[move.category.value-1] = 1
+            move_flags.extend(move_category)
+
+            # first 2 flags are ALLY_SIDE (tailwind, light screen, etc.) then ENEMY_SIDE (stealth rock, spikes, etc.)
+            if move.side_condition is not None:
+                if 'ally' in move.target:
+                    move_flags.extend([True, False])
+                else:
+                    move_flags.extend([False, True])
+            else:
+                move_flags.extend([False, False])
+            # store flags here for easier readability, will convert to bool/int when adding
+            raw_flags = [
+                move.self_switch,
+                move.force_switch,
+                move.weather,
+                move.status,
+                move.self_boost,
+                move.heal,
+                move.is_protect_move
+            ]
+
+            move_flags.extend(bool(flag) for flag in raw_flags)
+            flags.extend(move_flags)
+
+        return np.array(flags, dtype=np.float32)
+
 class NotableAbilities(StateComponent):
     """If a Pokémon can have levitate, flash fire, or any other damage altering abilities. First 5 are ally, next are
     opponent"""
@@ -69,7 +126,7 @@ class NotableAbilities(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         arr = np.zeros(self.length, dtype=np.float32)
 
         for ability in battle.active_pokemon.possible_abilities:
@@ -91,7 +148,7 @@ class NumFainted(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         ally_fainted = 0
         opponent_fainted = 0
         for mon in battle.team.values():
@@ -112,7 +169,7 @@ class Statuses(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         statuses = np.zeros(self.length, dtype=np.float32)
         for i, mon in enumerate(battle.team.values()):
             if mon.status:
@@ -131,7 +188,7 @@ class TeamHP(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         hp_vals = np.zeros(self.length, dtype=np.float32)
         for i, mon in enumerate(battle.team.values()):
             hp_vals[i] = mon.current_hp_fraction
@@ -146,11 +203,11 @@ class StatBoosts(StateComponent):
     """Pokemon stat changes, -6 low, 6 high, (ally first, then opponent)"""
 
     num_boostable_stats = len(STAT_IDX)
-    length = 2*num_boostable_stats
+    length = 2 * num_boostable_stats
     low = np.full(length, -6, dtype=np.float32)
     high = np.full(length, 6, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         ally_boosts = np.zeros(self.num_boostable_stats, dtype=np.float32)
         opponent_boosts = np.zeros(self.num_boostable_stats, dtype=np.float32)
         # encode stat boosts
@@ -169,7 +226,7 @@ class OneSideEffects(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.full(length, 3, dtype=np.float32)  # 3 stacks of spikes/perish song
 
-    def embed(self, battle: AbstractBattle):
+    def embed(self, battle: Battle):
         side_conditions = np.zeros(self.length, dtype=np.float32)
 
         # encode single-sided conditions for both teams
@@ -198,7 +255,7 @@ class FullFieldEffects(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         field_conditions = np.zeros(self.num_field_conditions, dtype=np.float32)
         weather_effects = np.zeros(self.num_weather, dtype=np.float32)
 
@@ -222,7 +279,7 @@ class PokemonIDX(StateComponent):
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         opponent_active_arr = np.zeros(self.num_pokemon, dtype=np.float32)
         ally_active_arr = np.zeros(self.num_pokemon, dtype=np.float32)
         ally_indices = np.zeros(self.num_pokemon * 5, dtype=np.float32)
@@ -242,18 +299,18 @@ class PokemonIDX(StateComponent):
             opponent_active_arr
         ], dtype=np.float32)
 
+
 class EstimatedMatchups(StateComponent):
     """Estimated matchups for all ally Pokémon vs enemy Pokémon, idea and code are from the 'SimpleHeuristicPlayer'
     from poke_env"""
     length = 6
     low = np.full(length, -10, dtype=np.float32)
-    high = np.ones(length, dtype=np.float32)
+    high = np.full(length, 10, dtype=np.float32)
 
-
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         matchups = np.zeros(self.length, dtype=np.float32)
         opponent = battle.opponent_active_pokemon
-        for i, pokemon in enumerate([battle.active_pokemon,*battle.available_switches]):
+        for i, pokemon in enumerate([battle.active_pokemon, *battle.available_switches]):
             score = max([opponent.damage_multiplier(t) for t in pokemon.types if t is not None])
             score -= max(
                 [pokemon.damage_multiplier(t) for t in opponent.types if t is not None]
@@ -268,6 +325,7 @@ class EstimatedMatchups(StateComponent):
 
             matchups[i] = score
         return matchups
+
 
 class MoveComponents(StateComponent):
     # the different possible subcomponents in the right order (matches args order and vector embedding order)
@@ -296,7 +354,7 @@ class MoveComponents(StateComponent):
             c.high for c in self.components
         ], dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle):
+    def embed(self, battle: Battle):
         moves_base_power = np.zeros(MovePower.length)
         moves_dmg_multiplier = np.zeros(MoveMultiplier.length)
 
@@ -356,7 +414,7 @@ class TeamComponents(StateComponent):
             c.high for c in self.components
         ], dtype=np.float32)
 
-    def embed(self, battle: AbstractBattle) -> np.ndarray:
+    def embed(self, battle: Battle) -> np.ndarray:
         fainted_mon_team = 0
         fainted_mon_opponent = 0
         status_vals = np.zeros(Statuses.length, dtype=np.float32)
@@ -398,6 +456,7 @@ class GameState:
             components = [
                 # active pokemon description
                 MoveComponents(),
+                MoveTags(), # move tags
                 TeamComponents(),
                 # stat boosts for active Pokémon (ally, opponent)
                 StatBoosts(),
@@ -423,10 +482,10 @@ class GameState:
         ], dtype=np.float32)
         self.description = Box(self.low, self.high, dtype=np.float32)
 
-    def embed_state(self, battle: AbstractBattle) -> np.ndarray:
+    def embed_state(self, battle: Battle) -> np.ndarray:
         """Converts battle object to a numpy array representing the battle state"""
 
-        # sometimes this isnt updated yet so we wait here for that
+        # sometimes this isn't updated yet, so we wait here for that
         while battle.active_pokemon is None or battle.opponent_active_pokemon is None:
             pass
 
@@ -476,3 +535,24 @@ class GameState:
             processed.append(globals()[component]())
 
         return cls(components=processed)
+
+def get_game_state(model_path:str | Path) -> GameState:
+    """Helper function to get the game state definition for a given checkpoint, used to ensure even older checkpoints
+    (before the game state was saved in the checkpoint cfg) can be reloaded easily."""
+    model_path = Path(model_path)
+
+    # load the agent config here
+    agent_cfg = read_yaml(model_path.parents[1]/'agent_config.yaml')
+
+    # if the game state was saved in the model config, just load it there
+    if 'game_state' in agent_cfg.keys():
+        return GameState.from_component_list(agent_cfg['game_state'])
+
+    # if the game state was saved in the train config, load if from there
+    train_cfg = read_yaml(model_path.parents[1]/'train_config.yaml')
+    if 'state_components' in train_cfg.keys():
+        return GameState.from_component_list(train_cfg['state_components'])
+
+    # otherwise, the checkpoint is too old and we throw an exception
+    raise RuntimeError(f"Model at {model_path} didn't have game state in the model or training configs, so the game "
+                       f"state must be provided when creating the player/agent object.")

@@ -3,7 +3,7 @@ import asyncio
 from poke_env import AccountConfiguration
 
 from src.poke_env_classes import TrainedRLPlayer, MultiTeambuilder
-from src.utils.general import repo_root, get_packed_teams, latest_ckpt_file
+from src.utils.general import repo_root, get_packed_teams
 from src.utils.pokemon import create_player
 
 
@@ -14,7 +14,7 @@ async def challenge_human(player: TrainedRLPlayer, opponent: str, n_battles: int
 if __name__ == '__main__':
     # set the model path, can use `latest_ckpt_file(PLAYER_CHECKPOINT_DIR)` for the latest saved checkpoint
     # model_path = latest_ckpt_file(r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402005_2mil_HighBatchHighMem\player_1")
-    model_path = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402009_1mil_SmallerNetwork\player_1\PokeNet_605000.pt"
+    model_path = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402016_EstimatedMatchups_2mil\player_1\PokeNet_1215000.pt"
 
     # the username of the account to challenge
     opponent_username = "stankyBagel42"

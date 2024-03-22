@@ -13,6 +13,7 @@ import torch
 import wandb
 from tqdm import tqdm
 
+from src.rl.game_state import GameState
 from src.rl.network import PokeNet, DuelingPokeNet
 from src.utils.general import load_pytorch, batch_iter, RunningAvg, repo_root
 
@@ -22,6 +23,7 @@ class AgentConfig:
     """Config for the agent, helps reduce arguments when constructing, and it's helpful for IDEs"""
     state_dim: int
     action_dim: int
+    game_state: GameState
     save_dir: Path = None
     batch_size: int = 32
     exploration_rate: float = 1.
@@ -108,7 +110,7 @@ class PokemonAgent:
         else:
             state = torch.FloatTensor(state).cuda() if self.use_cuda else torch.FloatTensor(state)
             state = state.unsqueeze(0)
-            action_values = self.net(state, model='online')
+            action_values = self.online_net(state)
             if self.use_argmax:
                 action_idx = torch.argmax(action_values, axis=1).item()
             else:
