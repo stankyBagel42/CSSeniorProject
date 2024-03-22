@@ -2,7 +2,7 @@ import asyncio
 import os
 import random
 from enum import Enum
-from pathlib import Path
+from typing import TypeVar
 
 import poke_env.exceptions
 from poke_env import AccountConfiguration
@@ -110,8 +110,9 @@ def run_showdown_cmd(cmd: str, args: str) -> str:
     os.chdir(cwd)
     return ret
 
-
-def create_player(player_class, username: str = None, **kwargs):
+# template type
+T = TypeVar('T')
+def create_player(player_class: T, username: str = None, **kwargs) -> T:
     """Creates a player with the given username, increments (or adds) the last number if the user is taken. it also
     limits the username size to -18"""
     count = 0
@@ -133,12 +134,13 @@ def create_player(player_class, username: str = None, **kwargs):
                 assert len(account.username) <= 18, f"{account.username} is too long!"
 
             player = player_class(account_configuration=account, **kwargs)
-            asyncio.get_event_loop().run_until_complete(player.ps_client.wait_for_login(wait_for=10))
+            asyncio.get_event_loop().run_until_complete(
+                player.ps_client.wait_for_login(checking_interval=0.05, wait_for=15))
 
             if player.ps_client.logged_in.is_set():
                 return player
-        except poke_env.exceptions.ShowdownException | NameError:
-            print(f"IGNORED AN EXCEPTION")
+        except poke_env.exceptions.ShowdownException | NameError | AssertionError:
+            print(f"IGNORED AN EXCEPTION WHEN LOGGING IN")
         if not name[-1].isnumeric():
             # max size is -18
             name = name[:18] + "0"

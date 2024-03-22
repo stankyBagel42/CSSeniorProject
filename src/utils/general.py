@@ -55,13 +55,26 @@ def read_yaml(yaml_filepath: str | Path) -> dict:
     """Read a yaml formatted file"""
     with open(yaml_filepath, 'r') as inp:
         data = yaml.load(inp, yaml.FullLoader)
+
+    # convert path strings to path objects
+    for key, val in data.items():
+        if isinstance(val, str) and Path(val).exists():
+            data[key] = Path(val)
     return data
 
 
 def write_yaml(data: dict, yaml_filepath: str | Path):
     """Write a dictionary to a yaml formatted file"""
+    # copy the data so we don't modify the original
+    to_write = data.copy()
+
+    # replace paths with strings
+    for key, val in data.items():
+        if isinstance(val, Path):
+            to_write[key] = str(val)
+
     with open(yaml_filepath, 'w') as outp:
-        yaml.dump(data, outp)
+        yaml.dump(to_write, outp)
 
 
 def get_packed_teams(packed_teams_dir: Path) -> list[str]:
