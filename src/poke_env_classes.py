@@ -84,7 +84,10 @@ class TrainedRLPlayer(Player):
         self.use_argmax = use_argmax
         # load the model
         if isinstance(model, str | Path):
-            model_info = torch.load(model)
+            if torch.cuda.is_available():
+                model_info = torch.load(model, map_location=torch.device('cuda:0'))
+            else:
+                model_info = torch.load(model, map_location=torch.device('cpu'))
             if model_info['cfg']['dueling_dqn']:
                 model = DuelingPokeNet(num_inputs=self.game_state.length, num_outputs=9,
                                 layers_per_side=model_info['cfg']['num_layers_per_side'],

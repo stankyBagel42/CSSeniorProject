@@ -106,6 +106,11 @@ def load_pytorch(filepath: PathLike, device: str = None, queue: Queue = None):
     Loads the data in the given filepath with pytorch, used when reading multiple files at once in different
     threads
     """
+    if device is None:
+        if torch.cuda.is_available():
+            device = torch.device('cuda:0')
+        else:
+            device = torch.device('cpu')
     data = torch.load(filepath, map_location=device)
     if queue is not None:
         queue.put(data)
