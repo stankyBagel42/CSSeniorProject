@@ -62,6 +62,7 @@ use_argmax: false
 state_components:
   - MovePower
   - MoveMultiplier
+  - MoveTags
   - TeamHP
   - Statuses
   - NumFainted
@@ -70,4 +71,6 @@ state_components:
   - FullFieldEffects
   - NotableAbilities
   - EstimatedMatchups
-#  - PokemonIDX
+
+# if true, will normalize the state vector between 0 and 1
+normalize_state: true

@@ -193,8 +193,6 @@ def main():
 
     BATTLE_FORMAT = "gen4anythinggoes"
 
-    # description of game state
-    game_state = GameState()
 
     checkpoint_dir = Path(cfg['checkpoint_dir']) / cfg['run_name']
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
@@ -222,6 +220,10 @@ def main():
     pretrain_steps = cfg.pop('pre_train_steps')
     replay_path = cfg.pop('replay_buffer_path')
     state_components = cfg.pop('state_components')
+    normalize_state = cfg.pop('normalize_state')
+
+    # description of game state
+    game_state = GameState.from_component_list(state_components, normalize_state)
 
     agent_config = AgentConfig(state_dim=game_state.length, action_dim=9, save_dir=checkpoint_dir / 'player_1',
                                game_state=game_state, **cfg)
@@ -242,7 +244,6 @@ def main():
         cfg2 = copy.deepcopy(agent_config)
         cfg2.save_dir = checkpoint_dir / 'player_2'
         agent_configs.append(cfg2)
-        game_state = GameState.from_component_list(state_components)
 
     # create 2 players
     player1 = create_player(
@@ -265,7 +266,7 @@ def main():
         model=models[1],
         agent_config=agent_configs[1],
         team=teambuilder,
-        game_state=game_state
+        game_state=copy.deepcopy(game_state)
     )
 
     # load memories if needed
@@ -362,4 +363,8 @@ def main():
 
 
 if __name__ == '__main__':
+    import platform
+
+    if platform.system() == 'Windows':
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     main()

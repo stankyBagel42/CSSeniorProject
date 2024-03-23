@@ -104,7 +104,8 @@ class PokemonAgent:
         """
         # EXPLORE
         if np.random.rand() < self.exploration_rate:
-            action_idx = np.random.randint(self.action_dim)
+            p = [0.2, 0.2, 0.2, 0.2, 0.04, 0.04, 0.04, 0.04, 0.04]
+            action_idx = np.random.choice(range(9), 1, p=p)[0]
 
         # EXPLOIT
         else:

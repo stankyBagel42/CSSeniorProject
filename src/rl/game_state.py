@@ -3,10 +3,10 @@ from pathlib import Path
 
 import numpy as np
 from gym.spaces import Box
-from poke_env.environment import Battle, MoveCategory
+from poke_env.environment import Battle
 
 from src.utils.pokemon import pokemon_to_index, GEN_DATA, STAT_IDX, SideCondition, Field, Weather, NotableAbility
-from utils.general import read_yaml
+from src.utils.general import read_yaml
 
 
 class StateComponent:
@@ -73,7 +73,7 @@ class MoveTags(StateComponent):
     #
 
     length = 48
-    low = np.full(length, -1, dtype=np.float32) # -1 when the moves arent available
+    low = np.full(length, -1, dtype=np.float32)  # -1 when the moves arent available
     high = np.ones(length, dtype=np.float32)
 
     def embed(self, battle: Battle) -> np.ndarray:
@@ -89,7 +89,7 @@ class MoveTags(StateComponent):
             move_flags = []
             # add the move category
             move_category = [0, 0, 0]  # physical, special, status
-            move_category[move.category.value-1] = 1
+            move_category[move.category.value - 1] = 1
             move_flags.extend(move_category)
 
             # first 2 flags are ALLY_SIDE (tailwind, light screen, etc.) then ENEMY_SIDE (stealth rock, spikes, etc.)
@@ -115,6 +115,7 @@ class MoveTags(StateComponent):
             flags.extend(move_flags)
 
         return np.array(flags, dtype=np.float32)
+
 
 class NotableAbilities(StateComponent):
     """If a Pokémon can have levitate, flash fire, or any other damage altering abilities. First 5 are ally, next are
@@ -451,12 +452,12 @@ class TeamComponents(StateComponent):
 
 
 class GameState:
-    def __init__(self, components: list[StateComponent] = None):
+    def __init__(self, components: list[StateComponent] = None, normalize:bool = True):
         if components is None:
             components = [
                 # active pokemon description
                 MoveComponents(),
-                MoveTags(), # move tags
+                MoveTags(),  # move tags
                 TeamComponents(),
                 # stat boosts for active Pokémon (ally, opponent)
                 StatBoosts(),
@@ -469,6 +470,8 @@ class GameState:
                 # estimated matchups for all switches
                 EstimatedMatchups()
             ]
+
+        self.normalize = normalize
 
         self._components: list[StateComponent] = components
 
@@ -492,6 +495,9 @@ class GameState:
         # pass battle to each component to embed
         final_vector = np.concatenate([component.embed(battle) for component in self._components], dtype=np.float32)
 
+        if self.normalize:
+            final_vector = final_vector - self.low
+            final_vector = final_vector / (self.high - self.low)
         return final_vector
 
     @property
@@ -506,7 +512,7 @@ class GameState:
         return components
 
     @classmethod
-    def from_component_list(cls, cfg_components: list[str]):
+    def from_component_list(cls, cfg_components: list[str], normalize:bool = True):
         """Returns a new GameState object constructed from the given component list"""
         move_components = [c.__name__ for c in MoveComponents.possible_components]
         team_components = [c.__name__ for c in TeamComponents.possible_components]
@@ -534,22 +540,23 @@ class GameState:
             # create a new instance of that component class
             processed.append(globals()[component]())
 
-        return cls(components=processed)
+        return cls(components=processed, normalize=normalize)
 
-def get_game_state(model_path:str | Path) -> GameState:
+
+def get_game_state(model_path: str | Path) -> GameState:
     """Helper function to get the game state definition for a given checkpoint, used to ensure even older checkpoints
     (before the game state was saved in the checkpoint cfg) can be reloaded easily."""
     model_path = Path(model_path)
 
     # load the agent config here
-    agent_cfg = read_yaml(model_path.parents[1]/'agent_config.yaml')
+    agent_cfg = read_yaml(model_path.parents[1] / 'agent_config.yaml')
 
     # if the game state was saved in the model config, just load it there
     if 'game_state' in agent_cfg.keys():
         return GameState.from_component_list(agent_cfg['game_state'])
 
     # if the game state was saved in the train config, load if from there
-    train_cfg = read_yaml(model_path.parents[1]/'train_config.yaml')
+    train_cfg = read_yaml(model_path.parents[1] / 'train_config.yaml')
     if 'state_components' in train_cfg.keys():
         return GameState.from_component_list(train_cfg['state_components'])
 
