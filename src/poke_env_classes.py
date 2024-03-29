@@ -1,6 +1,5 @@
 from collections import deque
 from pathlib import Path
-from typing import Union, Awaitable
 
 import numpy as np
 import torch
@@ -26,7 +25,6 @@ class MultiTeambuilder(Teambuilder):
     def yield_team(self):
         return np.random.choice(self.teams)
 
-
 class SimpleRLPlayer(Gen4EnvSinglePlayer):
     def __init__(self, model=None, agent_config: AgentConfig = None, game_state: GameState = None, *args, **kwargs):
         assert (model is not None) or (agent_config is not None), "Either a model or an agent config must be provided."
@@ -49,7 +47,6 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
         status_val = 0.25
         reward = self.reward_computing_helper(current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0,
                                               status_value=status_val)
-
         # we don't want enemy Pokémon to take advantage of statuses, but ours can
         mult = [1, -1]
         active_pokemon = [current_battle.active_pokemon, current_battle.opponent_active_pokemon]
@@ -76,7 +73,11 @@ class TrainedRLPlayer(Player):
         super().__init__(*args, **kwargs)
         # get game state info from the model if it exists
         if isinstance(model, str | Path) and game_state is None:
-            game_state = get_game_state(model)
+            if torch.cuda.is_available():
+                model_info = torch.load(model, map_location=torch.device('cuda:0'))
+            else:
+                model_info = torch.load(model, map_location=torch.device('cpu'))
+            game_state = get_game_state(model, model_info['cfg'])
         # default game state
         if game_state is None:
             game_state = GameState()
@@ -84,10 +85,6 @@ class TrainedRLPlayer(Player):
         self.use_argmax = use_argmax
         # load the model
         if isinstance(model, str | Path):
-            if torch.cuda.is_available():
-                model_info = torch.load(model, map_location=torch.device('cuda:0'))
-            else:
-                model_info = torch.load(model, map_location=torch.device('cpu'))
             if model_info['cfg']['dueling_dqn']:
                 model = DuelingPokeNet(num_inputs=self.game_state.length, num_outputs=9,
                                 layers_per_side=model_info['cfg']['num_layers_per_side'],

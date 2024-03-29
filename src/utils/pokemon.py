@@ -2,7 +2,7 @@ import asyncio
 import os
 import random
 from enum import Enum
-from typing import TypeVar
+from typing import TypeVar, Type
 
 import poke_env.exceptions
 from poke_env import AccountConfiguration
@@ -112,7 +112,7 @@ def run_showdown_cmd(cmd: str, args: str) -> str:
 
 # template type
 T = TypeVar('T')
-def create_player(player_class: T, username: str = None, **kwargs) -> T:
+def create_player(player_class: Type[T], username: str = None, **kwargs) -> T:
     """Creates a player with the given username, increments (or adds) the last number if the user is taken. it also
     limits the username size to -18"""
     count = 0

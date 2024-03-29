@@ -179,14 +179,15 @@ class PokemonAgent:
         self.target_net.load_state_dict(self.online_net.state_dict())
 
     def learn(self):
+        if self.curr_step < self.warmup_steps:
+            return None, None
+
+        # only sync and save after warmup steps are complete
         if self.curr_step % self.sync_every == 0:
             self.sync_Q_target()
 
         if self.curr_step % self.save_every == 0:
             self.save()
-
-        if self.curr_step < self.warmup_steps:
-            return None, None
 
         if self.curr_step % self.learn_every != 0:
             return None, None

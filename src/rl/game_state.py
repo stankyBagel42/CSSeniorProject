@@ -19,6 +19,48 @@ class StateComponent:
     def embed(self, battle: Battle) -> np.ndarray:
         pass
 
+class PokemonStats(StateComponent):
+    """Base stats of both active Pokémon, excluding HP"""
+    length = 10
+    low = np.full(length, 1, dtype=np.float32)
+    high = np.full(length, 255, dtype=np.float32)
+    def embed(self, battle: Battle) -> np.ndarray:
+        stats = np.ones(self.length)
+        active_pokemon = battle.active_pokemon
+        opponent_pokemon = battle.opponent_active_pokemon
+        for i, stat in enumerate(['atk','def','spa','spd','spe']):
+            stats[i] = active_pokemon.base_stats[stat]
+            stats[i+5] = opponent_pokemon.base_stats[stat]
+        return stats
+
+class MoveDamage(StateComponent):
+    """Combination of MovePower, MoveMultiplier, and move accuracy. It will just calculate the power * multiplier *
+    accuracy/100. It is the expected power of a move."""
+    length = 4
+    low = np.full(length, -1, dtype=np.float32)
+    # 4x multiplier, 400 base power, 100% accuracy would result in a 16 for the maximum damage
+    high = np.full(length, 24, dtype=np.float32)
+
+    def embed(self, battle: Battle) -> np.ndarray:
+        moves_base_power = np.full(self.length, -1, dtype=np.float32)
+        active_pokemon = battle.active_pokemon
+
+        # get move information
+        for i, move in enumerate(battle.available_moves):
+            base_power = move.base_power / 100
+            # Simple rescaling to facilitate learning
+            if move.type and move.type in active_pokemon.types:
+                base_power *= 1.5
+            if move.type:
+                base_power = move.type.damage_multiplier(
+                    battle.opponent_active_pokemon.type_1,
+                    battle.opponent_active_pokemon.type_2,
+                    type_chart=GEN_DATA.type_chart
+                )
+            # scale based on the accuracy to get the expected move power
+            moves_base_power[i] = base_power * move.accuracy
+        return moves_base_power
+
 
 class MovePower(StateComponent):
     """Move base power (divided by 100, so it isn't too large compared to others)"""
@@ -73,7 +115,7 @@ class MoveTags(StateComponent):
     #
 
     length = 48
-    low = np.full(length, -1, dtype=np.float32)  # -1 when the moves arent available
+    low = np.full(length, -1, dtype=np.float32)  # -1 when the moves aren't available
     high = np.ones(length, dtype=np.float32)
 
     def embed(self, battle: Battle) -> np.ndarray:
@@ -161,6 +203,14 @@ class NumFainted(StateComponent):
                 opponent_fainted += 1
 
         return np.array([ally_fainted / 6, opponent_fainted / 6], dtype=np.float32)
+
+class ActiveStatus(StateComponent):
+    length = 2
+    low = np.zeros(length, dtype=np.float32)
+    high = np.ones(length, dtype=np.float32)
+
+    def embed(self, battle: Battle) -> np.ndarray:
+        return np.array([1 if mon.status else 0 for mon in (battle.active_pokemon, battle.opponent_active_pokemon)])
 
 
 class Statuses(StateComponent):
@@ -302,8 +352,8 @@ class PokemonIDX(StateComponent):
 
 
 class EstimatedMatchups(StateComponent):
-    """Estimated matchups for all ally Pokémon vs enemy Pokémon, idea and code are from the 'SimpleHeuristicPlayer'
-    from poke_env"""
+    """Estimated matchups for all ally Pokémon vs enemy Pokémon, code is modified from the poke_env
+    SimpleHeuristicPlayer"""
     length = 6
     low = np.full(length, -10, dtype=np.float32)
     high = np.full(length, 10, dtype=np.float32)
@@ -543,17 +593,14 @@ class GameState:
         return cls(components=processed, normalize=normalize)
 
 
-def get_game_state(model_path: str | Path) -> GameState:
+def get_game_state(model_path: str | Path, model_cfg_dict: dict) -> GameState:
     """Helper function to get the game state definition for a given checkpoint, used to ensure even older checkpoints
     (before the game state was saved in the checkpoint cfg) can be reloaded easily."""
     model_path = Path(model_path)
 
-    # load the agent config here
-    agent_cfg = read_yaml(model_path.parents[1] / 'agent_config.yaml')
-
     # if the game state was saved in the model config, just load it there
-    if 'game_state' in agent_cfg.keys():
-        return GameState.from_component_list(agent_cfg['game_state'])
+    if 'game_state' in model_cfg_dict.keys():
+        return model_cfg_dict['game_state']
 
     # if the game state was saved in the train config, load if from there
     train_cfg = read_yaml(model_path.parents[1] / 'train_config.yaml')
