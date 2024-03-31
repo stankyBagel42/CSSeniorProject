@@ -1,6 +1,7 @@
 import asyncio
 import copy
 import random
+import sys
 import time
 from dataclasses import asdict
 from pathlib import Path
@@ -16,7 +17,8 @@ from src.benchmark import benchmark_player
 from src.poke_env_classes import SimpleRLPlayer, MultiTeambuilder, TrainedRLPlayer
 from src.rl.agent import PokemonAgent, AgentConfig
 from src.rl.game_state import GameState
-from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all, RunningAvg
+from src.utils.general import repo_root, read_yaml, get_packed_teams, write_yaml, latest_ckpt_file, seed_all, \
+    RunningAvg, read_json
 from src.utils.pokemon import test_vs_bot, create_player
 
 
@@ -74,11 +76,12 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
             state = state[0]
         # run the state through the model
         action = player.model.act(state)
-
         # send action to environment and get results
         try:
             next_state, reward, done, _, _ = player.step(action)
-
+            # DONT SWITCH
+            if action >= 4:
+                reward -= 0.1
         # if it fails here we just continue on, as the server is still running (usually a message parsing error)
         except Exception as e:
             print(f"EXCEPTION RAISED {e}")
@@ -124,6 +127,7 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
         if done or current_battle.finished:
             state = player.reset()
             current_battle = player.battles[sorted(list(player.battles.keys()))[-1]]
+            # player.clear_framestack()
     train_end = time.time()
     # log total time
     print(f"{player.username} finished {player.n_finished_battles} battles in {train_end - train_start}s with "
@@ -134,7 +138,10 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
     # We use 99 to give the agent an invalid option so it's forced
     # to take a random legal action
     while not opponent.done_training:
-        _, _, done, _, _ = player.step(99)
+        try:
+            _, _, done, _, _ = player.step(99)
+        except RuntimeError:
+            _ = player.reset()
         if done and not opponent.done_training:
             _ = player.reset()
             done = False
@@ -149,7 +156,7 @@ def load_latest(checkpoint_directory: str | Path, cfg: AgentConfig) -> tuple[Pok
     agent = PokemonAgent(cfg, checkpoint=latest_checkpoint)
     # read the train config for the run we are resuming to get the game state
     run_cfg = read_yaml(Path(checkpoint_directory).parent / 'train_config.yaml')
-    game_state = GameState.from_component_list(run_cfg['state_components'])
+    game_state = GameState.from_component_list(run_cfg['state_components'], run_cfg['normalize_state'])
     return agent, game_state
 
 
@@ -176,20 +183,22 @@ def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: Traine
     print(f"Target net vs Baseline WR: {target_wr:0.2%}")
     print(f"Validation took {val_end - val_start:0.2f}s")
     print("-" * 30 + "\n\n")
+    return wr, target_wr
 
 
-def main():
+def main(cfg:dict = None):
     # Set random seed
     seed_all(42)
-
-    cfg = read_yaml(repo_root / 'train_config.yaml')
+    if cfg is None:
+        cfg = read_yaml(repo_root / 'train_config.yaml')
 
     # initialize weights and biases to track training
-    if cfg.pop('debug'):
+    if cfg.pop('debug', False):
         wandb.init(mode="disabled")
     else:
-        wandb.init(project='pokemon_reinforcement_learning',
+        run = wandb.init(project='pokemon_reinforcement_learning',
                    config=cfg)
+        cfg['run_name'] = str(run.name)
 
     BATTLE_FORMAT = "gen4anythinggoes"
 
@@ -218,6 +227,7 @@ def main():
     resume_from = Path(resume_from) if resume_from else None
     use_replays = cfg.pop('use_existing_buffer')
     pretrain_steps = cfg.pop('pre_train_steps')
+    _ = cfg.pop('use_replays')
     replay_path = cfg.pop('replay_buffer_path')
     state_components = cfg.pop('state_components')
     normalize_state = cfg.pop('normalize_state')
@@ -282,12 +292,13 @@ def main():
             player2.model.pretrain(pretrain_steps, False)
 
     # create validation players once
-    trained_player = create_player(TrainedRLPlayer, model=None, battle_format=BATTLE_FORMAT,
+    trained_player = create_player(TrainedRLPlayer, model=None, game_state=game_state, battle_format=BATTLE_FORMAT,
                                    team=MultiTeambuilder(teams))
-    target_player = create_player(TrainedRLPlayer, model=None, battle_format=BATTLE_FORMAT,
+    target_player = create_player(TrainedRLPlayer, model=None, game_state=game_state, battle_format=BATTLE_FORMAT,
                                   team=MultiTeambuilder(teams))
     baseline_player = create_player(SimpleHeuristicsPlayer, 'HeuristicPlayer', battle_format=BATTLE_FORMAT,
                                     team=MultiTeambuilder(teams))
+    val_wrs = []
 
     # set the 2 players to face each other
     player1.set_opponent(player2)
@@ -314,15 +325,33 @@ def main():
         num_battles += 1
         # validate against random (once the model is out of warmup)
         if num_battles % validate_freq == 0 and player1.model.curr_step > cfg['warmup_steps']:
-            validate_player(player1, baseline_player, trained_player, target_player,
+            p1_wr, p1_target_wr = validate_player(player1, baseline_player, trained_player, target_player,
                             num_challenges=num_validate_battles,
                             teams=teams,
                             is_p1=True)
-            validate_player(player2, baseline_player, trained_player, target_player,
+            p2_wr, p2_target_wr = validate_player(player2, baseline_player, trained_player, target_player,
                             num_challenges=num_validate_battles,
                             teams=teams,
                             is_p1=False
                             )
+            bot_winrates = [p1_wr, p1_target_wr, p2_wr, p2_target_wr]
+            val_wrs.extend(bot_winrates)
+            best_wr = max(val_wrs)
+            # if we reach a new best winrate, save out the model
+            if p1_wr == best_wr:
+                print(f"New best validation winrate (online net, player 1): {p1_wr}")
+                player1.model.save('best')
+            elif p1_target_wr == best_wr:
+                print(f"New best validation winrate (target net, player 1): {p1_target_wr}")
+                player1.model.save('best')
+            elif p2_wr == best_wr:
+                print(f"New best validation winrate (online net, player 2): {p2_wr}")
+                player2.model.save('best')
+            elif p2_target_wr == best_wr:
+                print(f"New best validation winrate (target net, player 2): {p2_target_wr}")
+                player2.model.save('best')
+
+
 
     # Wait for thread completion (training to finish)
     t1.join()
@@ -330,6 +359,7 @@ def main():
     player1.close(purge=False)
     player2.close(purge=False)
     end = time.time()
+    wandb.log({f'val/best_wr': max(val_wrs)})
 
     # log basic stats, helps w/ sanity checks in case one player got messed up somewhere
     print(f"Finished with {num_steps} steps ({player1.n_finished_battles} battles) in {end - start:0.2f}s "
@@ -367,4 +397,16 @@ if __name__ == '__main__':
 
     if platform.system() == 'Windows':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    main()
+
+    # assume the argument is a json filepath for a sweep
+    if len(sys.argv) == 2:
+        cfg = read_json(sys.argv[-1])
+        run_out_dir = cfg['checkpoint_dir'] / cfg['run_name']
+
+        while run_out_dir.exists():
+            cfg['run_name'] = f"{run_out_dir.name[:-1]}{int(run_out_dir.name[-1])+1}"
+            run_out_dir = cfg['checkpoint_dir'] / cfg['run_name']
+
+        main(cfg)
+    else:
+        main()

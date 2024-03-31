@@ -1,3 +1,4 @@
+import json
 from collections import deque
 from os import PathLike
 from pathlib import Path
@@ -63,6 +64,18 @@ def read_yaml(yaml_filepath: str | Path) -> dict:
     return data
 
 
+def read_json(json_filepath: str | Path) -> dict:
+    """Read a json formatted file"""
+    with open(json_filepath, 'r') as inp:
+        data = json.load(inp)
+
+    # convert path strings to path objects
+    for key, val in data.items():
+        if isinstance(val, str) and Path(val).exists():
+            data[key] = Path(val)
+    return data
+
+
 def write_yaml(data: dict, yaml_filepath: str | Path):
     """Write a dictionary to a yaml formatted file"""
     # copy the data so we don't modify the original
@@ -80,7 +93,7 @@ def write_yaml(data: dict, yaml_filepath: str | Path):
 def get_packed_teams(packed_teams_dir: Path) -> list[str]:
     """Get a list of all packed team strings from the given directory"""
     packed_teams = []
-    for txt in packed_teams_dir.iterdir():
+    for txt in packed_teams_dir.glob("*.txt"):
         with open(txt, 'r') as team_inp:
             team = team_inp.read()
             packed_teams.append(team)
