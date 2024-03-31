@@ -25,24 +25,20 @@ class STAT_IDX(Enum):
     SPA = 2
     SPD = 3
     SPE = 4
-    EVASION = 5
-    ACCURACY = 6
 
 
 class SideCondition(Enum):
     """Pared down version of poke-env side condition since we don't need every possible value."""
     LIGHT_SCREEN = 0
     REFLECT = 1
-    SAFEGUARD = 2
-    SPIKES = 3
-    STEALTH_ROCK = 4
-    TAILWIND = 5
-    TOXIC_SPIKES = 6
+    STEALTH_ROCK = 2
+    TAILWIND = 3
+    TOXIC_SPIKES = 4
 
     def is_stackable(self) -> bool:
         """Poke-env has a weird thing where the value of the side condition dictionary is the turn a condition was
         played if it isn't stackable. I just need if it is present, and the stacks otherwise."""
-        return self in [SideCondition.SPIKES, SideCondition.TOXIC_SPIKES]
+        return self == SideCondition.TOXIC_SPIKES
 
 
 class Field(Enum):
@@ -61,12 +57,23 @@ class Weather(Enum):
 
 
 class NotableAbility(Enum):
-    """Abilities that change the way the pokemon takes damage or otherwise significantly impact gameplay"""
+    """Abilities that change the way the Pokemon takes damage or otherwise significantly impact gameplay"""
     LEVITATE = 0
     VOLTABSORB = 1
     WATERABSORB = 2
     FLASHFIRE = 3
     MAGICGUARD = 4
+
+
+class Status(Enum):
+    """Status Effects on Pokemon"""
+    BRN = 0
+    FRZ = 1
+    FNT = 6
+    PAR = 2
+    PSN = 3
+    SLP = 4
+    TOX = 5
 
 
 def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_player=None,

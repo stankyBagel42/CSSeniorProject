@@ -3,9 +3,9 @@ from pathlib import Path
 
 import numpy as np
 from gym.spaces import Box
-from poke_env.environment import Battle
+from poke_env.environment import Battle, PokemonType, Effect
 
-from src.utils.pokemon import pokemon_to_index, GEN_DATA, STAT_IDX, SideCondition, Field, Weather, NotableAbility
+from src.utils.pokemon import pokemon_to_index, GEN_DATA, STAT_IDX, SideCondition, Field, Weather, NotableAbility, Status
 from src.utils.general import read_yaml
 
 
@@ -112,9 +112,10 @@ class MoveTags(StateComponent):
     # SELF SWITCH (baton pass, u-turn, etc.)
     # ENEMY SWITCH (roar, whirlwind, etc.)
     # WEATHER (starts a weather condition)
-    #
+    # PRIORITY
 
-    length = 48
+    num_tags = 12
+    length = 4*num_tags
     low = np.full(length, -1, dtype=np.float32)  # -1 when the moves aren't available
     high = np.ones(length, dtype=np.float32)
 
@@ -125,7 +126,7 @@ class MoveTags(StateComponent):
         for i in range(4):
             # fill unavailable moves with -1
             if i >= len(moves):
-                flags.extend(-1 for _ in range(12))
+                flags.extend(-1 for _ in range(self.num_tags))
                 continue
             move = moves[i]
             move_flags = []
@@ -142,15 +143,20 @@ class MoveTags(StateComponent):
                     move_flags.extend([False, True])
             else:
                 move_flags.extend([False, False])
+            priority = move.priority
+            if priority > 1:
+                priority = 1
+            elif priority < 0:
+                priority = -1
             # store flags here for easier readability, will convert to bool/int when adding
             raw_flags = [
                 move.self_switch,
-                move.force_switch,
                 move.weather,
                 move.status,
                 move.self_boost,
                 move.heal,
-                move.is_protect_move
+                move.is_protect_move,
+                (priority + 1) / 2
             ]
 
             move_flags.extend(bool(flag) for flag in raw_flags)
@@ -205,13 +211,35 @@ class NumFainted(StateComponent):
         return np.array([ally_fainted / 6, opponent_fainted / 6], dtype=np.float32)
 
 class ActiveStatus(StateComponent):
+    num_statuses = len(Status)
+    length = 2 * num_statuses
+    low = np.zeros(length, dtype=np.float32)
+    high = np.ones(length, dtype=np.float32)
+
+    def embed(self, battle: Battle) -> np.ndarray:
+        status = np.zeros(self.length, dtype=np.float32)
+        active_pokemon = battle.active_pokemon
+        opponent_pokemon = battle.opponent_active_pokemon
+        if active_pokemon.status:
+            idx = Status.__getitem__(active_pokemon.status.name.upper()).value
+            status[idx] = 1
+        if opponent_pokemon.status:
+            idx = Status.__getitem__(opponent_pokemon.status.name.upper()).value
+            status[idx + self.num_statuses] = 1
+        return status
+
+class IsSubstitute(StateComponent):
+    """If the ally has a substitute, then if the enemy does"""
     length = 2
     low = np.zeros(length, dtype=np.float32)
     high = np.ones(length, dtype=np.float32)
 
     def embed(self, battle: Battle) -> np.ndarray:
-        return np.array([1 if mon.status else 0 for mon in (battle.active_pokemon, battle.opponent_active_pokemon)])
-
+        subs = []
+        for mon in (battle.active_pokemon, battle.opponent_active_pokemon):
+            has_substitute = 1 if Effect.SUBSTITUTE in mon.effects.keys() else 0
+            subs.append(has_substitute)
+        return np.array(subs,dtype=np.float32)
 
 class Statuses(StateComponent):
     """Status effects on a both teams (ally, then opponent), one for an active status, zero otherwise for no active
@@ -263,9 +291,11 @@ class StatBoosts(StateComponent):
         opponent_boosts = np.zeros(self.num_boostable_stats, dtype=np.float32)
         # encode stat boosts
         for boost, val in battle.active_pokemon.boosts.items():
-            ally_boosts[STAT_IDX.__getitem__(boost.upper()).value] = val
+            if hasattr(STAT_IDX, boost.upper()):
+                ally_boosts[STAT_IDX.__getitem__(boost.upper()).value] = val
         for boost, val in battle.opponent_active_pokemon.boosts.items():
-            opponent_boosts[STAT_IDX.__getitem__(boost.upper()).value] = val
+            if hasattr(STAT_IDX, boost.upper()):
+                ally_boosts[STAT_IDX.__getitem__(boost.upper()).value] = val
         return np.concatenate([ally_boosts, opponent_boosts])
 
 
@@ -273,7 +303,7 @@ class OneSideEffects(StateComponent):
     """Player-dependent field effects (stealth rock, light screen, etc.) (ally first, then opponents)"""
 
     num_side_conditions = len(SideCondition)
-    length = 14
+    length = 10
     low = np.zeros(length, dtype=np.float32)
     high = np.full(length, 3, dtype=np.float32)  # 3 stacks of spikes/perish song
 
@@ -286,12 +316,12 @@ class OneSideEffects(StateComponent):
         for env_condition, val in battle.side_conditions.items():
             condition = SideCondition.__getitem__(env_condition.name.upper())
             idx = condition.value
-            real_val = val if condition.is_stackable() else 1
+            real_val = val if condition.is_stackable() else 3
             side_conditions[idx] = real_val
         for env_condition, val in battle.opponent_side_conditions.items():
             condition = SideCondition.__getitem__(env_condition.name.upper())
             idx = condition.value
-            real_val = val if condition.is_stackable() else 1
+            real_val = val if condition.is_stackable() else 3
             side_conditions[idx + self.num_side_conditions] = real_val
 
         return side_conditions
@@ -355,21 +385,39 @@ class EstimatedMatchups(StateComponent):
     """Estimated matchups for all ally Pokémon vs enemy Pokémon, code is modified from the poke_env
     SimpleHeuristicPlayer"""
     length = 6
-    low = np.full(length, -10, dtype=np.float32)
-    high = np.full(length, 10, dtype=np.float32)
+    low = np.full(length, -4.5, dtype=np.float32)
+    high = np.full(length, 7.1, dtype=np.float32)
 
     def embed(self, battle: Battle) -> np.ndarray:
         matchups = np.zeros(self.length, dtype=np.float32)
         opponent = battle.opponent_active_pokemon
         for i, pokemon in enumerate([battle.active_pokemon, *battle.available_switches]):
-            score = max([opponent.damage_multiplier(t) for t in pokemon.types if t is not None])
+            score = max([opponent.damage_multiplier(t) for t in pokemon.types if t is not None]) # 4 max, 0.25 min
             score -= max(
                 [pokemon.damage_multiplier(t) for t in opponent.types if t is not None]
-            )
+            ) # 4 max, 0.25 min
             if pokemon.base_stats["spe"] > opponent.base_stats["spe"]:
                 score += 0.1
             elif opponent.base_stats["spe"] > pokemon.base_stats["spe"]:
                 score -= 0.1
+                if pokemon.current_hp_fraction < 0.5:
+                    score -= 0.3
+
+            # move effectiveness
+            for move in pokemon.moves.values():
+                if move.base_power > 0:
+                    if opponent.damage_multiplier(move) > 1:
+                        score += opponent.damage_multiplier(move)/6
+
+            # notable abilities
+            if pokemon.ability == 'waterabsorb' and PokemonType.WATER in opponent.types:
+                score += 0.1
+            elif pokemon.ability == 'levitate' and PokemonType.GROUND in opponent.types:
+                score += 0.1
+            elif pokemon.ability == 'voltabsorb' and PokemonType.ELECTRIC in opponent.types:
+                score += 0.1
+            elif pokemon.ability == 'flashfire' and PokemonType.FIRE in opponent.types:
+                score += 0.1
 
             score += pokemon.current_hp_fraction * 0.4
             score -= opponent.current_hp_fraction * 0.4
@@ -544,7 +592,6 @@ class GameState:
 
         # pass battle to each component to embed
         final_vector = np.concatenate([component.embed(battle) for component in self._components], dtype=np.float32)
-
         if self.normalize:
             final_vector = final_vector - self.low
             final_vector = final_vector / (self.high - self.low)
