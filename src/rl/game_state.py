@@ -33,30 +33,43 @@ class PokemonStats(StateComponent):
             stats[i+5] = opponent_pokemon.base_stats[stat]
         return stats
 
+# TODO: Maybe add a negative 1 to the move damage so the value is negative if 0 damage instead of neutral (0).
 class MoveDamage(StateComponent):
     """Combination of MovePower, MoveMultiplier, and move accuracy. It will just calculate the power * multiplier *
     accuracy/100. It is the expected power of a move."""
     length = 4
     low = np.full(length, -1, dtype=np.float32)
-    # 4x multiplier, 400 base power, 100% accuracy would result in a 16 for the maximum damage
+    # 4x multiplier, 400 base power, 100% accuracy would result in a 16 for the maximum damage, 150% for STAB
     high = np.full(length, 24, dtype=np.float32)
 
     def embed(self, battle: Battle) -> np.ndarray:
         moves_base_power = np.full(self.length, -1, dtype=np.float32)
         active_pokemon = battle.active_pokemon
+        opponent_mon = battle.opponent_active_pokemon
 
         # get move information
         for i, move in enumerate(battle.available_moves):
-            base_power = move.base_power / 100
             # Simple rescaling to facilitate learning
-            if move.type and move.type in active_pokemon.types:
-                base_power *= 1.5
+            base_power = move.base_power / 100
             if move.type:
-                base_power = move.type.damage_multiplier(
-                    battle.opponent_active_pokemon.type_1,
-                    battle.opponent_active_pokemon.type_2,
+                # type multiplier
+                base_power *= move.type.damage_multiplier(
+                    opponent_mon.type_1,
+                    opponent_mon.type_2,
                     type_chart=GEN_DATA.type_chart
                 )
+                # STAB
+                if move.type in active_pokemon.types:
+                    base_power *= 1.5
+                # treat all abilities as equally likely, so if the opponent can ONLY have levitate
+                # (or a similar ability), ground moves will never do anything
+                if (move.type == PokemonType.GROUND and 'levitate' in opponent_mon.possible_abilities) or \
+                   (move.type == PokemonType.WATER and 'waterabsorb' in opponent_mon.possible_abilities) or \
+                   (move.type == PokemonType.FIRE and 'flashfire' in opponent_mon.possible_abilities) or \
+                   (move.type == PokemonType.ELECTRIC and 'voltabsorb' in opponent_mon.possible_abilities):
+                    ability_factor = (1 / len(opponent_mon.possible_abilities))
+                    base_power *= (1 - ability_factor)
+
             # scale based on the accuracy to get the expected move power
             moves_base_power[i] = base_power * move.accuracy
         return moves_base_power
@@ -113,8 +126,10 @@ class MoveTags(StateComponent):
     # ENEMY SWITCH (roar, whirlwind, etc.)
     # WEATHER (starts a weather condition)
     # PRIORITY
+    # SELF-DESTRUCT
+    # RECOIL
 
-    num_tags = 12
+    num_tags = 14
     length = 4*num_tags
     low = np.full(length, -1, dtype=np.float32)  # -1 when the moves aren't available
     high = np.ones(length, dtype=np.float32)
@@ -156,7 +171,9 @@ class MoveTags(StateComponent):
                 move.self_boost,
                 move.heal,
                 move.is_protect_move,
-                (priority + 1) / 2
+                (priority + 1) / 2,
+                move.self_destruct,
+                move.recoil
             ]
 
             move_flags.extend(bool(flag) for flag in raw_flags)

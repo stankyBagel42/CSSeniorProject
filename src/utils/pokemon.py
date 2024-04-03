@@ -34,6 +34,7 @@ class SideCondition(Enum):
     STEALTH_ROCK = 2
     TAILWIND = 3
     TOXIC_SPIKES = 4
+    SPIKES = 2 # spikes = stealth rock, since they don't appear in our games
 
     def is_stackable(self) -> bool:
         """Poke-env has a weird thing where the value of the side condition dictionary is the turn a condition was

@@ -227,7 +227,6 @@ def main(cfg:dict = None):
     resume_from = Path(resume_from) if resume_from else None
     use_replays = cfg.pop('use_existing_buffer')
     pretrain_steps = cfg.pop('pre_train_steps')
-    _ = cfg.pop('use_replays')
     replay_path = cfg.pop('replay_buffer_path')
     state_components = cfg.pop('state_components')
     normalize_state = cfg.pop('normalize_state')
