@@ -80,19 +80,35 @@ class Status(Enum):
 def test_vs_bot(player, teams: list[str], n_challenges: int = 100, baseline_player=None,
                 format: str = "gen4anythinggoes") -> float:
     """Battle the given player against a baseline player for n_challenges times. Useful for benchmarking performance
-    over time when training"""
-
+    over time when training. The players each play teams once before new teams are selected to help remove any team
+    strength bias."""
+    orig_team = player._team
     original_wins = baseline_player.n_won_battles
     original_battles = baseline_player.n_finished_battles
     if baseline_player is None:
         baseline_player = RandomPlayer(battle_format=format)
 
-    for i in range(n_challenges):
-        baseline_player._team = ConstantTeambuilder(random.choice(teams))
-        asyncio.get_event_loop().run_until_complete(baseline_player.battle_against(player, n_battles=1))
+    # random formats don't need the team setup, so they can just play
+    if 'random' in format.lower():
+        asyncio.get_event_loop().run_until_complete(baseline_player.battle_against(player, n_battles=n_challenges))
+    else:
+        for i in range(n_challenges // 2):
+            team_1 = random.choice(teams)
+            team_2 = random.choice(teams)
+
+            # run the first battle
+            player._team = ConstantTeambuilder(team_1)
+            baseline_player._team = ConstantTeambuilder(team_2)
+            asyncio.get_event_loop().run_until_complete(baseline_player.battle_against(player, n_battles=1))
+
+            # swap teams and try again
+            player._team = ConstantTeambuilder(team_2)
+            baseline_player._team = ConstantTeambuilder(team_1)
+            asyncio.get_event_loop().run_until_complete(baseline_player.battle_against(player, n_battles=1))
 
     new_wins = baseline_player.n_won_battles - original_wins
     new_battles = baseline_player.n_finished_battles - original_battles
+    player._team = orig_team
     return 1 - (new_wins / new_battles)
 
 

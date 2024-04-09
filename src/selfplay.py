@@ -163,15 +163,15 @@ def load_latest(checkpoint_directory: str | Path, cfg: AgentConfig) -> tuple[Pok
 def validate_player(player: SimpleRLPlayer, baseline_player, trained_bot: TrainedRLPlayer, target_bot: TrainedRLPlayer,
                     num_challenges: int = 100, teams: list[str] = None, is_p1: bool = True):
     """Validate the given player's current model against the given baseline"""
-    if teams is None:
+    if teams is None and 'random' not in player.format.lower():
         teams = get_packed_teams(repo_root / 'packed_teams')
     val_start = time.time()
     trained_bot.model = copy.deepcopy(player.model.online_net).cpu()
     target_bot.model = copy.deepcopy(player.model.target_net).cpu()
 
-    wr = test_vs_bot(trained_bot, n_challenges=num_challenges, baseline_player=baseline_player, teams=teams)
+    wr = test_vs_bot(trained_bot, n_challenges=num_challenges, baseline_player=baseline_player, teams=teams, format=player.format)
     target_wr = test_vs_bot(target_bot, n_challenges=num_challenges, baseline_player=baseline_player,
-                            teams=teams)
+                            teams=teams, format=player.format)
 
     val_end = time.time()
     user = 'RL Bot 1' if is_p1 else 'RL Bot 2'
@@ -198,9 +198,11 @@ def main(cfg:dict = None):
     else:
         run = wandb.init(project='pokemon_reinforcement_learning',
                    config=cfg)
-        cfg['run_name'] = str(run.name)
+        if run.sweep_id is not None:
+            cfg['run_name'] = str(run.name)
 
     BATTLE_FORMAT = "gen4anythinggoes"
+    # BATTLE_FORMAT = "gen4randombattle"
 
 
     checkpoint_dir = Path(cfg['checkpoint_dir']) / cfg['run_name']
@@ -292,11 +294,11 @@ def main(cfg:dict = None):
 
     # create validation players once
     trained_player = create_player(TrainedRLPlayer, model=None, game_state=game_state, battle_format=BATTLE_FORMAT,
-                                   team=MultiTeambuilder(teams))
+                                   team=MultiTeambuilder(teams) if 'random' not in BATTLE_FORMAT else None)
     target_player = create_player(TrainedRLPlayer, model=None, game_state=game_state, battle_format=BATTLE_FORMAT,
-                                  team=MultiTeambuilder(teams))
+                                  team=MultiTeambuilder(teams) if 'random' not in BATTLE_FORMAT else None)
     baseline_player = create_player(SimpleHeuristicsPlayer, 'HeuristicPlayer', battle_format=BATTLE_FORMAT,
-                                    team=MultiTeambuilder(teams))
+                                    team=MultiTeambuilder(teams) if 'random' not in BATTLE_FORMAT else None)
     val_wrs = []
 
     # set the 2 players to face each other
@@ -400,8 +402,8 @@ if __name__ == '__main__':
     # assume the argument is a json filepath for a sweep
     if len(sys.argv) == 2:
         cfg = read_json(sys.argv[-1])
+        cfg['checkpoint_dir'] = Path(cfg['checkpoint_dir'])
         run_out_dir = cfg['checkpoint_dir'] / cfg['run_name']
-
         while run_out_dir.exists():
             cfg['run_name'] = f"{run_out_dir.name[:-1]}{int(run_out_dir.name[-1])+1}"
             run_out_dir = cfg['checkpoint_dir'] / cfg['run_name']

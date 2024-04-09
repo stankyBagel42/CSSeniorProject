@@ -36,14 +36,38 @@ class MaxDamagePlayer(Player):
             return self.choose_random_move(battle)
 
 
-def single_battle(player: TrainedRLPlayer, opponent: Player, teams: list[str]) -> bool:
-    """Returns true if the player won, false if they didn't"""
-    player._team = ConstantTeambuilder(random.choice(teams))
-    opponent._team = ConstantTeambuilder(random.choice(teams))
-    wins_before = player.n_won_battles
-    asyncio.get_event_loop().run_until_complete(player.battle_against(opponent))
-    wins_after = player.n_won_battles
-    return wins_after > wins_before
+def two_battles(player: TrainedRLPlayer, opponent: Player, teams: list[str]) -> int:
+    """Battles the two opponents with randomly chosen teams, where they play once and then swap teams and play again.
+    Returns # of times the 'player' won."""
+    loop = asyncio.get_event_loop()
+    if 'random' in player.format.lower():
+        wins_before = player.n_won_battles
+        loop.run_until_complete(player.battle_against(opponent))
+        loop.run_until_complete(player.battle_against(opponent))
+        wins_after = player.n_won_battles
+        wins = wins_after-wins_before
+    else:
+        # choose 2 random teams
+        team_1 = random.choice(teams)
+        team_2 = random.choice(teams)
+
+        # run the first game and record the result
+        player._team = ConstantTeambuilder(team_1)
+        opponent._team = ConstantTeambuilder(team_2)
+        wins_before = player.n_won_battles
+        loop.run_until_complete(player.battle_against(opponent))
+        wins_after = player.n_won_battles
+        player_won = 1 if wins_after > wins_before else 0
+
+        # swap teams and run the second game, recording the result
+        player._team = ConstantTeambuilder(team_2)
+        opponent._team = ConstantTeambuilder(team_1)
+        wins_before = player.n_won_battles
+        loop.run_until_complete(player.battle_against(opponent))
+        wins_after = player.n_won_battles
+        player_won2 = 1 if wins_after > wins_before else 0
+        wins = player_won + player_won2
+    return wins
 
 
 def benchmark_player(player: TrainedRLPlayer, teams: list[str], n_challenges: int = 100, tqdm_pos:int=0, players:list[Player]=None) -> dict[str, float]:
@@ -67,17 +91,19 @@ def benchmark_player(player: TrainedRLPlayer, teams: list[str], n_challenges: in
 
     for opponent in players:
         wins = 0
-        for i in tqdm(range(n_challenges), desc=f"{opponent.username} Battles:", position=tqdm_pos):
-            player_won = single_battle(player, opponent, teams=teams)
-            if player_won:
-                wins += 1
+        pbar = tqdm(total=n_challenges, desc=f"{opponent.username} Battles:", position=tqdm_pos)
+        for i in range(n_challenges // 2):
+            num_wins = two_battles(player, opponent, teams=teams)
+            wins += num_wins
+            pbar.update(2)
+
         winrates[opponent.username] = wins / n_challenges
 
     return winrates
 
 
 if __name__ == '__main__':
-    MODEL_PATH = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\2402003_1mil_LowGammaLowSync\player_1\PokeNet_121.pt"
+    MODEL_PATH = r"C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints\240323_NoArgMax_2milLargeNet\player_1\PokeNet_1355000.pt"
     NUM_CHALLENGES = 1000
 
     packed_teams = get_packed_teams(repo_root / 'packed_teams')

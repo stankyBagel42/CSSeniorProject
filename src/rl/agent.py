@@ -39,7 +39,7 @@ class AgentConfig:
     num_layers_per_side: int = 3
     memory_size: int = 100000
     use_argmax: bool = True
-    dueling_dqn:bool = True
+    dueling_dqn: bool = True
 
 
 # made following https://pytorch.org/tutorials/intermediate/mario_rl_tutorial.html#environment
@@ -73,9 +73,9 @@ class PokemonAgent:
         # create networks and optimizer
         if self.cfg.dueling_dqn:
             self.online_net = DuelingPokeNet(num_inputs=self.cfg.state_dim,
-                                  num_outputs=self.cfg.action_dim,
-                                  layers_per_side=self.cfg.num_layers_per_side,
-                                  base_nodes=self.cfg.base_nodes_layer).float()
+                                             num_outputs=self.cfg.action_dim,
+                                             layers_per_side=self.cfg.num_layers_per_side,
+                                             base_nodes=self.cfg.base_nodes_layer).float()
         else:
             self.online_net = PokeNet(num_inputs=self.cfg.state_dim,
                                       num_outputs=self.cfg.action_dim,
