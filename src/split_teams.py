@@ -15,7 +15,7 @@ if __name__ == '__main__':
         teams = inp.read()
 
     # regex split out the teams (item 1 is name, then 2 is team, then repeat)
-    teams_lst = re.split("=+\n",teams)[1:]
+    teams_lst = re.split("=+",teams)[1:]
 
     team_data = {}
     for i in range(len(teams_lst)//2):
