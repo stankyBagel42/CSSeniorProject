@@ -25,6 +25,7 @@ class MultiTeambuilder(Teambuilder):
     def yield_team(self):
         return np.random.choice(self.teams)
 
+
 class SimpleRLPlayer(Gen4EnvSinglePlayer):
     def __init__(self, model=None, agent_config: AgentConfig = None, game_state: GameState = None, *args, **kwargs):
         assert (model is not None) or (agent_config is not None), "Either a model or an agent config must be provided."
@@ -44,9 +45,10 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
         super().__init__(*args, **kwargs)
 
     def calc_reward(self, last_battle:Battle, current_battle:Battle) -> float:
-        status_val = 0.25
+        status_val = 0.15
         reward = self.reward_computing_helper(current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0,
                                               status_value=status_val)
+
         # we don't want enemy Pokémon to take advantage of statuses, but ours can
         mult = [1, -1]
         active_pokemon = [current_battle.active_pokemon, current_battle.opponent_active_pokemon]
@@ -55,6 +57,10 @@ class SimpleRLPlayer(Gen4EnvSinglePlayer):
                 reward += status_val * 2 * mult
             elif active_mon.ability == 'poisonheal' and active_mon.status in [Status.TOX, Status.PSN]:
                 reward += status_val * 2 * mult
+
+            # stat boosts
+            for boost, val in active_mon.boosts.items():
+                reward += val * mult * status_val
         return reward
 
     def describe_embedding(self) -> Space[ObsType]:
@@ -71,6 +77,7 @@ class TrainedRLPlayer(Player):
         """model is the pytorch model used to make actions given a battle state (can be a model or a PathLike object
         pointing to the saved weights. Args and Kwargs are sent to Player init"""
         super().__init__(*args, **kwargs)
+        self.MESSAGES_TO_IGNORE.add('medal-msg')
         # get game state info from the model if it exists
         if isinstance(model, str | Path) and game_state is None:
             if torch.cuda.is_available():
@@ -97,6 +104,8 @@ class TrainedRLPlayer(Player):
 
         self.model = model
 
+        #
+        self.last_switch = float('-inf')
     def choose_move(self, battle):
         state = torch.tensor(self.game_state.embed_state(battle))
         if next(self.model.parameters()).is_cuda:
@@ -119,7 +128,8 @@ class TrainedRLPlayer(Player):
                         and not battle.force_switch
                 ):
                     return Player.create_order(battle.available_moves[action])
-                elif 0 <= action - 4 < len(battle.available_switches):
+                elif 0 <= action - 4 < len(battle.available_switches) and battle.turn - self.last_switch > 1:
+                    self.last_switch = battle.turn
                     return Player.create_order(battle.available_switches[action - 4])
                 cur_action -= 1
             return self.choose_random_move(battle)
@@ -133,7 +143,8 @@ class TrainedRLPlayer(Player):
                     and not battle.force_switch
             ):
                 return self.create_order(battle.available_moves[action])
-            elif 0 <= action - 4 < len(battle.available_switches):
+            elif 0 <= action - 4 < len(battle.available_switches) and battle.turn - self.last_switch > 1:
+                self.last_switch = battle.turn
                 return self.create_order(battle.available_switches[action - 4])
             else:
                 return self.choose_random_move(battle)
@@ -177,9 +188,23 @@ class PlayerMemoryWrapper(Gen4EnvSinglePlayer):
         super().__init__(*args, **kwargs)
 
     def calc_reward(self, last_battle, current_battle) -> float:
-        return self.reward_computing_helper(
-            current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0, status_value=0.25
-        )
+        status_val = 0.15
+        reward = self.reward_computing_helper(current_battle, fainted_value=2.0, hp_value=1.0, victory_value=30.0,
+                                              status_value=status_val)
+
+        # we don't want enemy Pokémon to take advantage of statuses, but ours can
+        mult = [1, -1]
+        active_pokemon = [current_battle.active_pokemon, current_battle.opponent_active_pokemon]
+        for active_mon, mult in zip(active_pokemon, mult):
+            if active_mon.ability == 'guts' and active_mon.status == Status.BRN:
+                reward += status_val * 2 * mult
+            elif active_mon.ability == 'poisonheal' and active_mon.status in [Status.TOX, Status.PSN]:
+                reward += status_val * 2 * mult
+
+            # stat boosts
+            for boost, val in active_mon.boosts.items():
+                reward += val * mult * status_val
+        return reward
 
     def describe_embedding(self) -> Space[ObsType]:
         return self.game_state.description
