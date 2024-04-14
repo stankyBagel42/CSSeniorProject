@@ -31,8 +31,10 @@
 - PyTorch RL and Tutorials: 15 Hours (Eric)
 ## Hours (2nd Semester)
 - Assignments and Team Meetings: 20 Hours (everyone)
+- Expo 5 hours (everyone)
 - Advisor Meetings: 10 Hours (everyone)
-- Battle Testing: 15 Hours (Alex)
+- Battle Testing: 15 Hours (Alex and Nick)
+- Strategy Development: 5 Hours (Nick)
 - AI Training: 25 Hours (Eric)
 ### Justification (Alex)
 In the Spring semester, Alex primarily worked on the main project deliverables, namely the User Guide, the poster, and 
@@ -47,5 +49,11 @@ hours to get through since his previous experience in AI didn't transfer to Rein
 spring semester Eric was in charge of training the AI agents and making sure they had the right game state input 
 (as described [here](game_state.md)). This easily took 25+ hours as there were > 150 agents trained, and the game state 
 / training curriculum was changed a lot over the length of the project.
+### Justification (Nick)
+In the fall semester, Nick worked on the initial set up of the pokemon showdown server, ensuring that the server could
+be run locally, that the agent could interface with the server, and all of the information that we needed the agent to 
+have could be pulled from the server. In the spring semester, Nick primarly worked with Eric on the agent's strategic 
+decision making skills through changing states and how the agent viewed certain pokemon moves, abilities, and their 
+interactions. 
 
 ## [Notebooks](./Notebooks/)
