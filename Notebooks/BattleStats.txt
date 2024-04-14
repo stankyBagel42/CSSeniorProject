@@ -1,0 +1,19 @@
+NOTE: THESE BATTLE STATS WERE PERFORMED WITH AN EARLIER VERSION OF THE BATTLER
+
+Alex: 24
+Bot: 6
+
+Jackson: 7
+Bot: 5
+
+Teams it works well with:
+Greek RMT
+The Gang
+
+Bot vs Tourney-goers
+Tourney-goers: 3
+Bot: 2
+
+
+    pokemon_bot = TrainedRLPlayer(account_configuration=bot_account, 
+                                  model=model_path, battle_format='gen4anythinggoes', team=teams, use_argmax=True)
