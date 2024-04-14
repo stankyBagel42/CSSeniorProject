@@ -1,6 +1,4 @@
-========================================================================================================
-TEAM 1: THE OG
-========================================================================================================
+=== [gen4anythinggoes] TEAM 1: THE OG ===
 Roserade @ Focus Sash  
 Ability: Natural Cure  
 Level: 80  
@@ -62,10 +60,7 @@ Rash Nature
 - Fire Blast  
 - Brick Break  
 - Roost  
-
-========================================================================================================
-TEAM 2: STALL TEAM
-========================================================================================================
+=== [gen4anythinggoes] TEAM 2: STALL TEAM ===
 Daedalus (Hippowdon) @ Leftovers  
 Ability: Sand Stream  
 Level: 80  
@@ -127,10 +122,7 @@ IVs: 3 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Rest  
 - Sleep Talk  
 - Hidden Power [Fighting]  
-
-========================================================================================================
-TEAM 3: TEACHER'S OUT
-========================================================================================================
+=== [gen4anythinggoes] TEAM 3: TEACHER'S OUT ===
 Garchomp @ Salac Berry  
 Ability: Sand Veil  
 Level: 74  
@@ -192,10 +184,7 @@ IVs: 0 Atk
 - Calm Mind  
 - Thunderbolt  
 - Psychic  
-
-========================================================================================================
-TEAM 4: WE ARE THE MACHAMPIONS! 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 4: WE ARE THE MACHAMPIONS! ===
 Homeland Security (Jirachi) @ Leftovers  
 Ability: Serene Grace  
 Level: 75  
@@ -257,10 +246,7 @@ Adamant Nature
 - Sleep Talk  
 - Waterfall  
 - Dragon Dance  
-
-========================================================================================================
-TEAM 5: TEAM ASTRAL PROJECTION
-========================================================================================================
+=== [gen4anythinggoes] TEAM 5: TEAM ASTRAL PROJECTION ===
 Aerodactyl @ Focus Sash  
 Ability: Pressure  
 Level: 79  
@@ -320,10 +306,7 @@ Naive Nature
 - Thunderbolt  
 - Superpower  
 - Shadow Ball  
-
-========================================================================================================
-TEAM 6: TEAM ANTIMATTER 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 6: TEAM ANTIMATTER ===
 Shaymin-Sky @ Choice Scarf  
 Ability: Serene Grace  
 Level: 73  
@@ -385,10 +368,7 @@ Adamant Nature
 - Substitute  
 - Waterfall  
 - Outrage  
-
-========================================================================================================
-TEAM 7: TEAM RAIKOULOVER 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 7: TEAM RAIKOULOVER ===
 Iggybot (Yanmega) @ Focus Sash  
 Ability: Speed Boost  
 Level: 82  
@@ -451,10 +431,7 @@ IVs: 0 Atk
 - Thunderbolt  
 - Substitute  
 - Calm Mind  
-
-========================================================================================================
-TEAM 8: THE DARK PASSENGER
-========================================================================================================
+=== [gen4anythinggoes] TEAM 8: THE DARK PASSENGER ===
 The Bastard (Salamence) @ Life Orb  
 Ability: Intimidate  
 Level: 75  
@@ -516,10 +493,7 @@ Naive Nature
 - Earth Power  
 - Fire Blast  
 - Stealth Rock  
-
-========================================================================================================
-TEAM 9: TEAM ROSE TYLER 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 9: TEAM ROSE TYLER ===
 Fallen Leaves (Roserade) @ Focus Sash  
 Ability: Natural Cure  
 Level: 80  
@@ -582,10 +556,7 @@ IVs: 0 Atk
 - Calm Mind  
 - Thunderbolt  
 - Substitute  
-
-========================================================================================================
-TEAM 10: SIX PATHS OF PAIN
-========================================================================================================
+=== [gen4anythinggoes] TEAM 10: SIX PATHS OF PAIN ===
 Starmie @ Choice Specs  
 Ability: Natural Cure  
 Level: 80  
@@ -649,10 +620,7 @@ IVs: 2 Atk / 30 Def
 - Hidden Power [Ice]  
 - Roost  
 - Agility  
-
-========================================================================================================
-TEAM 11: A GREEK RMT
-========================================================================================================
+=== [gen4anythinggoes] TEAM 11: A GREEK RMT ===
 Zorbas (Azelf) @ Focus Sash  
 Ability: Levitate  
 Level: 78  
@@ -714,10 +682,7 @@ IVs: 0 Atk
 - Shadow Ball  
 - Baton Pass  
 - Rain Dance  
-
-========================================================================================================
-TEAM 12: PRIDE & PREJUDICE
-========================================================================================================
+=== [gen4anythinggoes] TEAM 12: PRIDE & PREJUDICE ===
 Heatran @ Shuca Berry  
 Ability: Flash Fire  
 Level: 77  
@@ -778,10 +743,7 @@ Naive Nature
 - Hidden Power [Fire]  
 - Flash Cannon  
 - Explosion  
-
-========================================================================================================
-TEAM 13: CHAMPION CYNTHIA!
-========================================================================================================
+=== [gen4anythinggoes] TEAM 13: CHAMPION CYNTHIA! ===
 Garchomp @ Focus Sash  
 Ability: Sand Veil  
 Level: 74  
@@ -844,10 +806,7 @@ Adamant Nature
 - Extreme Speed  
 - Bullet Punch  
 - Close Combat  
-
-========================================================================================================
-TEAM 14: THE GANG
-========================================================================================================
+=== [gen4anythinggoes] TEAM 14: THE GANG ===
 Quagmire (Luxray) @ Life Orb  
 Ability: Intimidate  
 Level: 88  
@@ -908,10 +867,17 @@ IVs: 0 Atk
 - Soft-Boiled  
 - Seismic Toss  
 - Thunder Wave  
+=== [gen4anythinggoes] TEAM 15: I HATE SAND ===
+Tyranitar @ Lum Berry  
+Ability: Sand Stream  
+Level: 79  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Dragon Dance  
+- Stone Edge  
+- Crunch  
+- Earthquake  
 
-========================================================================================================
-TEAM 15: I HATE SAND 
-========================================================================================================
 Garchomp @ Choice Scarf  
 Ability: Sand Veil  
 Level: 74  
@@ -942,16 +908,6 @@ Adamant Nature
 - U-turn  
 - Superpower  
 
-Tyranitar @ Lum Berry  
-Ability: Sand Stream  
-Level: 79  
-EVs: 4 HP / 252 Atk / 252 Spe  
-Jolly Nature  
-- Dragon Dance  
-- Stone Edge  
-- Crunch  
-- Earthquake  
-
 Heatran @ Shuca Berry  
 Ability: Flash Fire  
 Level: 77  
@@ -973,10 +929,7 @@ IVs: 0 Atk
 - Thunderbolt  
 - Roost  
 - Roar  
-
-========================================================================================================
-TEAM 16 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 16 ===
 Wobbuffet @ Leftovers
 Ability: Shadow Tag  
 Level: 81  
@@ -1040,10 +993,7 @@ Adamant Nature
 - Spore  
 - Seed Bomb  
 - Focus Punch  
-
-========================================================================================================
-TEAM 17 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 17 ===
 Scootch (Sceptile) @ Leftovers  
 Ability: Overgrow  
 Level: 84  
@@ -1105,10 +1055,7 @@ Adamant Nature
 - Earthquake  
 - Brick Break  
 - Shadow Claw  
-
-========================================================================================================
-TEAM 18 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 18 ===
 Beetleborg (Heracross) @ Flame Orb  
 Ability: Guts  
 Level: 81  
@@ -1170,10 +1117,7 @@ IVs: 0 Atk
 - Taunt  
 - Energy Ball  
 - Thunderbolt  
-
-========================================================================================================
-TEAM 19: DOGGIES!!
-========================================================================================================
+=== [gen4anythinggoes] TEAM 19: DOGGIES!! ===
 Air Bud (Arcanine) @ Lum Berry  
 Ability: Intimidate  
 Level: 82  
@@ -1234,10 +1178,7 @@ Impish Nature
 - Thunder Wave  
 - Return  
 - Earthquake  
-
-========================================================================================================
-TEAM 20: GYM-TIMIDATION 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 20: GYM-TIMIDATION ===
 Pitbull (Arcanine) @ Choice Band  
 Ability: Intimidate  
 Level: 82  
@@ -1298,10 +1239,7 @@ Careful Nature
 - Aerial Ace  
 - Dragon Claw  
 - Crunch  
-
-========================================================================================================
-TEAM 21: RAIN TEAM 
-========================================================================================================
+=== [gen4anythinggoes] TEAM 21: RAIN TEAM ===
 Crobat @ Damp Rock  
 Ability: Inner Focus  
 Level: 82  

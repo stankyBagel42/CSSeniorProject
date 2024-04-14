@@ -1,0 +1,78 @@
+# if true, wandb won't log anything (helps avoid spamming wandb with updates)
+debug: true
+
+# File paths
+checkpoint_dir: C:\Users\Eric\Desktop\proj\CSSeniorProject\checkpoints
+# final save path will be checkpoint_dir\run_name\
+run_name: 240329_2milAntiSwitch
+# resume training from latest checkpoint found under resume_from
+resume: false
+resume_from: null
+
+# initialize the replay buffer with memories (deque of tensors saved via torch.save)
+use_existing_buffer: false
+# can pass a single file path or multiple
+replay_buffer_path:
+  - 240212_AbilityState_50k\player1_memory.pt
+  - 240212_AbilityState_50k\player2_memory.pt
+  - 240212_AbilityState_vsRandom50k\player1_memory.pt
+# steps to just learn on initialized memory (without adding new experiences)
+# NOTE: Each step will be seeing `batch_size` different samples, and this data will still be in the memory
+#  for the first iterations of training
+pre_train_steps: 200000
+
+# Training/Model Parameters
+batch_size: 512
+num_steps: 2000000 # TURNS for each bot to play (not battles)
+validate_freq: 250 # After this many BATTLES, battle against a random player to benchmark
+num_validate_battles: 100 # battle this many times against the validate bot (random for now)
+dueling_dqn: true # Whether to use a dueling dqn architecture or not
+
+# model updating
+warmup_steps: 50000 # Steps without training in the beginning
+learn_freq: 1 # steps between updating network
+sync_freq: 10 # Steps between updating target network
+lr: 0.00025 # learning rate (Adam optimizer)
+
+# exploration rate
+exploration_rate: 1
+exploration_rate_decay: 0.9999975 # every step exploration rate is multiplied by this
+exploration_rate_min: 0.1
+
+# other settings
+gamma: 0.5 # % of influence for target (offline) network when making predictions
+save_freq: 5000 # Steps between saving the networks to the checkpoint directory
+memory_size: 500000 # Maximum steps to hold in memory
+
+# model architecture
+# Model is created in a simple way (BASE is base_nodes layer, N is the number of layers per side -1), all layers are
+# just linear/dense with ReLU between, and a softmax at the end.
+# INPUT_DIM -> BASE -> 2*BASE -> ... -> 2^N * BASE -> 2^(N-1) * BASE -> ... -> 2*BASE -> BASE -> OUTPUT_DIM
+base_nodes_layer: 128
+num_layers_per_side: 2
+
+# EXPERIMENTAL: If false, then the agent will treat model output as a probability distribution and sample actions from
+#   it, true will simply use argmax
+use_argmax: false
+
+
+# game state definition, see game_state.md for more details on each component
+# PokemonIDX is disabled since it made training harder, future architectures might help solve this problem.
+state_components:
+#  - MovePower
+#  - MoveMultiplier
+  - PokemonStats
+  - MoveDamage
+  - MoveTags
+  - TeamHP
+  - ActiveStatus
+#  - Statuses
+  - NumFainted
+  - StatBoosts
+  - OneSideEffects
+  - FullFieldEffects
+  - NotableAbilities
+  - EstimatedMatchups
+
+# if true, will normalize the state vector between 0 and 1
+normalize_state: true
