@@ -81,7 +81,7 @@ def learn_loop(player: SimpleRLPlayer, opponent: SimpleRLPlayer, num_steps: int,
             next_state, reward, done, _, _ = player.step(action)
             # DONT SWITCH
             if action >= 4:
-                reward -= 0.1
+                reward -= 0.05
         # if it fails here we just continue on, as the server is still running (usually a message parsing error)
         except Exception as e:
             print(f"EXCEPTION RAISED {e}")
