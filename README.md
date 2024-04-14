@@ -33,6 +33,7 @@
 - Assignments and Team Meetings: 20 Hours (everyone)
 - Advisor Meetings: 10 Hours (everyone)
 - Battle Testing: 15 Hours (Alex)
+- AI Training: 25 Hours (Eric)
 ### Justification (Alex)
 In the Spring semester, Alex primarily worked on the main project deliverables, namely the User Guide, the poster, and 
 part of the final presentation slides. This took easily 15-20 hours, especially given the amount of detail provided in 
