@@ -1,4 +1,4 @@
-### [prev](./12_AboutShowdown.md) | [next](./22_StartingTheServer)
+### [prev](./12_AboutShowdown.md) | [next](./22_StartingTheServer.md)
 # Project Setup
 To set up the environment, follow these steps:
 
@@ -13,4 +13,4 @@ To set up the environment, follow these steps:
 
    *NOTE*: On Linux, follow the directions found in the Pokémon showdown submodule  
 
-### [prev](./12_AboutShowdown.md) | [next](./22_StartingTheServer)
+### [prev](./12_AboutShowdown.md) | [next](./22_StartingTheServer.md)
