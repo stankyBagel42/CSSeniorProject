@@ -27,4 +27,4 @@ Eric has worked with AI for co-ops in the past and has experience with training 
 PyTorch, which is how we are training the AI agent.
 
 # Approach to Problem
-To improve AI performance in Pokémon battles, our team will implement Double Deep Q-Network (DDQN) training using Pokémon Showdown battle data. We'll supplement this with self-play and engagements with other players. Testing involves scenarios with clear optimal choices and historical battle data simulations. Our approach will expose the AI to diverse team compositions and battle scenarios to enhance its adaptability across different strategies.
+To improve AI performance in Pokémon battles, our team has implemented Double Dueling Deep Q-Network (DDQN) training using Pokémon Showdown battle data. We'll supplement this with self-play and engagements with other players. Testing involves scenarios with clear optimal choices. Our approach will expose the AI to diverse team compositions and battle scenarios to enhance its adaptability across different strategies.
