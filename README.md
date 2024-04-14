@@ -34,5 +34,17 @@
 - Advisor Meetings: 10 Hours (everyone)
 - Battle Testing: 15 Hours (Alex)
 ### Justification (Alex)
-In the Spring semester, Alex primarily worked on the main project deliverables, namely the User Guide, the poster, and part of the final presentation slides. This took easily 15-20 hours, especially given the amount of detail provided in the Teams section of the User Guide. He also attended all team meetings held over the course of the semester, which amounted to about 10-12 1 hour meetings. He also participated in about 15 hours of testing, both by himself and with people not associated with the project to see how the battler performs against regular people. Partial battle stats can be accessed in the Notebooks folder.
+In the Spring semester, Alex primarily worked on the main project deliverables, namely the User Guide, the poster, and 
+part of the final presentation slides. This took easily 15-20 hours, especially given the amount of detail provided in 
+the Teams section of the User Guide. He also attended all team meetings held over the course of the semester, which 
+amounted to about 10-12 1 hour meetings. He also participated in about 15 hours of testing, both by himself and with 
+people not associated with the project to see how the battler performs against regular people. Partial battle stats can 
+be accessed in the Notebooks folder.
+### Justification (Eric)
+In the fall semester, Eric mostly worked on getting the AI environment and training set up. These took about 15-20 
+hours to get through since his previous experience in AI didn't transfer to Reinforcement Learning as well. In the 
+spring semester Eric was in charge of training the AI agents and making sure they had the right game state input 
+(as described [here](game_state.md)). This easily took 25+ hours as there were > 150 agents trained, and the game state 
+/ training curriculum was changed a lot over the length of the project.
+
 ## [Notebooks](./Notebooks/)
