@@ -9,3 +9,7 @@ scratch/
 # model training checkpoints and replays
 checkpoints/
 replays/
+data/
+
+# wandb makes a lot of files when training models
+wandb/
